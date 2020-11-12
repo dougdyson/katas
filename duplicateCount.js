@@ -16,7 +16,6 @@ function duplicateCount(string) {
 
   for (let i = 0; i < str.length; i++) {
     const currentChar = str[i];
-    //console.log(currentChar);
     if (currentChar === str[i + 1]) {
       if (!checkIfCharExists(currentChar)) {
         dupeChars.push(currentChar)
