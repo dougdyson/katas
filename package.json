@@ -4,7 +4,7 @@
   "description": "daily challenges",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch --verbose=true"
   },
   "repository": {
     "type": "git",
