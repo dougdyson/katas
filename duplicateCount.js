@@ -1,15 +1,14 @@
 function duplicateCount(text) {
   
-  const str = text.toLowerCase().split('').sort();
-  let dupeChars = [];
+  const string = text.toLowerCase().split('').sort();
+  let duplicates = [];
 
-  for (let i = 0; i < str.length; i++) {
-    const currentChar = str[i];
-    if ((currentChar === str[i + 1]) && !dupeChars.includes(currentChar)) {
-      dupeChars.push(currentChar)
+  for (let i = 0; i < string.length; i++) {
+    if ((string[i] === string[i + 1]) && !duplicates.includes(string[i])) {
+      duplicates.push(string[i])
     }
   }
-  return dupeChars.length;
+  return duplicates.length;
 }
 
 module.exports = duplicateCount;
