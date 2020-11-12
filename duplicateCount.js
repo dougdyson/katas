@@ -19,7 +19,6 @@ function duplicateCount(string) {
     
     if (firstIndex < lastIndex) {
       dupeCount++;
-      console.log(dupeCount);
     }
   }
   console.log('dupeCount:', dupeCount);
