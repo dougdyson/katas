@@ -1,0 +1,23 @@
+{
+  "name": "katas",
+  "version": "1.0.0",
+  "description": "daily challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HatHeadNinja/katas.git"
+  },
+  "keywords": [
+    "challenges",
+    "katas"
+  ],
+  "author": "@unfamousdyson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HatHeadNinja/katas/issues"
+  },
+  "homepage": "https://github.com/HatHeadNinja/katas#readme"
+}
