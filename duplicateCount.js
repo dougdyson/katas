@@ -1,8 +1,6 @@
 function duplicateCount(string) {
   
-  const lcString = string.toLowerCase();
-  const str = lcString.split('');
-  str.sort();
+  const str = string.toLowerCase().split('').sort();
   let dupeChars = [];
 
   function checkIfCharExists(character) {
