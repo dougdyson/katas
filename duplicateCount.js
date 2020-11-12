@@ -1,28 +1,29 @@
 function duplicateCount(string) {
-
-  const test = 'aabBcde';
   
-  const str = string.toLowerCase();
-  let dupeCount = 0;
-  const stringLength = str.length;
+  const lcString = string.toLowerCase();
+  const str = lcString.split('');
+  str.sort();
+  let dupeChars = [];
 
-  if (!str) {
-    return dupeCount;
+  function checkIfCharExists(character) {
+    for (let i = 0; i < dupeChars.length; i++) {
+      if (dupeChars[i] === character) {
+        return true;
+      }
+    }
+    return false;
   }
 
-  for (let i = 0; i < stringLength; i++) {
-
-    const currentString = str.slice(i);
-    const currentChar = currentString.slice(0,1);
-    const firstIndex = currentString.indexOf(currentChar)
-    const lastIndex = currentString.lastIndexOf(currentChar)
-    
-    if (firstIndex < lastIndex) {
-      dupeCount++;
+  for (let i = 0; i < str.length; i++) {
+    const currentChar = str[i];
+    //console.log(currentChar);
+    if (currentChar === str[i + 1]) {
+      if (!checkIfCharExists(currentChar)) {
+        dupeChars.push(currentChar)
+      }
     }
   }
-  console.log('dupeCount:', dupeCount);
-  return dupeCount;
+  return dupeChars.length;
 }
 
 module.exports = duplicateCount;
