@@ -13,7 +13,7 @@ function duplicateCount(text) {
 
 module.exports = duplicateCount;
 
-// to dig into further...
+// to dig into further: filter && match
 //
 // function duplicateCount(text){
 //   return text.toLowerCase().split('').filter(function(val, i, arr){
