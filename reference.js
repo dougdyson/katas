@@ -45,80 +45,78 @@ const numbers = [1, 3, 2, 5, 4];
 
 // # Array properties
 // length
-animals.length;
+animals.length; //?
 // ----------------------------------------
 
 // isArray
-Array.isArray(animals);
+Array.isArray(animals); //?
 // ----------------------------------------
 
 
 // # Array methods
 // concat
 const newAnimals = ['Hamster', 'Snake'];
-const concatAnimals = animals.concat(newAnimals);
+const concatAnimals = animals.concat(newAnimals); //?
 // ----------------------------------------
 
+// includes, determines if an element in an array includes a certain value, returns true or false
+const includesSpecies = animals.includes('Cat'); //?
 
 // filter single line arrow syntax, returns a new array
-const filteredCats1 = animals.filter((animal) => animal === 'Cat');
+const filteredCats1 = animals.filter((animal) => animal === 'Cat'); //?
 // ----------------------------------------
-
 
 // filter multi line arrow syntax, returns a new array
 const isCat = (animal) => animal === 'Cat';
-const filteredCats2 = animals.filter(isCat);
+const filteredCats2 = animals.filter(isCat); //?
 // ----------------------------------------
 
-
 // find, array takes in a function and returns the first value found in the array
-const findFirstCat = animals.find(isCat);
+const findFirstCat = animals.find(isCat); //?
 // ----------------------------------------
 
 
 // join, takes an array and returns a string with an optional seperator
-const animalParade = animals.join(', ');
+const animalParade = animals.join(', '); //?
 // ----------------------------------------
 
 
 // map, takes an existing array and creates a new one, with each element as an output from a function
-const pluralizedAnimals = animals.map(animal => {return animal + 's'})
+const pluralizedAnimals = animals.map(animal => {return animal + 's'}) //?
 // ----------------------------------------
 
 
 // pop, removes and returns the last element of an existing array, mutating the existing array
-const lastAnimal = animals.pop();
+const lastAnimal = animals.pop(); //?
 // ----------------------------------------
 
 
 // push, returns new index and puts new element at the end of an existing array, mutating the existing array
-const newAnimalIndex = animals.push('Mouse');
+const newAnimalIndex = animals.push('Mouse'); //?
 // ----------------------------------------
 
 
 // shift, removes and returns the first element of an array, mutating the existing array
-const firstAnimal = animals.shift();
+const firstAnimal = animals.shift(); //?
 // ----------------------------------------
 
-
 // slice, returns a new array of specified elements in an existing array
-const slicedAnimal = animals.slice(2,3);
+const slicedAnimal = animals.slice(2,3);  //?
 // ----------------------------------------
 
 
 // sort, orders elements in an array, mutating the existing array
-const numSortAsc = numbers.sort(function(a, b){return a-b});
+const numSortAsc = numbers.sort(function(a, b){return a-b}); //?
 // ----------------------------------------
-const numSortDec = numbers.sort(function(a, b){return b-a});
+const numSortDec = numbers.sort(function(a, b){return b-a}); //?
 // ----------------------------------------
-const animalSortUp = animals.sort(); 
+const animalSortUp = animals.sort(); //?
 // ----------------------------------------
-const animalSortDown = animals.reverse(); 
+const animalSortDown = animals.reverse(); //?
 // ----------------------------------------
-
 
 // splice, removes and returns specific elements from an existing array, mutating the existing array
-const splicedAnimal = animals.splice(2,1);
+const splicedAnimal = animals.splice(2,1); //?
 // ----------------------------------------
 
 
