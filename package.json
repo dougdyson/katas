@@ -4,7 +4,8 @@
   "description": "daily challenges",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose=true --watch --json --outputFile=test.json"
+    "test": "jest --verbose=true --watch",
+    "stats": "jest --json --outputFile=test.json"
   },
   "repository": {
     "type": "git",

@@ -9,13 +9,18 @@
           return response.json();
         }).then(function (obj){
           console.log(obj);
-          document.writeln('<h1>Fetching Jest Results</h2>');
-          document.writeln('<h2>Passed tests: ' + obj.numPassedTests + '</h2>');
-          document.writeln('<h2>Failed tests: ' + obj.numFailedTests + '</h2>');
-          document.writeln('<h2>Pending tests: ' + obj.numPendingTests + '</h2>');
+          document.write('<h1>Challenge Results</h2>');
+          document.write('<h2>Total challenges: ' + obj.numTotalTestSuites + '</h2>');
+          document.write('<h2>Success rate: ' + Math.round(obj.numPassedTests / obj.numTotalTests * 100) + '%</h2>');
+          document.write('<h2>Total tests: ' + obj.numTotalTests + '</h2>');
+          document.write('<h2>Passed tests: ' + obj.numPassedTests + '</h2>');
+          document.write('<h2>Failed tests: ' + obj.numFailedTests + '</h2>');
+          document.write('<h2>Pending tests: ' + obj.numPendingTests + '</h2>');
+          document.close;
         }).catch(function (error){
           console.error(error);
         });
+
 
     </script>
   </body>
