@@ -4,7 +4,7 @@
   "description": "daily challenges",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch --verbose=true"
+    "test": "jest --verbose=true --watch --json --outputFile=test.json"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/HatHeadNinja/katas#readme",
   "devDependencies": {
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "jest-html-reporters": "^2.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
   }
 }

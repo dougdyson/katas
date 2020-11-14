@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+
+        // write the simplest code to display a local json file
+      
+        fetch('test.json').then(function (response) {
+          return response.json();
+        }).then(function (obj){
+          console.log(obj);
+          document.writeln('<h1>Fetching Jest Results</h2>');
+          document.writeln('<h2>Passed tests: ' + obj.numPassedTests + '</h2>');
+          document.writeln('<h2>Failed tests: ' + obj.numFailedTests + '</h2>');
+          document.writeln('<h2>Pending tests: ' + obj.numPendingTests + '</h2>');
+        }).catch(function (error){
+          console.error(error);
+        });
+
+    </script>
+  </body>
+</html>

@@ -20,7 +20,7 @@ function duplicateCount(text) {
   // the classic c-style for loop I used in my first refactor
 
   // here is a refactor using indexOf() && lastIndexOf()
-  // which removes the need to pre-sort the array
+  // which removes the need to pre-sort the array.
   for (let i = 0; i < string.length; i++) {
     if (string.lastIndexOf(string[i]) !== i && !duplicates.includes(string[i])) {
       duplicates.push(string[i]);
