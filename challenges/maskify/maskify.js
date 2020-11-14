@@ -15,6 +15,7 @@ function maskify(string) {
   // feels like using a hammer for something that's not a nail
   // Also like the chaining, where I might have created several intermediate
   // variables (for something which appears to be very rudimentary)
+  // This solution is half the code of my first iteration
   return '#'.repeat(string.slice(0, -4).length) + string.slice(-4);
   
 }
