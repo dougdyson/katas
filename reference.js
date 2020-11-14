@@ -43,6 +43,10 @@ const animals = ['Dog', 'Cat', 'Bunny', 'Fish', 'Kitten', 'Cat'];
 
 const numbers = [1, 3, 2, 5, 4];
 
+// # Strings
+// match
+// repeat
+
 // # Array properties
 // length
 animals.length; //?

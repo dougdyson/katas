@@ -1,11 +1,8 @@
 function maskify(string) {
-
   const chars = string.split('');
-
   for (let i = 0; i < (chars.length - 4); i++) {
     chars[i] = '#';   
   }
-  
   return chars.join('');
 }
 
