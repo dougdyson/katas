@@ -1,6 +1,7 @@
 function maskify(string) {
   
-  // first iteration
+  // First iteration
+  // ===============
   // const chars = string.split('');
   // for (let i = 0; i < (chars.length - 4); i++) {
   //   chars[i] = '#';   
@@ -9,13 +10,18 @@ function maskify(string) {
   // return chars.join('');
   
   // Redo as repeat
+  // ===============
   // Similar to duplicateCount, this soluton uses a string instead of an array,
   // which reduces the amount computation required.
+  //
   // Sometimes using an array for what appears to be a very rudimentary problem
   // feels like using a hammer for something that's not a nail
+  //
   // Also like the chaining, where I might have created several intermediate
   // variables (for something which appears to be very rudimentary)
-  // This solution is half the code of my first iteration
+  //
+  // This solution is half the amount of code of my first iteration
+  
   return '#'.repeat(string.slice(0, -4).length) + string.slice(-4);
   
 }
