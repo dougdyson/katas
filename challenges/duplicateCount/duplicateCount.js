@@ -19,7 +19,7 @@ function duplicateCount(text) {
   // has the solution logic. can also see how filter encapsulates
   // the classic c-style for loop I used in my first refactor
 
-  // here is a refactor using indexOf() && lastIndexOf()
+  // here is a refactor using lastIndexOf()
   // which removes the need to pre-sort the array.
   for (let i = 0; i < string.length; i++) {
     if (string.lastIndexOf(string[i]) !== i && !duplicates.includes(string[i])) {
