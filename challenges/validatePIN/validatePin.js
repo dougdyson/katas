@@ -1,12 +1,12 @@
 function validatePIN(pin) {
-  if (pin.length === 4 || pin.length === 6){
-    for (char of pin) {
-      if (char > '9' || char < '0' ) {
-        return false;
-      }
-    }
-  } else {
+  const PIN = pin.split('');
+  if (PIN.length !== 4 && PIN.length !== 6) {
     return false;
+  }
+  for (char of PIN) {
+    if (char > '9' || char < '0' ) {
+      return false;
+    }
   }
   return true;
 }
