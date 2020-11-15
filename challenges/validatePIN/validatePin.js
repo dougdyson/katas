@@ -1,10 +1,9 @@
 function validatePIN(pin) {
-  const PIN = pin.split('');
-  if (PIN.length !== 4 && PIN.length !== 6) {
+  if (pin.length !== 4 && pin.length !== 6) {
     return false;
   }
-  for (char of PIN) {
-    if (char > '9' || char < '0' ) {
+  for (char in pin) {
+    if (pin[char] > '9' || pin[char] < '0' ) {
       return false;
     }
   }
