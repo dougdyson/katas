@@ -1,4 +1,4 @@
-const validatePIN = require('./validatePin');
+const validatePIN = require('./validatePIN');
 
 describe("validatePIN", function() {
   test("should return False for pins with length other than 4 or 6", function() {
