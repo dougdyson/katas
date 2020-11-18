@@ -1,8 +1,8 @@
 const persistence = require('./persistence');
-
-test('Initial Tests', () => {
-  expect(persistence(39)).toBe(3);
-  expect(persistence(4)).toBe(0);
-  expect(persistence(25)).toBe(2);
-  expect(persistence(999)).toBe(4);
+  
+  it('returns the number of times you must multiply the digits in num until you reach a single digit', function () {
+    expect(persistence(4)).toBe(0);
+    expect(persistence(39)).toBe(3);
+    expect(persistence(25)).toBe(2);
+    expect(persistence(999)).toBe(4);
 });
