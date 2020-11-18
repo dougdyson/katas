@@ -1,3 +1,6 @@
+// from:
+// https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/javascript
+
 const persistence = require('./persistence');
   
   it('returns the number of times you must multiply the digits in num until you reach a single digit', function () {
