@@ -18,6 +18,18 @@ function persistence(num) {
 }
 module.exports = persistence;
 
+// most popular, with reduce
+// =========================
+// function persistence(num) {
+//   var times = 0;
+//   num = num.toString();
+//   while (num.length > 1) {
+//     times++;
+//     num = num.split('').map(Number).reduce((a, b) => a * b).toString();
+//   }
+//   return times;
+// }
+
 // shorter with reduce..
 // =====================
 // function persistence(num) {
