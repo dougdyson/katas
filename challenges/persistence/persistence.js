@@ -17,3 +17,20 @@ function persistence(num) {
   return persistCounter;
 }
 module.exports = persistence;
+
+// shorter with reduce..
+// =====================
+// function persistence(num) {
+//   for (var i = 0; num > 9; i++) {
+//     num = num.toString().split('').reduce((t, c) => c * t);
+//   }
+//   return i;
+// }
+
+// even shorter reduce with ternerary
+// ======================
+// const persistence = num => {
+//   return `${num}`.length > 1 
+//     ? 1 + persistence(`${num}`.split('').reduce((a, b) => a * +b)) 
+//     : 0;
+// }
