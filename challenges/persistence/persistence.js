@@ -19,7 +19,7 @@ function persistence(num) {
 }
 module.exports = persistence;
 
-// most popular, with reduce
+// most popular, with map & reduce
 // =========================
 // function persistence(num) {
 //   var times = 0;
