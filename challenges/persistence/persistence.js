@@ -6,9 +6,7 @@ function persistence(num) {
       let product = 1;
       let nums = numbers.toString().split('');
       persistCounter = persistCounter + 1;
-      for (let i = 0; i < nums.length; i++) {
-        product *= parseInt(nums[i]);
-      }
+      product = nums.reduce((total, factor) => total * factor);
       if (product > 9) {
         persist(product)
       }
