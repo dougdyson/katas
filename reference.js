@@ -89,6 +89,10 @@ const animalParade = animals.join(', '); //?
 const pluralizedAnimals = animals.map(animal => {return animal + 's'}) //?
 // ----------------------------------------
 
+// reduce, takes an existing array and performs a function for each value in the array,
+// the return value of which is stored in an accululator
+const reducedProduct = numbers.reduce((total, factor) => total * factor); //?
+
 
 // pop, removes and returns the last element of an existing array, mutating the existing array
 const lastAnimal = animals.pop(); //?
