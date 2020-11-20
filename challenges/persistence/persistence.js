@@ -1,12 +1,10 @@
 function persistence(num) {
   let persistCounter = 0;
   if (num > 9) {
-    // below function is recursive
     function persist(numbers) {
-      let product = 1;
-      let nums = numbers.toString().split('');
-      persistCounter = persistCounter + 1;
-      product = nums.reduce((total, factor) => total * factor);
+      const nums = numbers.toString().split('');
+      const product = nums.reduce((total, factor) => total * factor);
+      persistCounter++;
       if (product > 9) {
         persist(product)
       }
