@@ -3,7 +3,7 @@
 
 const persistence = require('./persistence');
   
-  it('returns the number of times you must multiply the digits in num until you reach a single digit', function () {
+it('returns the number of times you must multiply the digits in num until you reach a single digit', function () {
     expect(persistence(4)).toBe(0);
     expect(persistence(39)).toBe(3);
     expect(persistence(25)).toBe(2);
