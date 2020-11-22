@@ -2,8 +2,7 @@ function persistence(num) {
   let persistCounter = 0;
   if (num > 9) {
     function persist(numbers) {
-      const nums = numbers.toString().split('');
-      const product = nums.reduce((total, factor) => total * factor);
+      const product = numbers.toString().split('').reduce((total, factor) => total * factor);
       persistCounter++;
       if (product > 9) {
         persist(product)
