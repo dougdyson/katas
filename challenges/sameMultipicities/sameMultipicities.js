@@ -1,11 +1,15 @@
-function sameMultiplicity (arr1, arr2) {
-
+function sameMultiplicity (a1, a2) {
   let isSame = false;
-
-  if (arr1.length > 0 && (arr1.length == arr2.length)){
-    isSame = true;
+  
+  if (a1.length == a2.length){
+    for (let number of a1){
+      if (a2.includes(number * number)){
+        isSame = true;
+      } else {
+        return false;
+      }
+    }
   }
-
   return isSame;
 }
 
