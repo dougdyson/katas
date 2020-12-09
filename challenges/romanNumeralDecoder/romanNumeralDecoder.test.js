@@ -3,7 +3,7 @@
 
 const romanNumeralDecoder = require('./romanNumeralDecoder');
 
-it('Returns null if input parameters is empty', function() {
+it('Returns null if input parameter is empty', function() {
   expect(romanNumeralDecoder('')).toBe(null);
 })
 
