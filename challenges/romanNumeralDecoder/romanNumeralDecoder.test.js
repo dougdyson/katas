@@ -11,6 +11,10 @@ it('Returns null if input is not a string', function(){
   expect(romanNumeralDecoder(2)).toBe(null);
 })
 
+it('Returns null if character is not a valid roman numeral', function(){
+  expect(romanNumeralDecoder('K')).toBe(null);
+})
+
 it('Translates Roman numerals into integers', function() {
   expect(romanNumeralDecoder('XXI')).toBe(21);
   expect(romanNumeralDecoder('I')).toBe(1);

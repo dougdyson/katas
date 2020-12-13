@@ -1,4 +1,4 @@
-tfunction romanNumeralDecoder (romanNumeral) {
+function romanNumeralDecoder (romanNumeral) {
 
   if (typeof(romanNumeral) !== 'string' || romanNumeral === '') return null;
   
@@ -6,6 +6,13 @@ tfunction romanNumeralDecoder (romanNumeral) {
 
   const length = romanNumeral.length;
   const romanNumeralArr = romanNumeral.split();
+
+  console.log(romanNumeralArr);
+
+  // test for non-valid strings
+  if (!validRomanNumerals.includes(romanNumeral)) {
+    return null;
+  }
 
 
   
