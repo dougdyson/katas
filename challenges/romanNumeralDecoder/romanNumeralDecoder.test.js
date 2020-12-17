@@ -16,8 +16,8 @@ it('Returns null if character is not a valid roman numeral', function(){
 })
 
 it('Translates Roman numerals into integers', function() {
-  expect(romanNumeralDecoder('XXI')).toBe(21);
   expect(romanNumeralDecoder('I')).toBe(1);
+  expect(romanNumeralDecoder('XXI')).toBe(21);
   expect(romanNumeralDecoder('IV')).toBe(4);
   expect(romanNumeralDecoder('MMVIII')).toBe(2008);
   expect(romanNumeralDecoder('MDCLXVI')).toBe(1666);
