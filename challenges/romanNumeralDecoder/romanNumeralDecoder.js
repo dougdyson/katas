@@ -15,11 +15,11 @@ function romanNumeralDecoder (romanNumeral) {
     }
 
     if (prevValue >= currentValue) {
-      accumulator += currentValue;
+      accumulator += currentValue; //?
     } else {
-      accumulator = currentValue - prevValue; 
+      accumulator = currentValue - accumulator; //?
     }
-    prevValue = currentValue; 
+    prevValue = currentValue; //?
   }
 
   return accumulator; 
@@ -29,8 +29,9 @@ romanNumeralDecoder('I'); //?
 romanNumeralDecoder('II'); //?
 romanNumeralDecoder('XXI'); //?
 romanNumeralDecoder('IV'); //?
-romanNumeralDecoder('MDCC'); //?
+romanNumeralDecoder('MDCC') === 1700; //?
 romanNumeralDecoder('LXXXVII'); //?
+romanNumeralDecoder('LXXXIV'); //?
 
 
 module.exports = romanNumeralDecoder;
