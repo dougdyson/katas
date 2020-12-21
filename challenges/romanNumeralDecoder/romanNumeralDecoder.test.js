@@ -30,7 +30,7 @@ it('Translates Roman numerals into integers', function() {
 it('Translates Roman numerals into integers where numeral ends with IV (4) or IX (9)', function() {
   expect(romanNumeralDecoder('IV')).toBe(4);
   expect(romanNumeralDecoder('IX')).toBe(9);
-  expect(romanNumeralDecoder('XIX')).toBe(19);
+  expect(romanNumeralDecoder('XIV')).toBe(14);
   expect(romanNumeralDecoder('MMIX')).toBe(2009);
   expect(romanNumeralDecoder('MDCLXIV')).toBe(1664);
 })
