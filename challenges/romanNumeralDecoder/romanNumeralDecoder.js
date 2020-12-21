@@ -9,18 +9,18 @@ function romanNumeralDecoder (romanNumeral) {
   for (let i = 0; i < romanNumeral.length; i++){
     
     const currentLetter = romanNumeral.charAt(i); 
-    const currentValue = romanNumerals[currentLetter]; 
+    const currentValue = romanNumerals[currentLetter]; //?
     
     if (romanNumerals[currentLetter] === undefined) {
       return null;
     }
 
     if (prevValue >= currentValue) { 
-      accumulator += currentValue; 
-      decodedNumeral+= currentValue; 
+      accumulator += currentValue; //?
+      decodedNumeral+= currentValue; //?
     } else {
-      accumulator = currentValue - (prevValue * 2);
-      decodedNumeral += accumulator; 
+      accumulator = currentValue - (prevValue * 2); //?
+      decodedNumeral += accumulator; //?
     }
     prevValue = currentValue;
   }
@@ -30,11 +30,12 @@ function romanNumeralDecoder (romanNumeral) {
 
 // romanNumeralDecoder('I'); 
 // romanNumeralDecoder('II'); 
+// romanNumeralDecoder('IV'); //?
 // romanNumeralDecoder('XXI'); 
-romanNumeralDecoder('XLIV'); //?
-// romanNumeralDecoder('MDCC')  
-// romanNumeralDecoder('LXXXV'); 
-// romanNumeralDecoder('LXXXIX'); 
+// romanNumeralDecoder('XLIV');
+// romanNumeralDecoder('MMV')  //?
+// romanNumeralDecoder('LXXXVIII'); //?
+//romanNumeralDecoder('MDCLXIV');  //?
 
 
 module.exports = romanNumeralDecoder;
