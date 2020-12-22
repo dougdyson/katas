@@ -3,8 +3,9 @@
 
 const romanNumeralDecoder = require('./romanNumeralDecoder');
 
-it('Returns null if input parameter is empty', function() {
+it('Returns null if input parameter is empty or null', function() {
   expect(romanNumeralDecoder('')).toBe(null);
+  expect(romanNumeralDecoder(null)).toBe(null);
 })
 
 it('Returns null if input is not a string', function() {
@@ -20,7 +21,8 @@ it('Returns null if input contains an invalid roman numeral', function() {
 })
 
 it('Translates Roman numerals into integers', function() {
-  expect(romanNumeralDecoder('I')).toBe(1);
+  expect(romanNumeralDecoder('I')).toBe(1); // smallest roman numeral
+  expect(romanNumeralDecoder('MMMDCCCLXXXVIII')).toBe(3888); // largest roman numeral
   expect(romanNumeralDecoder('XXI')).toBe(21);
   expect(romanNumeralDecoder('VI')).toBe(6);
   expect(romanNumeralDecoder('MMVIII')).toBe(2008);

@@ -5,6 +5,8 @@ function romanNumeralDecoder (romanNumeral) {
   let decodedNumeral = null;
   let accumulator = null;
   let prevValue = null;
+
+  if (romanNumeral === null) return null;
   
   for (let i = 0; i < romanNumeral.length; i++){
     
