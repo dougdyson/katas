@@ -12,6 +12,8 @@ function romanNumeralDecoder (romanNumeral) {
   let decodedNumeral = null;
   let accumulator = null;
   let prevValue = null;
+
+  //let decodedNumeral = encodedNumerals.reduce(())
   
   for (let i = 0; i < encodedNumerals.length; i++){
     
