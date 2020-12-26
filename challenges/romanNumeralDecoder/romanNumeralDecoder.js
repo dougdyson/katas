@@ -9,11 +9,13 @@ function romanNumeralDecoder (romanNumeral) {
   
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
-  let decodedNumeral = null;
+  //let decodedNumeral = null;
   let accumulator = null;
-  let prevValue = null;
+  //let prevValue = null;
 
-  //let decodedNumeral = encodedNumerals.reduce(())
+  return encodedNumerals.reduce((decodedNumeral, prevValue) =>{
+    
+  })
   
   for (let i = 0; i < encodedNumerals.length; i++){
     
