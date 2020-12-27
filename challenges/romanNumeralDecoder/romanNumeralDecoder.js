@@ -1,7 +1,7 @@
 function romanNumeralDecoder (romanNumeral) {
   
   // refactor this function to use an array and reduce
-  // reduce syntax: array.reduce((accumulator, current-value) => {filter logic})
+  // reduce syntax: array.reduce((accumulator, currentValue, currentIndex, array), initialValue)
 
   if (romanNumeral === null || typeof(romanNumeral) !== 'string') return null;
 
@@ -14,11 +14,6 @@ function romanNumeralDecoder (romanNumeral) {
   //let prevValue = null;
 
   return encodedNumerals.reduce((decodedNumeral, prevValue) =>{
-    
-  })
-  
-  for (let i = 0; i < encodedNumerals.length; i++){
-    
     const currentLetter = encodedNumerals[i]; 
     const currentValue = romanNumerals[currentLetter]; 
     
@@ -34,9 +29,9 @@ function romanNumeralDecoder (romanNumeral) {
       decodedNumeral += accumulator;
     }
     prevValue = currentValue;
-  }
+  })
+  
 
-  return decodedNumeral; 
 }
 
 // // ==================================================
