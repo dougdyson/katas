@@ -3,7 +3,7 @@ function romanNumeralDecoder (romanNumeral) {
   // refactor this function to use an array and reduce
   // reduce syntax: array.reduce((accumulator, currentValue, currentIndex, array), initialValue)
 
-  if (romanNumeral === null || typeof(romanNumeral) !== 'string') return null;
+  if (romanNumeral === null || romanNumeral === '' || typeof(romanNumeral) !== 'string') return null;
 
   const encodedNumerals = romanNumeral.split('');
   
