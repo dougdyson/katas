@@ -23,7 +23,7 @@ function romanNumeralDecoder (romanNumeral) {
 
     if (prevValue >= currentValue) { 
       accumulator += currentValue;
-      decodedNumeral+= currentValue;
+      decodedNumeral += currentValue;
     } else {
       accumulator = currentValue - (prevValue * 2); 
       decodedNumeral += accumulator;
