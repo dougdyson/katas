@@ -1,6 +1,6 @@
 function isPrime(number) {
 
-  return null;
+  return false;
 
 }
 
