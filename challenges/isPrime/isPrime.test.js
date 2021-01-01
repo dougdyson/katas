@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/5262119038c0985a5b00029f/train/javascript
 
-const isPrime = require('./isPrime')
+const isPrime = require('./isPrime');
 
 it("Validation tests", () => {
 
