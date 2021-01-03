@@ -1,6 +1,6 @@
 function isPrime(number) {
 
-  return false;
+  return (number % 2 === 0 && typeof(number) === number || number === 2) ? true : false;
 
 }
 
