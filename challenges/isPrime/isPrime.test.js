@@ -10,25 +10,26 @@ it("Validation tests", () => {
   expect(isPrime({})).toBe(false);
   expect(isPrime([])).toBe(false);
 
-})
+});
 
 it("Basic tests", () => {
   
+  expect(isPrime(-3)).toBe(false);
+  expect(isPrime(-2)).toBe(false);
+  expect(isPrime(-1)).toBe(false);
   expect(isPrime(0)).toBe(false);
   expect(isPrime(1)).toBe(false);
   expect(isPrime(2)).toBe(true);
-  //expect(isPrime(73)).toBe(true);
-  //expect(isPrime(75)).toBe(false);
-  //expect(isPrime(-1)).toBe(false);
+  expect(isPrime(3)).toBe(true);
   
 });
 
 it("Test prime", () => {
-  
-  expect(isPrime(3)).toBe(true);
   expect(isPrime(5)).toBe(true);
   expect(isPrime(7)).toBe(true);
   expect(isPrime(41)).toBe(true);
+  expect(isPrime(73)).toBe(true);
+  expect(isPrime(75)).toBe(false);
   expect(isPrime(5099)).toBe(true);
   
 });

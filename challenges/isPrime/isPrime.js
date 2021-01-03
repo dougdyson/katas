@@ -1,6 +1,10 @@
 function isPrime(number) {
 
-  return (number % 2 === 0 && typeof(number) === number || number === 2) ? true : false;
+  if (typeof(number) !== 'number' || number === null || number < 2) {
+    return false;
+  }
+
+  return (Number.isInteger(number / 2) || Number.isInteger(number / 3)) ? true : false;
 
 }
 
