@@ -5,14 +5,8 @@ function isPrime(number) {
     return false;
   }
 
-  // this works but is not scalable
-  //return (number % 2 === 0 || number % 3 === 0) ? true : false;
-
-  // recursion or reduce seem like possible approaches.
-  // the trick is reducing the amount of computation required as much as possible, but
-  // calculating whether a modulo divisor is necessary perhaps costs as much as
-  // calculating the modulo operation result.
-
+  // the below works and passes the sample tests but it times out in the codewar test runner.
+  // codewars' generic recommendation is refactoring for effeciency.
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
       return false;
@@ -21,8 +15,10 @@ function isPrime(number) {
 
   return true;
 
-  // the above works and passes the sample tests but it times out in the codewar test runner.
-  // codewars' generic recommendation is refactoring for effeciency.
+  // recursion or reduce seem like potential approaches.
+  // the trick is reducing the amount of computation required as much as possible, but
+  // calculating whether a modulo divisor is necessary perhaps costs as much as
+  // calculating the modulo operation result.
 
 }
 
