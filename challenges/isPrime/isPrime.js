@@ -4,7 +4,13 @@ function isPrime(number) {
     return false;
   }
 
-  return (Number.isInteger(number / 2) || Number.isInteger(number / 3)) ? true : false;
+  // this works but is not scalable
+  return (number % 2 === 0 || number % 3 === 0) ? true : false;
+
+  // recursion or reduce seem like possible approaches
+  // the trick is reducing the amount of computation required as much as possible, but
+  // calculating whether a modulo divisor is necessary perhaps costs as much as
+  // calculating the modulo operatoin result
 
 }
 
