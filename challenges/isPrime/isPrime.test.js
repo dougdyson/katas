@@ -31,6 +31,10 @@ it("Test prime", () => {
   expect(isPrime(73)).toBe(true);
   expect(isPrime(75)).toBe(false);
   expect(isPrime(5099)).toBe(true);
+  expect(isPrime(131071)).toBe(true);
+  expect(isPrime(524287)).toBe(true);
+  expect(isPrime(6700417)).toBe(true);
+  expect(isPrime(2147483647)).toBe(true);
   
 });
 
