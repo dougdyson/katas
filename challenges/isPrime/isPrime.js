@@ -7,7 +7,7 @@ function isPrime(number) {
   if (typeof(number) !== 'number' || number === null || number < 2) return false;
 
   // check precalculated primes
-  if (primes.includes(number)) return true;
+  // if (primes.includes(number)) return true;
 
   // if input argument not in precalculated primes, test via modulo
   for (let i = 1; i <= Math.sqrt(number); i++) {
