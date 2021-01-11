@@ -10,7 +10,7 @@ function isPrime(number) {
   // if (primes.includes(number)) return true;
   // if input argument not in precalculated primes, test via modulo
 
-  for (let i = 1; Math.sqrt(number) > i; i--) {
+  for (let i = 1; Math.sqrt(number) > i; i++) {
     if (number / i === 0) {
       return false;
     }
