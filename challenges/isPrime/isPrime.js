@@ -8,8 +8,8 @@ function isPrime(number) {
 
   // check precalculated primes
   // if (primes.includes(number)) return true;
+  
   // if input argument not in precalculated primes, test via modulo
-
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
       return false;
