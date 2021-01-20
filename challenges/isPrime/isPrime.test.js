@@ -2,16 +2,6 @@
 
 const isPrime = require('./isPrime');
 
-it("Validation tests", () => {
-
-  expect(isPrime(null)).toBe(false);
-  expect(isPrime('')).toBe(false);
-  expect(isPrime('K')).toBe(false);
-  expect(isPrime({})).toBe(false);
-  expect(isPrime([])).toBe(false);
-
-});
-
 it("Basic tests", () => {
   
   expect(isPrime(-3)).toBe(false);
@@ -21,7 +11,6 @@ it("Basic tests", () => {
   expect(isPrime(1)).toBe(false);
   expect(isPrime(2)).toBe(true);
   expect(isPrime(3)).toBe(true);
-  
 });
 
 it("Test prime", () => {
@@ -35,11 +24,9 @@ it("Test prime", () => {
   expect(isPrime(524287)).toBe(true);
   expect(isPrime(6700417)).toBe(true);
   expect(isPrime(2147483647)).toBe(true);
-  
 });
 
 it("Test not prime", () => {
-  
   expect(isPrime(4)).toBe(false);
   expect(isPrime(6)).toBe(false);
   expect(isPrime(8)).toBe(false);
@@ -48,5 +35,4 @@ it("Test not prime", () => {
   expect(isPrime(-5)).toBe(false);
   expect(isPrime(-8)).toBe(false);
   expect(isPrime(-41)).toBe(false);
-  
 });
