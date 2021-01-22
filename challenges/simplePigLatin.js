@@ -6,7 +6,11 @@ function pigIt(englishSentence) {
 
   for (let i = 0; i < englishSentence.length; i++) {
     const letter = englishSentence[i];
-    console.log(letter);
+    if (letters.includes(letter)) {
+      console.log(letter, ' is a letter');
+    } else {
+      console.log(letter, ' is not a letter');
+    }
   }
   
   return null;
