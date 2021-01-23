@@ -1,36 +1,31 @@
 function romanNumeralDecoder (romanNumeral) {
   
-  // refactor this function to calculate from right to left, rather than left to right
-  // this direction avoids having to recalcuate for edge cases
-
   if (romanNumeral === null) return null;
   
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
-
+  
   let decodedNumeral = null;
   let prevValue = null;
-
+  
+  // calculate from right to left, rather than left to right
+  // this avoids having to recalcuate for edge cases
   for (let i = romanNumeral.length - 1; i >= 0; i--) {
     
     const currentLetter = romanNumeral.charAt(i); 
     const currentValue = romanNumerals[currentLetter];
-    console.log('currentLetter:', currentLetter, '; currentValue:', currentValue, '; prevValue:', prevValue, '; decodedNumeral:', decodedNumeral);
-    
-    if (romanNumerals[currentLetter] === undefined) {
-      return null;
-    }
 
+    // check if character is a valid roman numberal
+    if (romanNumerals[currentLetter] === undefined) return null
+
+    // check for edge case (i.e. IV for 4 or IX for 9)
     if (prevValue > currentValue) {
-      console.log('edge case');
-      decodedNumeral = decodedNumeral + currentValue - prevValue;
+      decodedNumeral = decodedNumeral - currentValue;
     } else {
-      console.log('simple addition');
       decodedNumeral = decodedNumeral + currentValue;
     }
-    //console.log(decodedNumeral, prevValue, currentValue);
     prevValue = currentValue;
   }
-  console.log('EOF');
+
   return decodedNumeral;
 
 }
@@ -75,15 +70,5 @@ function romanNumeralDecoderV1 (romanNumeral) {
 
   return decodedNumeral; 
 }
-
-// romanNumeralDecoder('I');  
-// romanNumeralDecoder('II');  
-// romanNumeralDecoder('IV'); 
-// romanNumeralDecoder('XXI');  
-// romanNumeralDecoder('XLIV'); 
-// romanNumeralDecoder('MMV'); 
-// romanNumeralDecoder('LXXXVIII'); 
-// romanNumeralDecoder('MDCLXIV');  
-
 
 module.exports = romanNumeralDecoder;
