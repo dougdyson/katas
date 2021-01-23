@@ -14,7 +14,7 @@ function romanNumeralDecoder (romanNumeral) {
     const currentLetter = romanNumeral.charAt(i); 
     const currentValue = romanNumerals[currentLetter];
 
-    // check if character is a valid roman numberal
+    // check if character is a valid roman numeral
     if (romanNumerals[currentLetter] === undefined) return null
 
     // check for edge case (i.e. IV for 4 or IX for 9)
