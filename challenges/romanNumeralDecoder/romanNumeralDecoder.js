@@ -1,4 +1,41 @@
 function romanNumeralDecoder (romanNumeral) {
+  // reduce using reduce
+  
+  if (romanNumeral === null) return null;
+  
+  const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
+  
+  let prevValue = null;
+
+  return romanNumeral.split('')
+                     .reduce((decodedNumeral, currentValue) => {
+
+  }
+  
+  // calculate from right to left, rather than left to right
+  // this avoids having to recalcuate for edge cases
+  for (let i = romanNumeral.length - 1; i >= 0; i--) {
+    
+    const currentLetter = romanNumeral.charAt(i); 
+    const currentValue = romanNumerals[currentLetter];
+
+    // check if character is a valid roman numeral
+    if (romanNumerals[currentLetter] === undefined) return null
+
+    // check for edge case (i.e. IV for 4 or IX for 9)
+    if (prevValue > currentValue) {
+      decodedNumeral = decodedNumeral - currentValue;
+    } else {
+      decodedNumeral = decodedNumeral + currentValue;
+    }
+    prevValue = currentValue;
+  }
+
+  return decodedNumeral;
+
+}
+
+function romanNumeralDecoderV2 (romanNumeral) {
   
   if (romanNumeral === null) return null;
   

@@ -95,7 +95,7 @@ const factorialProduct = numbers.reduce((product, factor) => product * factor); 
 
 // full reduce, takes an existing array and performs a function for each value in the array,
 // the return value of which is stored in an accululator. Initial variables include:
-// array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+// array.reduce(function(accumulator, currentValue, currentIndex, sourceArray), initialValue)
 
 
 // pop, removes and returns the last element of an existing array, mutating the existing array
