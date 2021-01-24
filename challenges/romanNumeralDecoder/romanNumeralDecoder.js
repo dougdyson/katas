@@ -28,6 +28,11 @@ function romanNumeralDecoder (romanNumeral) {
 
   return decodedNumeral;
 
+  // Above is the second solution, which is much more straightforward and uses less code.
+  // 
+  // Since decodedNumeral is an acculuator variable, this appears a good candidate for .reduce
+  // Going to do a refactor with reduce and see if it reduces code further.
+
 }
 
 // ==================================================
