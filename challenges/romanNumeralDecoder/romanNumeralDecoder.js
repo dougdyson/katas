@@ -7,33 +7,24 @@ function romanNumeralDecoder (romanNumeral) {
   
   let prevValue = null;
 
-  return romanNumeral.split('')
-                     .reduce((decodedNumeral, currentValue) => {
+  console.log(romanNumeral, typeof(romanNumeral));
+  const encodedNumerals = romanNumeral.split('');
+  console.log('encodedNumerals:', encodedNumerals);
+  let decodedNumeral = null;
 
-  }
-  
-  // calculate from right to left, rather than left to right
-  // this avoids having to recalcuate for edge cases
-  for (let i = romanNumeral.length - 1; i >= 0; i--) {
+  return encodedNumerals.reduceRight((decodedNumeral, currentValue ))
+  // return encodedNumerals.reduce((decodedNumeral, currentValue, currentIndex) => {
     
-    const currentLetter = romanNumeral.charAt(i); 
-    const currentValue = romanNumerals[currentLetter];
+    const currentLetter = romanNumeral[currentIndex]; 
+    currentValue = romanNumerals[currentLetter];
+  //   console.log('currentLetter:', currentLetter, 'currentValue:', currentValue);
 
-    // check if character is a valid roman numeral
-    if (romanNumerals[currentLetter] === undefined) return null
-
-    // check for edge case (i.e. IV for 4 or IX for 9)
-    if (prevValue > currentValue) {
-      decodedNumeral = decodedNumeral - currentValue;
-    } else {
-      decodedNumeral = decodedNumeral + currentValue;
-    }
-    prevValue = currentValue;
-  }
-
-  return decodedNumeral;
+  // }, null)
+  return null;
 
 }
+
+romanNumeralDecoder('IV');
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
