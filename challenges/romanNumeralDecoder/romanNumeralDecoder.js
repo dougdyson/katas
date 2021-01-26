@@ -1,28 +1,31 @@
 function romanNumeralDecoder (romanNumeral) {
-  // reduce using reduceRight
+  // using reduceRight
   
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
   let prevValue = null;
 
-  return romanNumeral.split('').reduceRight(function(decodedNumeral, currentValue) {  
-
-    if (prevValue > currentValue) {
-      decodedNumeral -= romanNumerals[currentValue]
+  return romanNumeral.split('').reduceRight(function(decodedNumber, key) {  
+    
+    const currentValue = romanNumerals[key];
+    
+    if (prevValue > currentValue) { 
+      decodedNumber -= currentValue;
     } else {
-      decodedNumeral += romanNumerals[currentValue]
+      decodedNumber += currentValue; 
     }
     
     prevValue = currentValue;
     
-    return decodedNumeral;
-    
+    return decodedNumber;
+
   }, null)
 
 }
 
 // romanNumeralDecoder('IV');//?
 // romanNumeralDecoder('MMMDCCCLXXXVIII');//?
+// romanNumeralDecoderV2('MMMDCCCLXXXVIII');//?
 // romanNumeralDecoder('IXX');//?
 
 function romanNumeralDecoderV2 (romanNumeral) {
@@ -46,9 +49,9 @@ function romanNumeralDecoderV2 (romanNumeral) {
 
     // check for edge case (i.e. IV for 4 or IX for 9)
     if (prevValue > currentValue) {
-      decodedNumeral = decodedNumeral - currentValue;
+      decodedNumeral -=currentValue; //?
     } else {
-      decodedNumeral = decodedNumeral + currentValue;
+      decodedNumeral += currentValue; //?
     }
     prevValue = currentValue;
   }
