@@ -1,30 +1,30 @@
 function romanNumeralDecoder (romanNumeral) {
   // reduce using reduce
   
-  if (romanNumeral === null) return null;
-  
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
   let prevValue = null;
 
-  console.log(romanNumeral, typeof(romanNumeral));
-  const encodedNumerals = romanNumeral.split('');
-  console.log('encodedNumerals:', encodedNumerals);
-  let decodedNumeral = null;
-
-  return encodedNumerals.reduceRight((decodedNumeral, currentValue ))
-  // return encodedNumerals.reduce((decodedNumeral, currentValue, currentIndex) => {
+  return romanNumeral.split('').reduceRight(function(decodedNumeral, currentValue) {  
     
-    const currentLetter = romanNumeral[currentIndex]; 
-    currentValue = romanNumerals[currentLetter];
-  //   console.log('currentLetter:', currentLetter, 'currentValue:', currentValue);
+    if (romanNumerals[currentValue] === undefined) return null//?
 
-  // }, null)
-  return null;
+    if (prevValue > currentValue) {
+      decodedNumeral -= romanNumerals[currentValue]
+    } else {
+      decodedNumeral += romanNumerals[currentValue]
+    }
+    
+    prevValue = currentValue; //?
+    
+    return decodedNumeral; //?
+  }, null)
 
 }
 
-romanNumeralDecoder('IV');
+// romanNumeralDecoder('IV');//?
+// romanNumeralDecoder('MMMDCCCLXXXVIII');//?
+// romanNumeralDecoder('IK');//?
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
