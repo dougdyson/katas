@@ -1,8 +1,11 @@
 function romanNumeralDecoder (romanNumeral) {
-  // using reduceRight
+  
+  // validate input variable
+  if (typeof(romanNumeral) != 'string' || romanNumeral === '') return null;
   
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
+  // used later to compare for IV (4) and IX (9)
   let prevValue = null;
 
   return romanNumeral.split('').reduceRight(function(decodedNumber, key) {  
@@ -22,11 +25,6 @@ function romanNumeralDecoder (romanNumeral) {
   }, null)
 
 }
-
-// romanNumeralDecoder('IV');//?
-// romanNumeralDecoder('MMMDCCCLXXXVIII');//?
-// romanNumeralDecoderV2('MMMDCCCLXXXVIII');//?
-// romanNumeralDecoder('IXX');//?
 
 function romanNumeralDecoderV2 (romanNumeral) {
   

@@ -5,13 +5,13 @@ const romanNumeralDecoder = require('./romanNumeralDecoder');
 
 it('Returns null if input parameter is empty or null', function() {
   expect(romanNumeralDecoder('')).toBe(null);
-  expect(romanNumeralDecoder(null)).toBe(NaN);
+  expect(romanNumeralDecoder(null)).toBe(null);
 })
 
 it('Returns null if input is not a string', function() {
-  expect(romanNumeralDecoder(2)).toBe(NaN);
-  expect(romanNumeralDecoder({})).toBe(NaN);
-  expect(romanNumeralDecoder([])).toBe(NaN);
+  expect(romanNumeralDecoder(2)).toBe(null);
+  expect(romanNumeralDecoder({})).toBe(null);
+  expect(romanNumeralDecoder([])).toBe(null);
 })
 
 it('Returns null if input contains an invalid roman numeral', function() {
