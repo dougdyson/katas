@@ -3,21 +3,21 @@
 
 const romanNumeralDecoder = require('./romanNumeralDecoder');
 
-it.skip('Returns null if input parameter is empty or null', function() {
+it('Returns null if input parameter is empty or null', function() {
   expect(romanNumeralDecoder('')).toBe(null);
-  expect(romanNumeralDecoder(null)).toBe(null);
+  expect(romanNumeralDecoder(null)).toBe(NaN);
 })
 
-it.skip('Returns null if input is not a string', function() {
-  expect(romanNumeralDecoder(2)).toBe(null);
-  expect(romanNumeralDecoder({})).toBe(null);
-  expect(romanNumeralDecoder([])).toBe(null);
+it('Returns null if input is not a string', function() {
+  expect(romanNumeralDecoder(2)).toBe(NaN);
+  expect(romanNumeralDecoder({})).toBe(NaN);
+  expect(romanNumeralDecoder([])).toBe(NaN);
 })
 
-it.skip('Returns null if input contains an invalid roman numeral', function() {
-  expect(romanNumeralDecoder('K')).toBe(null);
-  expect(romanNumeralDecoder('%')).toBe(null);
-  expect(romanNumeralDecoder('-')).toBe(null);
+it('Returns null if input contains an invalid roman numeral', function() {
+  expect(romanNumeralDecoder('K')).toBe(NaN);
+  expect(romanNumeralDecoder('%')).toBe(NaN);
+  expect(romanNumeralDecoder('-')).toBe(NaN);
 })
 
 it('Translates Roman numerals into integers', function() {
