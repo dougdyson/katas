@@ -12,7 +12,7 @@ function romanNumeralDecoder (romanNumeral) {
     
     const currentValue = romanNumerals[key];
     
-    prevValue > currentValue ? decodedNumeral -=currentValue : decodedNumeral += currentValue;
+    prevValue > currentValue ? decodedNumber -=currentValue : decodedNumber += currentValue;
     
     prevValue = currentValue;
     
