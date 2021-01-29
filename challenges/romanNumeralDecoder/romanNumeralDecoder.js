@@ -8,7 +8,7 @@ function romanNumeralDecoder (romanNumeral) {
   // used later to compare for IV (4) and IX (9)
   let prevValue = null;
 
-  return romanNumeral.split('').reduceRight(function(decodedNumber, key) {  
+  return [...romanNumeral].reduceRight(function(decodedNumber, key) {  
     
     const currentValue = romanNumerals[key];
     
@@ -19,6 +19,10 @@ function romanNumeralDecoder (romanNumeral) {
     return decodedNumber;
 
   }, null)
+
+  // NOTES
+  // Reviewing other solutions and see that map can be used in this context
+  // So, will do a refactor using map.  Also, spread
 
 }
 
