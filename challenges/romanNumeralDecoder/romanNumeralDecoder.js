@@ -1,8 +1,5 @@
 function romanNumeralDecoder (romanNumeral) {
   
-  // validate input variable
-  if (typeof(romanNumeral) != 'string' || romanNumeral === '') return null;
-  
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
   // used later to compare for IV (4) and IX (9)
@@ -12,7 +9,9 @@ function romanNumeralDecoder (romanNumeral) {
     
     const currentValue = romanNumerals[key];
     
-    prevValue > currentValue ? decodedNumber -=currentValue : decodedNumber += currentValue;
+    prevValue > currentValue 
+      ? decodedNumber -=currentValue 
+      : decodedNumber += currentValue;
     
     prevValue = currentValue;
     
