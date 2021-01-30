@@ -2,28 +2,31 @@ function romanNumeralDecoder (romanNumeral) {
   
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
-  // used later to compare for IV (4) and IX (9)
   let prevValue = null;
+  
+  return [...romanNumeral]
+    .map(key => romanNumerals[key])
+    .reduceRight(function(accumulator, currentValue) {  
 
-  return [...romanNumeral].reduceRight(function(decodedNumber, key) {  
-    
-    const currentValue = romanNumerals[key];
-    
-    prevValue > currentValue 
-      ? decodedNumber -=currentValue 
-      : decodedNumber += currentValue;
+    prevValue > currentValue
+      ? accumulator -=currentValue 
+      : accumulator += currentValue;
     
     prevValue = currentValue;
     
-    return decodedNumber;
+    return accumulator;
 
-  }, null)
-
-  // NOTES
-  // Reviewing other solutions and see that map can be used in this context
-  // So, will do a refactor using map.  Also, spread
-
+  }, null)  
 }
+// NOTES
+// Reviewing other solutions and see that map can be used in this context
+// So, will do a refactor using map.  Also, spread.
+//
+// Update: refactor complete and successful!
+// While I could make the above code even more terse, the current code
+// is easy to read and follow.  Marks a 41% reduction in code!
+
+romanNumeralDecoder('IV');
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
@@ -57,7 +60,7 @@ function romanNumeralDecoderV2 (romanNumeral) {
 
   // Above is the second solution, which is much more straightforward and uses less code.
   // 
-  // Since decodedNumeral is an acculuator variable, this appears a good candidate for .reduce
+  // Since decodedNumeral is an accumulator variable, this appears a good candidate for .reduce
   // Going to do a refactor with reduce and see if it reduces code further.
 
 }
@@ -72,8 +75,6 @@ function romanNumeralDecoderV2 (romanNumeral) {
 // Seeing that I needed an accumulator, going to do a refactor using an array with the reduce method.
 //
 function romanNumeralDecoderV1 (romanNumeral) {
-
-  if (romanNumeral === null) return null;
   
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
