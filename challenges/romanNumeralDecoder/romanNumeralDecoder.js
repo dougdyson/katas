@@ -20,7 +20,7 @@ function romanNumeralDecoder (romanNumeral) {
 //
 // Update: refactor complete and successful!
 // While I could make the above code even more terse, the current code
-// is easy to read and follow.  Marks a 41% reduction in code!
+// is easy to read and follow.  Marks a 47% reduction in code!
 
 //romanNumeralDecoder('IV'); //?
 
