@@ -6,11 +6,11 @@ function romanNumeralDecoder (romanNumeral) {
     .map(key => romanNumerals[key])
     .reduceRight(function(accumulator, currentValue, index, array) {  
     
-    array[index + 1] > currentValue //?
-      ? accumulator -=currentValue //?
-      : accumulator += currentValue; //?
+    array[index + 1] > currentValue
+      ? accumulator -=currentValue
+      : accumulator += currentValue;
     
-    return accumulator; //?
+    return accumulator;
 
   }, null)  
 }
@@ -22,7 +22,7 @@ function romanNumeralDecoder (romanNumeral) {
 // While I could make the above code even more terse, the current code
 // is easy to read and follow.  Marks a 41% reduction in code!
 
-romanNumeralDecoder('IV'); //?
+//romanNumeralDecoder('IV'); //?
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
