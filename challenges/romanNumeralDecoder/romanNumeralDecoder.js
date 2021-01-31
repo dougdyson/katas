@@ -1,7 +1,7 @@
 function romanNumeralDecoder (romanNumeral) {
   return [...romanNumeral]
     .map(k => ({'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}[k]))
-    .reduceRight(function(a, v, i, arr) {  
+    .reduceRight((a, v, i, arr) => {  
       arr[i + 1] > v
         ? a -= v
         : a += v;
