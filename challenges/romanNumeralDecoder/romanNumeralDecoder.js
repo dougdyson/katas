@@ -2,19 +2,15 @@ function romanNumeralDecoder (romanNumeral) {
   
   const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
   
-  let prevValue = null;
-  
   return [...romanNumeral]
     .map(key => romanNumerals[key])
-    .reduceRight(function(accumulator, currentValue) {  
-
-    prevValue > currentValue
-      ? accumulator -=currentValue 
-      : accumulator += currentValue;
+    .reduceRight(function(accumulator, currentValue, index, array) {  
     
-    prevValue = currentValue;
+    array[index + 1] > currentValue //?
+      ? accumulator -=currentValue //?
+      : accumulator += currentValue; //?
     
-    return accumulator;
+    return accumulator; //?
 
   }, null)  
 }
@@ -26,7 +22,7 @@ function romanNumeralDecoder (romanNumeral) {
 // While I could make the above code even more terse, the current code
 // is easy to read and follow.  Marks a 41% reduction in code!
 
-romanNumeralDecoder('IV');
+romanNumeralDecoder('IV'); //?
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
