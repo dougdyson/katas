@@ -7,7 +7,7 @@ function romanNumeralDecoder (romanNumeral) {
     .reduceRight(function(accumulator, currentValue, index, array) {  
     
     array[index + 1] > currentValue
-      ? accumulator -=currentValue
+      ? accumulator -= currentValue
       : accumulator += currentValue;
     
     return accumulator;
