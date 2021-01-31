@@ -10,7 +10,7 @@ function romanNumeralDecoder (romanNumeral) {
   null)
 }
 // NOTES
-// Reviewing other solutions and see that map can be used in this context
+// Reviewing other solutions and saw that map can be used in this context
 // So, will do a refactor using map.  Also, spread.
 //
 // Update: refactor complete and successful!
@@ -18,8 +18,6 @@ function romanNumeralDecoder (romanNumeral) {
 // is easy to read and follow.  Marks a 47% reduction in code!
 //
 // Update: went full terse mode for a 77% reduction in code!!!
-
-//romanNumeralDecoder('IV'); //?
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
@@ -54,12 +52,12 @@ function romanNumeralDecoderV2 (romanNumeral) {
   // Above is the second solution, which is much more straightforward and uses less code.
   // 
   // Since decodedNumeral is an accumulator variable, this appears a good candidate for .reduce
-  // Going to do a refactor with reduce and see if it reduces code further.
+  // Going to do a refactor with reduce and see if it further reduces code.
 
 }
 
 // ==================================================
-// This is the first solution. 
+// Below is the first solution. 
 // I decided to not create an array from the input argument.
 // My thinking was that since every character in the input argument needs to be evaluated,
 // and characters in a string are iterable, should be possible to solve without creating an array. 
