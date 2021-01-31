@@ -4,8 +4,8 @@ function romanNumeralDecoder (romanNumeral) {
     .reduceRight((a, v, i, arr) => {  
       arr[i + 1] > v
         ? a -= v
-        : a += v;
-      return a;
+        : a += v
+      return a
     }, null)
 } 
 // NOTES
@@ -16,7 +16,7 @@ function romanNumeralDecoder (romanNumeral) {
 // While I could make the above code even more terse, the current code
 // is easy to read and follow.  Marks a 47% reduction in code!
 //
-// Update: went full terse mode for a 77% reduction in code!!!
+// Update: went full terse mode for a 78% reduction in code!!!
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
