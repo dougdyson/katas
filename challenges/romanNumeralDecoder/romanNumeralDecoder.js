@@ -6,7 +6,7 @@ function romanNumeralDecoder (romanNumeral) {
         ? a -= v
         : a += v;
       return a;
-    },null)
+    }, null)
 } 
 // NOTES
 // Reviewing other solutions and saw that map can be used in this context
