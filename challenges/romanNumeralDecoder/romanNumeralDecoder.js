@@ -1,18 +1,13 @@
 function romanNumeralDecoder (romanNumeral) {
-  
-  const romanNumerals = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
-  
   return [...romanNumeral]
-    .map(key => romanNumerals[key])
-    .reduceRight(function(accumulator, currentValue, index, array) {  
-    
-    array[index + 1] > currentValue
-      ? accumulator -= currentValue
-      : accumulator += currentValue;
-    
-    return accumulator;
-
-  }, null)  
+    .map(k => ({'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}[k]))
+    .reduceRight(function(a, v, i, arr) {  
+      arr[i + 1] > v
+        ? a -= v
+        : a += v;
+      return a;
+    },
+  null)
 }
 // NOTES
 // Reviewing other solutions and see that map can be used in this context
@@ -21,6 +16,8 @@ function romanNumeralDecoder (romanNumeral) {
 // Update: refactor complete and successful!
 // While I could make the above code even more terse, the current code
 // is easy to read and follow.  Marks a 47% reduction in code!
+//
+// Update: went full terse mode for a 77% reduction in code!!!
 
 //romanNumeralDecoder('IV'); //?
 
