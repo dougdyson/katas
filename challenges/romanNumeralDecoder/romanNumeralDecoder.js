@@ -1,12 +1,7 @@
-function romanNumeralDecoder (romanNumeral) {
-  return [...romanNumeral]
+function romanNumeralDecoder (r) {
+  return [...r]
     .map(k => ({'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}[k]))
-    .reduceRight((a, v, i, arr) => {  
-      arr[i + 1] > v
-        ? a -= v
-        : a += v
-      return a
-    }, null)
+    .reduceRight((a, v, i, arr) => arr[i + 1] > v ? a -= v : a += v, null)
 } 
 // NOTES
 // Reviewing other solutions and saw that map can be used in this context
@@ -16,7 +11,7 @@ function romanNumeralDecoder (romanNumeral) {
 // While I could make the above code even more terse, the current code
 // is easy to read and follow.  Marks a 47% reduction in code!
 //
-// Update: went full terse mode for a 78% reduction in code!!!
+// Update: went full terse mode for a 76% reduction in code!!!
 
 function romanNumeralDecoderV2 (romanNumeral) {
   
