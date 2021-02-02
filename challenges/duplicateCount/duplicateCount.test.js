@@ -22,8 +22,5 @@ test('checks for duplicate instances of characters within a string with duplicat
 
 test('checks for duplicate instances of characters within a string with duplicates which are not adjacent', () => {
   expect(duplicateCount("Indivisibility")).toBe(1);
-});
-
-test('checks for duplicate instances of characters within a string with duplicates which are not adjacent', () => {
   expect(duplicateCount("Indivisibilities")).toBe(2);
 });
