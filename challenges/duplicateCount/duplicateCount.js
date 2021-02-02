@@ -5,28 +5,32 @@ function duplicateCount(text) {
 
 duplicateCount('aabbcde'); //?
   
-function duplicateCountV2(text) {
+function duplicateCountV1(text) {
   //first refactor, with includes
-  
+
   const string = text.toLowerCase().split('').sort();
+  let duplicates = [];
+  
   for (let i = 0; i < string.length; i++) {
     if ((string[i] === string[i + 1]) && !duplicates.includes(string[i])) {
       duplicates.push(string[i]);
     }
   }
+
+  return duplicates.length;
 }
 // in earlier attempts, was trying to use indexOf() !== lastIndexOf()
 // but didn't find a way for it to account for instances where there
 // were 3+ instances of a character. 
 // 
-// the commented out example below this function using filter 
+// the example below this function using filter 
 // has the solution logic. can also see how filter encapsulates
 // the classic c-style for loop I used in my first refactor
 
-function duplicateCountV1(text){
-  return text.toLowerCase().split('').filter(function(val, i, arr){
-    return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
-  }).length;
-}
+// function duplicateCountV1(text){
+//   return text.toLowerCase().split('').filter(function(val, i, arr){
+//     return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+//   }).length;
+// }
 
 module.exports = duplicateCount;
