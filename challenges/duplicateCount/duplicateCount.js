@@ -1,5 +1,5 @@
 function duplicateCount(text) {
-  return [...text].sort().reduce((p,c,i,a) => (c === a[i+1] ? p+1 : p ), 0); //?
+  return text.toLowerCase().split('').sort().reduce((p,c,i,a) => (c === a[i+1] ? p+1 : p ), 0); //?
 }
 // UPDATE: refactored above with 65% reduction in code!
 
