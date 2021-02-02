@@ -4,8 +4,6 @@ function duplicateCount(text) {
 // UPDATE: refactored above with 65% reduction in code!
 
 duplicateCount('aabbcde'); //?
-
-
   
 function duplicateCountV2(text) {
   //first refactor, with includes
