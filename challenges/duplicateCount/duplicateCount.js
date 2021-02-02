@@ -1,5 +1,5 @@
 function duplicateCount(text) {
-  
+
   // here is a refactor using lastIndexOf()
   // which removes the need to pre-sort the array.
 
@@ -15,6 +15,10 @@ function duplicateCount(text) {
 
   duplicateCount('Hello Dolly'); //?
 
+  module.exports = duplicateCount;
+  
+  // to dig into further: filter && match
+  //
   //const string = text.toLowerCase().split('').sort();
 
   // first refactor, with includes
@@ -31,13 +35,7 @@ function duplicateCount(text) {
   // the commented out example below this function using filter 
   // has the solution logic. can also see how filter encapsulates
   // the classic c-style for loop I used in my first refactor
-
-
-module.exports = duplicateCount;
-
-// to dig into further: filter && match
-//
-// function duplicateCount(text){
+  // function duplicateCount(text){
 //   return text.toLowerCase().split('').filter(function(val, i, arr){
 //     return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
 //   }).length;
