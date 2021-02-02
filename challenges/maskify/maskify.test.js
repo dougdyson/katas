@@ -9,12 +9,10 @@ test('do not mask if empty string', () => {
 
 test('do not mask if string.length < 5', () => {
   expect(maskify('1')).toBe('1');
+  expect(maskify('3')).toBe('3');
 });
 
 test('mask every character > (string.length >= 5)', () => {
   expect(maskify('12345')).toBe('#2345');
-});
-
-test('mask every character > (string.length >= 5)', () => {
   expect(maskify('4556364607935616')).toBe('############5616');
 });
