@@ -44,8 +44,12 @@ const animals = ['Dog', 'Cat', 'Bunny', 'Fish', 'Kitten', 'Cat'];
 const numbers = [1, 3, 2, 5, 4];
 
 // # Strings
-// match
-// repeat
+// repeat specified number of instances of a string to concatenate to itself
+const string = 'repeat';
+const threePeat = string.repeat(3); //?
+
+// match, search string with a regular expression
+
 
 // # Array properties
 // length
