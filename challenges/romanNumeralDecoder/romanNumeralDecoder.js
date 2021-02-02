@@ -34,9 +34,9 @@ function romanNumeralDecoderV2 (romanNumeral) {
 
     // check for edge case (i.e. IV for 4 or IX for 9)
     if (prevValue > currentValue) {
-      decodedNumeral -=currentValue; //?
+      decodedNumeral -=currentValue;
     } else {
-      decodedNumeral += currentValue; //?
+      decodedNumeral += currentValue;
     }
     prevValue = currentValue;
   }
