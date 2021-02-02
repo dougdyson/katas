@@ -4,7 +4,7 @@ function isPrime(number) {
   if (number < 2) return false;
   
   // numbers produced from factors of composite numbers begin repeating after the square root of the product,
-  // so it is not necessary to repeat the calculation past the product's square root.
+  // thus it is not necessary to repeat the calculation past the product's square root.
   for (let i = 2; i <= Math.sqrt(number); i++) {
     if (number % i === 0) {
       return false;
