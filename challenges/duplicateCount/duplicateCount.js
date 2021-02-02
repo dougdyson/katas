@@ -1,8 +1,21 @@
 function duplicateCount(text) {
   
-  //const string = text.toLowerCase().split('').sort();
+  // here is a refactor using lastIndexOf()
+  // which removes the need to pre-sort the array.
+
   const string = text.toLowerCase().split('');
   let duplicates = [];
+  for (let i = 0; i < string.length; i++) {
+    if (string.lastIndexOf(string[i]) !== i && !duplicates.includes(string[i])) {
+      duplicates.push(string[i]);
+    }
+  }
+  return duplicates.length;
+}
+
+  duplicateCount('Hello Dolly'); //?
+
+  //const string = text.toLowerCase().split('').sort();
 
   // first refactor, with includes
   // for (let i = 0; i < string.length; i++) {
@@ -19,15 +32,6 @@ function duplicateCount(text) {
   // has the solution logic. can also see how filter encapsulates
   // the classic c-style for loop I used in my first refactor
 
-  // here is a refactor using lastIndexOf()
-  // which removes the need to pre-sort the array.
-  for (let i = 0; i < string.length; i++) {
-    if (string.lastIndexOf(string[i]) !== i && !duplicates.includes(string[i])) {
-      duplicates.push(string[i]);
-    }
-  }
-  return duplicates.length;
-}
 
 module.exports = duplicateCount;
 
