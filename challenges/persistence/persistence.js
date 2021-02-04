@@ -1,5 +1,13 @@
-
 function persistence(num) {
+  for (var i = 0; num > 9; i++) {
+    num = num.toString().split('').reduce((a,c) => a * c); //?
+  }
+  return i; //?
+}
+
+persistence(4); //?
+
+function persistenceV1(num) {
   let persistCounter = 0;
   if (num > 9) {
     function persist(numbers) {
@@ -15,7 +23,6 @@ function persistence(num) {
 }
 module.exports = persistence;
 
-persistence(999); //?
 
 // most popular, with map & reduce
 // =========================
