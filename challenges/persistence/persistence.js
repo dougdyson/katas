@@ -9,7 +9,7 @@ function persistence(num) {
 
 function persistenceV3(num) {
   return (num > 9)
-    ? 1 + persistence(num.toString().split('').reduce((a,c) => a * c))
+    ? 1 + persistenceV3(num.toString().split('').reduce((a,c) => a * c))
     : 0
 }
 // The V3 refactor above uses recursion but reduces code by 68%.
