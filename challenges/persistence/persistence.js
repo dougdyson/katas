@@ -1,9 +1,10 @@
+
 function persistence(num) {
   let persistCounter = 0;
   if (num > 9) {
     function persist(numbers) {
-      const product = numbers.toString().split('').reduce((total, factor) => total * factor);
-      persistCounter++;
+      const product = numbers.toString().split('').reduce((total, factor) => total * factor); //?
+      persistCounter++; //?
       if (product > 9) {
         persist(product)
       }
@@ -13,6 +14,8 @@ function persistence(num) {
   return persistCounter;
 }
 module.exports = persistence;
+
+persistence(999); //?
 
 // most popular, with map & reduce
 // =========================
