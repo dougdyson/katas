@@ -5,7 +5,8 @@ function persistence(num) {
   return i;
 }
 // The V2 refactor above removes recursion and reduces code by 65%
-// UPDATE: after reviewing V3 refactor, going with this one!
+// UPDATE: after reviewing V3 refactor, going with this one! It does
+// use var though.
 
 function persistenceV3(num) {
   return (num > 9)
