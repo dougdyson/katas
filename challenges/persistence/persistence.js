@@ -33,7 +33,8 @@ function persistenceV1(num) {
   }
   return persistCounter;
 }
-// The above V1 of this code is horrible! Repeating some conditional logic, unnecessary conditional logic,
-// and too verbose. Props for chaining functions though!
+// The above V1 of this code is horrible! 
+// Repeating some conditional logic, unnecessary conditional logic, and too verbose. 
+// Props for chaining functions though!
 
 module.exports = persistence;
