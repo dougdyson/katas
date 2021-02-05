@@ -1,12 +1,13 @@
 function persistence(num) {
-  for (var i = 0; num > 9; i++) {
+  let i = 0;
+  for (i; num > 9; i++) {
     num = num.toString().split('').reduce((a,c) => a * c);
   }
   return i;
 }
-// The V2 refactor above removes recursion and reduces code by 65%
-// UPDATE: after reviewing V3 refactor, going with this one! It does
-// use var though.
+// The V2 refactor above removes recursion and conditional logic
+// while reducing by 62%.
+// UPDATE: after reviewing V3 refactor, going with this one!
 
 function persistenceV3(num) {
   return (num > 9)
