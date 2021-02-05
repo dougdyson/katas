@@ -5,7 +5,7 @@ function persistence(num) {
   }
   return i;
 }
-// The V2 refactor above removes recursion and conditional logic
+// The V2 refactor above doesn't use recursion nor if statements
 // while reducing by 62%.
 // UPDATE: after reviewing V3 refactor, going with this one!
 
@@ -17,9 +17,9 @@ function persistenceV3(num) {
 // The V3 refactor above uses recursion but reduces code by 68%.
 // From a risk perspective, feel it might be better to use the 
 // V2 refactor, which doesn't use recursion nor if statements 
-// and is only 3% larger. V2 also seems a bit easier to follow, 
+// and is only 6% larger. V2 also seems a bit easier to follow, 
 // declaring key variables in one place (for statement) instead of 
-// spreading them out in the logic.
+// spreading them out in the logic (ternerary statement).
 
 function persistenceV1(num) {
   let persistCounter = 0;
