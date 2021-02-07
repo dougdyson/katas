@@ -6,7 +6,7 @@ function persistence(num) {
   return i;
 }
 // The V2 refactor above doesn't use recursion nor if statements
-// while reducing by 62%.
+// while reducing code by 62%.
 // UPDATE: after reviewing V3 refactor, going with this one!!
 
 function persistenceV3(num) {
