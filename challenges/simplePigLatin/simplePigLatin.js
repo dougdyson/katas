@@ -1,4 +1,5 @@
 function pigIt(englishSentence) {
+  // consider ascii values
   
   let pigSentence = englishSentence;
 
