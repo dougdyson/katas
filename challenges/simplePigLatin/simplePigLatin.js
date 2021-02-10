@@ -1,5 +1,4 @@
 function pigIt(englishSentence) {
-  // consider ascii values
 
   const isLetter = (char) => char.toLowerCase().charCodeAt(0) > 96 && char.toLowerCase().charCodeAt(0) < 123 ? true : false; //?
 
