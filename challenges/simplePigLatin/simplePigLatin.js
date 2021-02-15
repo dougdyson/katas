@@ -8,8 +8,11 @@ function pigIt(englishSentence) {
     isLetter(letter) //?
     
     // TO DO:
+    // - learn regex!
     // - select words and transform
     // - build new string
+    //
+    // this is a great kata for starting to learn regex!
   }
   
   return null;
