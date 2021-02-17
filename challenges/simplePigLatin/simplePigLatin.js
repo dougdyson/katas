@@ -15,7 +15,7 @@ function pigIt(englishSentence) {
     // this is a great kata for starting to learn regex!
   }
   
-  return null;
+  return pigSentence;
 
 }
 
