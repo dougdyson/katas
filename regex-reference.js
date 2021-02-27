@@ -8,11 +8,16 @@ let myArray = myRe.exec('bbbbbbbddddcdbbdbsbdz'); //?
 myArray[1]; //?
 
 // find space
- let phrase = / /g;
- let space = phrase.exec('Hello World!'); //?
+const phrase = / /g;
+const space = phrase.exec('Hello World!'); //?
 
- 
 // find word
+const p = "Hello World!";
+const r = / /g;
+const s = p.match(r); //?
+const i = r.exec(p).index; //?
+const w = p.slice(0, i); //?
+
 
 // respell word
 
