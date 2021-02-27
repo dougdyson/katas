@@ -14,7 +14,6 @@ const space = phrase.exec('Hello World!'); //?
 // find word
 const p = "Hello World!";
 const r = / /g;
-const s = p.match(r); //?
 const i = r.exec(p).index; //?
 const w = p.slice(0, i); //?
 
