@@ -4,7 +4,13 @@
 
 const pigIt = require('./simplePigLatin');
 
-it('Move the first letter of each word to the end of it, then add "ay" to the end', () => {
+it('Move the first letter of each word to the end of it, then add "ay" to the end, no punctuation', () => {
+  expect(pigIt('Pig latin is cool')).toBe('igPay atinlay siay oolcay');
+  expect(pigIt('This is my string')).toBe('hisTay siay ymay tringsay');
+})
+
+
+it('Move the first letter of each word to the end of it, then add "ay" to the end and keep punctuation', () => {
   expect(pigIt('Pig latin is cool!')).toBe('igPay atinlay siay oolcay!');
   expect(pigIt('This is my string.')).toBe('hisTay siay ymay tringsay.');
 })
