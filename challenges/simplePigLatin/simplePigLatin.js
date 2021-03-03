@@ -4,6 +4,6 @@ function pigIt(s) {
           .trim();
 }
 
-pigIt("hello world boom"); //?
+pigIt("hello world boom!"); //?
 
 module.exports = pigIt;
