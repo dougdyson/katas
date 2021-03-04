@@ -1,9 +1,8 @@
 function pigIt(s) {
-  return s.split(' ')
-          .reduce((a, v) => a += v.slice(1) + v.slice(0,1) + 'ay ', '')
-          .trim();
+  return s.split(/\b/)
+          .reduce((a, v) => /\w/.test(v) ? a += v.slice(1) + v.slice(0,1) + 'ay' : a += v, '');
 }
 
-pigIt("hello world boom!"); //?
+pigIt("O tempora o mores !");
 
 module.exports = pigIt;
