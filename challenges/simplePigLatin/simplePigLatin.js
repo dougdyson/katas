@@ -1,4 +1,4 @@
-function pigItV1(s) {
+function pigIt(s) {
   return s.split(/\b/)
           .reduce((a, v) => /\w/.test(v) ? a += v.slice(1) + v.slice(0,1) + 'ay' : a += v, '');
 }
@@ -9,12 +9,11 @@ function pigItV1(s) {
 //
 // Will refactor with more effective regex/less code.
 
-
-function pigIt(s){
-  // s.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
-  return s.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3") //?
+function pigItV2(str) {
+  // example from codewars
+  return str.replace(/\b(\w)(\w*)\b/g,"$2$1ay");
 }
 
-pigIt("O tempora o mores !");
+pigItV2("O tempora o mores!"); //?
 
 module.exports = pigIt;
