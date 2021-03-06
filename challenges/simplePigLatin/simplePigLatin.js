@@ -3,7 +3,7 @@ const pigIt = (s) => s.replace(/(\w)(\w*)/g,'$2$1ay');
 // The above V2 uses a string instead of an array, since we can iterate
 // through characters in a string as we would an array. This reduces
 // code by not having to create an array from the string argument.
-// 230% reduction in code!!!
+// 41% reduction in code!!!
 
 function pigItV1(s) {
   return s.split(/\b/).reduce((a, v) => /\w/.test(v) ? a += v.slice(1) + v.slice(0,1) + 'ay' : a += v, '');
