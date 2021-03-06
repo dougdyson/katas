@@ -15,6 +15,7 @@ function pigItV1(s) {
 //
 // Will refactor below with more effective regex/less code.
 
-pigIt("O tempora o mores !"); //?
+pigIt("O tempora o mores !");   //?
+pigItV1("O tempora o mores !"); //?
 
 module.exports = pigIt;
