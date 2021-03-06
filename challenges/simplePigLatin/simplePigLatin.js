@@ -13,7 +13,7 @@ function pigItV1(s) {
 // I reviewed other solutions which used regex much more effectively with
 // much less code.
 //
-// Will refactor below with more effective regex/less code.
+// Will refactor with more effective regex/less code.
 
 pigIt("O tempora o mores !");   //?
 pigItV1("O tempora o mores !"); //?
