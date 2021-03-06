@@ -16,7 +16,7 @@ function pigItV2(str) {
 
 // The above V2 uses a string instead of an array, since we can iterate
 // through characters in a string as we would an array. This reduces
-// code by not having to create an array from the string
+// code by not having to create an array from the string argument
 
 pigItV2("O tempora o mores!"); //?
 
