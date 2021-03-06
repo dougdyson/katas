@@ -1,6 +1,12 @@
-function pigIt(s) {
-  return s.split(/\b/)
-          .reduce((a, v) => /\w/.test(v) ? a += v.slice(1) + v.slice(0,1) + 'ay' : a += v, '');
+const pigIt = (s) => s.replace(/(\w)(\w*)/g,'$2$1ay');
+
+// The above V2 uses a string instead of an array, since we can iterate
+// through characters in a string as we would an array. This reduces
+// code by not having to create an array from the string argument.
+// 230% reduction in code!!!
+
+function pigItV1(s) {
+  return s.split(/\b/).reduce((a, v) => /\w/.test(v) ? a += v.slice(1) + v.slice(0,1) + 'ay' : a += v, '');
 }
 
 // The above V1 is not too bad. However, after submitting this solution,
@@ -9,16 +15,6 @@ function pigIt(s) {
 //
 // Will refactor below with more effective regex/less code.
 
-function pigItV2(s) {
-  // example from codewars
-  // const pigIt = s => s.replace(/(\w)(\w*)/g, '\$2\$1ay');
-  return s.replace(/(\w)(\w*)/g,"$2$1ay");
-}
-
-// The above V2 uses a string instead of an array, since we can iterate
-// through characters in a string as we would an array. This reduces
-// code by not having to create an array from the string argument
-
-pigItV2("O tempora o mores !"); //?
+pigIt("O tempora o mores !"); //?
 
 module.exports = pigIt;
