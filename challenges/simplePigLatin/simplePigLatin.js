@@ -11,6 +11,7 @@ function pigIt(s) {
 
 function pigItV2(str) {
   // example from codewars
+  // const pigIt = s => s.replace(/(\w)(\w*)/g, '\$2\$1ay');
   return str.replace(/\b(\w)(\w*)\b/g,"$2$1ay");
 }
 
