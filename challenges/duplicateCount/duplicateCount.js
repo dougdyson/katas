@@ -3,6 +3,8 @@ function duplicateCount(text) {
              .reduce((p,c,i,a) => (c === a[i+1] && c != a[i-1] ? p+1 : p ), 0);
 }
 // UPDATE: refactored above with 59% reduction in code!
+//
+// Going to revisit this and refactor using regex
 
 function duplicateCountV1(text) {
   //first refactor, with includes
