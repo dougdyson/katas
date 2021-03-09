@@ -5,7 +5,7 @@ function duplicateCount(text) {
 // UPDATE: refactored above with 59% reduction in code!
 //
 // Going to revisit this and refactor using regex.
-// Also, investigate matches
+// Also, investigate matches.
 
 function duplicateCountV1(text) {
   //first refactor, with includes
