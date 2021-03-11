@@ -8,7 +8,7 @@ function duplicateCount(text) {
 // Also, investigate matches.
 
 function duplicateCountV1(text) {
-  //first refactor, with includes
+  //first refactor, with includes.
 
   const string = text.toLowerCase().split('').sort();
   let duplicates = [];
