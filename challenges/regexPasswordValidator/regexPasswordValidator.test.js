@@ -7,3 +7,9 @@
 
 Valid passwords will only be alphanumeric characters.
 */
+
+const validate = require('./regexPasswordValidator');
+
+test('checks for empty string', () => {
+  expect(validate('')).toBe(false);
+});
