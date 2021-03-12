@@ -20,13 +20,14 @@ test('checks for non-alphanumeric', () => {
   expect(validate('!fdjn345')).toBe(false);
 });
 
-/*
-Test.expect(validate('djI38D55'), 'djI38D55 - Expected true');
-Test.expect(!validate('a2.d412'), 'a2.d412 - Expected false');
-Test.expect(!validate('JHD5FJ53'), 'JHD5FJ53 - Expected false');
-Test.expect(!validate('!fdjn345'), '!fdjn345 - Expected false');
-Test.expect(!validate('jfkdfj3j'), 'jfkdfj3j - Expected false');
-Test.expect(!validate('123'), '123 - Expected false');
-Test.expect(!validate('abc'), 'abc - Expected false');
-Test.expect(validate('Password123'), 'Password123 - Expected true');
-*/
+test('checks valid 6 alphanumeric character password', () => {
+  expect(validate('djI38D55')).toBe(true);
+  expect(validate('Password123')).toBe(true);
+});
+
+test('checks invalid alphanumeric character password', () => {
+  expect(validate('JHD5FJ53')).toBe(false);
+  expect(validate('jfkdfj3j')).toBe(false);
+  expect(validate('123')).toBe(false);
+  expect(validate('abc')).toBe(false);
+});

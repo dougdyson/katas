@@ -1,6 +1,6 @@
 function validate(password) {
   return password.length <=6 
-         ? /(put answer here)/.test(password)
+         ? /((put answer here))/.test(password)
          : false;
 }
 
