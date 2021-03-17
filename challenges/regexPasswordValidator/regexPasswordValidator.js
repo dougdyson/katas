@@ -12,6 +12,8 @@ validate('abcdefg'); //?
 validate('123456'); //?
 validate('abc123'); //?
 validate('abcdef'); //?
+validate('abc'); //?
+validate('123'); //?
 
 
 module.exports = validate;
