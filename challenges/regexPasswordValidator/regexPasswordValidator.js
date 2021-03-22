@@ -1,7 +1,7 @@
 function validate(password) {
   password;
   return password.length <=6 //?
-         ? /\p{L}/gu.test(password) //?
+         ? /\w/gu.test(password) //?
          : false;
 
 // try incorporating the length validation as part of regex

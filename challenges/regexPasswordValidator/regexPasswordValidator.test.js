@@ -25,9 +25,8 @@ test('checks valid 6 alphanumeric character password', () => {
   expect(validate('Password123')).toBe(true);
 });
 
-test('checks invalid alphanumeric character password', () => {
+test('checks invalid alphanumeric character password with too many characters', () => {
   expect(validate('JHD5FJ53')).toBe(false);
   expect(validate('jfkdfj3j')).toBe(false);
-  expect(validate('123')).toBe(false);
-  expect(validate('abc')).toBe(false);
 });
+
