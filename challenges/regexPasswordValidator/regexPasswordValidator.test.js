@@ -18,8 +18,7 @@ test('checks for non-alphanumeric', () => {
   expect(validate('!')).toBe(false);
   expect(validate('a2.d412')).toBe(false);
   expect(validate('!fdjn345')).toBe(false);
-  expect(validate('!23abc')).t
-  oBe(false);
+  expect(validate('!23abc')).toBe(false);
   expect(validate('fdjn3!')).toBe(false);
 });
 
