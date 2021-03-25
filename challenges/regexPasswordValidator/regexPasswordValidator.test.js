@@ -22,10 +22,15 @@ test('checks for non-alphanumeric', () => {
   expect(validate('fdjn3!')).toBe(false);
 });
 
-test('checks valid alphanumeric character password', () => {
+test('checks invalid alphanumeric character password', () => {
+  expect(validate('123ABC')).toBe(false);
+  expect(validate('abc123')).toBe(false);
+});
+
+test('checks invalid alphanumeric character password', () => {
   expect(validate('djiI38')).toBe(true);
-  expect(validate('123')).toBe(true);
-  expect(validate('abc')).toBe(true);
+  expect(validate('123aB')).toBe(true);
+  expect(validate('aBc1')).toBe(true);
 });
 
 test('checks invalid alphanumeric character password with too many characters', () => {
