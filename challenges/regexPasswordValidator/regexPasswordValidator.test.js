@@ -37,4 +37,6 @@ test('checks invalid alphanumeric character password with too many characters', 
   expect(validate('Password123')).toBe(false);
   expect(validate('JHD5FJ53')).toBe(false);
   expect(validate('jfkdfj3j')).toBe(false);
+  expect(validate('!fkdfj3j')).toBe(false);
+  expect(validate('j!kdfj3j')).toBe(false);
 });
