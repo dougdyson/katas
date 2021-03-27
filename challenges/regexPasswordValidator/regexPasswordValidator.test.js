@@ -28,7 +28,7 @@ test('checks invalid alphanumeric character password with missing case', () => {
 });
 
 test('checks valid alphanumeric character password', () => {
-  expect(validate('djiI38')).toBe(true);
+  expect(validate('abCD38')).toBe(true);
   expect(validate('123aB')).toBe(true);
   expect(validate('aBc1')).toBe(true);
 });
