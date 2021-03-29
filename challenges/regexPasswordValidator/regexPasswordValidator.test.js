@@ -30,6 +30,7 @@ test('checks valid alphanumeric character password', () => {
   expect(validate('abC123')).toBe(true);
   expect(validate('123aB')).toBe(true);
   expect(validate('aBc1')).toBe(true);
+  expect(validate('AbC1')).toBe(true);
 });
 
 test('checks invalid alphanumeric character password with too many characters', () => {
