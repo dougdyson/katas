@@ -16,6 +16,7 @@ test('checks for empty string', () => {
 
 test('checks for non-alphanumeric', () => {
   expect(validate('!')).toBe(false);
+  expect(validate('~!@#$%')).toBe(false);
   expect(validate('a1.b2c')).toBe(false);
   expect(validate('!abcD1')).toBe(false);
   expect(validate('abC12!')).toBe(false);
