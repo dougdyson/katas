@@ -10,6 +10,7 @@ function validate(password) {
 }
 
 validate('!ab123'); //?
+validate('!@#$%^'); //?
 validate('abcdefg'); //?
 validate('123456'); //?
 validate('abc123'); //?
