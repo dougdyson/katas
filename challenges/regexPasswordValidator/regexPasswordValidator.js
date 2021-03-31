@@ -7,6 +7,7 @@ function validate(password) {
 // try incorporating the length validation as part of regex
 // determine OR syntax
 // determine syntax for negation
+// capture groups
 }
 
 validate('!ab123'); //?
