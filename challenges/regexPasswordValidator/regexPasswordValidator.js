@@ -1,10 +1,10 @@
 function validate(password) {
   password;
   return password.length <=6 //?
-         ? /\w/gu.test(password) //?
+         ? /(\w)...../.test(password) //?
          : false;
 
-// try incorporating the length validation as part of regex
+// try incorporating the length validation as part of regex: n{a,b}
 // determine OR syntax
 // determine syntax for negation
 // capture groups
