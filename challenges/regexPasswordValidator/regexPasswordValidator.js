@@ -1,23 +1,21 @@
 function validate(password) {
-  password;
-  return password.length <=6 //?
-         ? /\w+/.test(password) //?
-         : false;
+  return /([a-z][A-Z]\d.){1,6}/.test(password)
 
-// try incorporating the length validation as part of regex: n{a,b}
-// determine OR syntax
-// determine syntax for negation
-// capture groups
 }
 
-validate('!ab123'); //?
-validate('!@#$%^'); //?
-validate('abcdefg'); //?
-validate('123456'); //?
-validate('abc123'); //?
-validate('abcdef'); //?
-validate('abc'); //?
-validate('123'); //?
+validate('a1.b2c') //?
+validate('!ab123') //?
+validate('ab123!') //?
+validate('!@#$%^') //?
+validate('abcdefg') //?
+validate('123456') //?
+validate('abc123') //?
+validate('abcdef') //?
+validate('123') //?
+validate('abc') //?
+validate('abC') //?
+validate('abC123') //?
+validate('123aB') //?
 
 
 module.exports = validate;
