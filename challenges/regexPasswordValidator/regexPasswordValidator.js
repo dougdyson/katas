@@ -1,10 +1,10 @@
 function validate(password) {
-  return /([a-z][A-Z]\d.){1,6}/.test(password)
-
+  return /([0-9a-z][A-Z])/.test(password)
 }
 
+
 validate('a1.b2c') //?
-validate('!ab123') //?
+validate('!aB123') //?
 validate('ab123!') //?
 validate('!@#$%^') //?
 validate('abcdefg') //?
@@ -13,9 +13,9 @@ validate('abc123') //?
 validate('abcdef') //?
 validate('123') //?
 validate('abc') //?
-validate('abC') //?
+validate('AbC1') //?
 validate('abC123') //?
-validate('123aB') //?
+validate('123aBC') //?
 
 
 module.exports = validate;
