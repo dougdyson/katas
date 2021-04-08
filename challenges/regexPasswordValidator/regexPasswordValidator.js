@@ -1,6 +1,6 @@
 function validate(password) {
   return /([0-9a-z][A-Z])/.test(password)
-}
+};
 
 
 validate('a1.b2c') //?
