@@ -1,6 +1,16 @@
 function validate(password) {
-  return /([0-9a-z][A-Z])/.test(password)
+  return password.length <=6 
+         ? /\W/.test(password)
+         : false
+         
 };
+
+// alphanumeric only: \w{1,6}
+// one upper case: [A-Z]
+// one lower case: [a-z]
+// one number: [0-9]
+// no special characters: 
+// <=6 length: {1.6}
 
 
 validate('a1.b2c') //?
