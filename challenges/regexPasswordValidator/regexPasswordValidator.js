@@ -1,8 +1,7 @@
 function validate(password) {
   return password.length <=6 
-         ? /\W/.test(password)
+         ? /[a-z0-9][A-Z]/.test(password)
          : false
-         
 };
 
 // alphanumeric only: \w{1,6}
