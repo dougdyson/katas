@@ -1,6 +1,6 @@
 function validate(password) {
   return password.length <=6 
-         ? /[a-z0-9][A-Z]/.test(password)
+         ? password.match(/[a-z0-9][A-Z]/)
          : false
 };
 
