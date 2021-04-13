@@ -1,6 +1,8 @@
 function validate(password) {
-  return /([a-z0-9][A-Z])/.test(password)
-};
+  let regexp = /([a-z0-9][A-Z]){1,6}/;
+  return regexp.exec(password) ? true : false
+  //return password.match(regexp);
+};;
 
 // alphanumeric only: \w{1,6}
 // one upper case: [A-Z]
@@ -15,6 +17,7 @@ validate('!aB123') //?
 validate('ab123!') //?
 validate('!@#$%^') //?
 validate('abcdefg') //?
+validate('abcdefg1B') //?
 validate('123456') //?
 validate('abc123') //?
 validate('abcdef') //?
