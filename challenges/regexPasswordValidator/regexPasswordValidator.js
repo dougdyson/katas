@@ -4,7 +4,7 @@ function validate(password) {
     ? regexp.test(password)
     : false
   //return password.match(regexp);
-};;
+};
 
 // alphanumeric only: \w{1,6}
 // one upper case: [A-Z]
