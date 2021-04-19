@@ -1,10 +1,25 @@
-function validate(password) {
+function validateV1(password) {
   let regexp = /[a-z0-9A-Z][A-Z]/;
   return password.length <= 6
          ? regexp.test(password)
          : false
   //return password.match(regexp);
 };
+
+function validate(password) {
+  
+  if (password.length > 6) return false;
+
+  if (!/[a-z]/.test(password)) {
+    return false
+  }
+
+  if (!/[A-Z]/.test(password)) {
+    return false
+  }
+
+  return true
+}
 
 // alphanumeric only: \w{1,6}
 // one upper case: [A-Z]
