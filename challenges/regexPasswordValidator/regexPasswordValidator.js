@@ -1,8 +1,8 @@
 function validate(password) {
   let regexp = /[a-z0-9A-Z][A-Z]/;
   return password.length <= 6
-    ? regexp.test(password)
-    : false
+         ? regexp.test(password)
+         : false
   //return password.match(regexp);
 };
 
