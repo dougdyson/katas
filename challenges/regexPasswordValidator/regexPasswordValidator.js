@@ -22,6 +22,10 @@ function validate(password) {
     return false
   }
 
+  if (/\D/.test(password)) {
+    return false
+  }
+
   return true
 }
 
