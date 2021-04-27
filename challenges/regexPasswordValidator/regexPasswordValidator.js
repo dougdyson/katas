@@ -24,7 +24,7 @@ function validate(password) {
 
   if (!/\S/.test(password)) {
     return false
-  }
+  };
 
   return true
 }
