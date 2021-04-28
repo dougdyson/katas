@@ -20,7 +20,7 @@ function validate(password) {
 
   if (!/[0-9]/.test(password)) {
     return false
-  }
+  };
 
   if (!/\S/.test(password)) {
     return false
