@@ -12,7 +12,7 @@ function validate(password) {
 
   if (!/[a-z]/.test(password)) {
     return false
-  }
+  };
 
   if (!/[A-Z]/.test(password)) {
     return false
