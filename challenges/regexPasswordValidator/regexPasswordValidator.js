@@ -26,7 +26,7 @@ function validate(password) {
     return false
   };
 
-  return true
+  return true;
 }
 
 // alphanumeric only: \w{1,6}
