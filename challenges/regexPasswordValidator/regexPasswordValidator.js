@@ -4,7 +4,7 @@ function validateV1(password) {
          ? regexp.test(password)
          : false
   //return password.match(regexp);
-};
+}
 
 function validate(password) {
   
