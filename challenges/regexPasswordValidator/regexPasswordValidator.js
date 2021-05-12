@@ -35,6 +35,7 @@ function validate(password) {
 // one number: [0-9]
 // no special characters: 
 // <=6 length: {1.6}
+// How to concatenate/combine parameters?
 
 
 validate('a1.b2c') //?
