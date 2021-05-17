@@ -15,18 +15,18 @@ function validate(password) {
   }
 
   if (!/[A-Z]/.test(password)) {
-    return false
+    return false;
   }
 
   if (!/[0-9]/.test(password)) {
-    return false
+    return false;
   }
 
   if (!/\S/.test(password)) {
-    return false
+    return false;
   }
 
-  return true
+  return true;
 }
 
 // alphanumeric only: \w{1,6}
