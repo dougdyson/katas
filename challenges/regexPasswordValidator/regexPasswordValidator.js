@@ -11,7 +11,7 @@ function validate(password) {
   if (password.length > 6) return false;
 
   if (!/[a-z]/.test(password)) {
-    return false
+    return false;
   }
 
   if (!/[A-Z]/.test(password)) {
