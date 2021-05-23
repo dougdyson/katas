@@ -4,6 +4,7 @@
 - contains a lowercase letter
 - contains an uppercase letter
 - contains a number
+- no special characters
 
 Valid passwords will only be alphanumeric characters.
 */
