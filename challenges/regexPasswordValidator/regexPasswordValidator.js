@@ -22,7 +22,7 @@ function validate(password) {
     return false;
   }
 
-  if (!/\S/.test(password)) {
+  if (/[.!?\\-]/.test(password)) {
     return false;
   }
 
