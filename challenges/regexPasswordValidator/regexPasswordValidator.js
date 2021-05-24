@@ -1,5 +1,5 @@
 function validateV1(password) {
-  let regexp = /[a-z0-9A-Z][A-Z]/;
+  let regexp = /[a-z](![.!?\\-])/;
   return password.length < 7
          ? regexp.test(password)
          : false
@@ -14,13 +14,13 @@ function validate(password) {
     return false;
   }
 
-  if (!/[A-Z]/.test(password)) {
-    return false;
-  }
+  // if (!/[A-Z]/.test(password)) {
+  //   return false;
+  // }
 
-  if (!/[0-9]/.test(password)) {
-    return false;
-  }
+  // if (!/[0-9]/.test(password)) {
+  //   return false;
+  // }
 
   if (/[.!?\\-]/.test(password)) {
     return false;
