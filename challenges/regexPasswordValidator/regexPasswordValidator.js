@@ -14,13 +14,13 @@ function validate(password) {
     return false;
   }
 
-  // if (!/[A-Z]/.test(password)) {
-  //   return false;
-  // }
+  if (!/[A-Z]/.test(password)) {
+    return false;
+  }
 
-  // if (!/[0-9]/.test(password)) {
-  //   return false;
-  // }
+  if (!/[0-9]/.test(password)) {
+    return false;
+  }
 
   if (/[.!?\\-]/.test(password)) {
     return false;
