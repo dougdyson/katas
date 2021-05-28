@@ -8,7 +8,7 @@ function validateV1(password) {
 
 function validate(password) {
   
-  if (/[a-z]{6,}/) return false;
+  if (password.length > 6) return false;
 
   if (!/[a-z]/.test(password)) {
     return false;
