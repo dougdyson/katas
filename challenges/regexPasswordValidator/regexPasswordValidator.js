@@ -3,7 +3,6 @@ function validateV1(password) {
   return password.length > 6
          ? regexp.test(password)
          : false
-  //return password.match(regexp);
 }
 
 function validate(password) {
