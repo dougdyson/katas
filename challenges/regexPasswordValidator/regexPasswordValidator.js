@@ -1,5 +1,5 @@
 function validate(password) {
-  let regexp = /(?=.{6,})(?=.*(![.!?\\-]))/;
+  let regexp = /^(?=.{6,})/;
   return regexp.test(password)
          ? true
          : false
