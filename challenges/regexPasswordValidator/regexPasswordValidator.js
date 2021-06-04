@@ -1,5 +1,5 @@
 function validate(password) {
-  let regexp = /^(?=.{6,})/;
+  let regexp = /^(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/;
   return regexp.test(password)
          ? true
          : false
@@ -72,6 +72,8 @@ validate('abc') //?
 validate('AbC1') //?
 // validateV1('abC123') //?
 validate('123aBC') //?
+validate('ABCDEF') //?
+validate('abcDEF') //?
 
 
 module.exports = validate;
