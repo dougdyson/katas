@@ -1,12 +1,7 @@
 function validate(password) {
   
-  if (/(?=.*[!@#$%^&*])/.test(password)) {
-    return false
-  }
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)\w{6,}$/.test(password)
 
-  return /^(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/.test(password)
-         ? true
-         : false
 }
 
 validate('a1.b2c') //?
