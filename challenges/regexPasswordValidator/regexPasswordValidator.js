@@ -1,6 +1,10 @@
 function validate(password) {
-  let regexp = /^(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/;
-  return regexp.test(password)
+  
+  if (/(?=.*[!@#$%^&*])/.test(password)) {
+    return false
+  }
+
+  return /^(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/.test(password)
          ? true
          : false
 }
@@ -8,7 +12,7 @@ function validate(password) {
 validate('a1.b2c') //?
 validate('!aB123') //?
 validate('ab123!') //?
-validate('!@#$%^') //?
+validate('!@#$%^aA') //?
 validate('abcdefg') //?
 validate('abcdefg1B') //?
 validate('123456') //?
