@@ -1,4 +1,4 @@
-const strippedComments = input => {
+const strippedComments = (input, markers) => {
 
   return input;
 }
