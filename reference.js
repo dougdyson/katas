@@ -49,7 +49,10 @@ const string = 'repeat';
 const threePeat = string.repeat(3); //?
 
 // match, search string with a regular expression
-
+// also, replace
+const dogs = 'A poodle is not a lab nor a terrier';
+const lab = dogs.match(/(lab)/); //?
+lab[1]; //?
 
 // # Array properties
 // length
