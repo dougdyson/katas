@@ -8,6 +8,8 @@ const strippedComments = (input, markers) => {
   // look for = marker
   // replace with = ''
 
+  // do without regex first, then apply regex
+
   return input.replace(markers, '');
 
 }
