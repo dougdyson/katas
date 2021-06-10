@@ -9,6 +9,7 @@ const strippedComments = (input, markers) => {
   // replace with = ''
 
   // do without regex first, then apply regex
+  // use string or convert to array?
 
   return input.replace(markers, '');
 
