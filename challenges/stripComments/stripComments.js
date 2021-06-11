@@ -10,8 +10,14 @@ const strippedComments = (input, markers) => {
 
   // do without regex first, then apply regex
   // use string or convert to array?
+  // string
+  let stripped = '';
 
-  return input.replace(markers, '');
+  for (const marker of markers) {
+    
+  }
+
+  return stripped;
 
 }
 
