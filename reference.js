@@ -78,7 +78,7 @@ const filteredCats1 = animals.filter((animal) => animal === 'Cat'); //?
 // ----------------------------------------
 
 // filter multi line arrow syntax, returns a new array
-const isCat = (animal) => animal === 'Cat';
+const isCat = animal => animal === 'Cat';
 const filteredCats2 = animals.filter(isCat); //?
 // ----------------------------------------
 
