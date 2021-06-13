@@ -11,16 +11,14 @@ const strippedComments = (input, markers) => {
   // do without regex first, then apply regex
   // use string or convert to array?
   // string
-  let stripped = '';
+  let marker = markers[0];
 
-  for (const marker of markers) {
-    
-  }
+  input = input.replace(marker, ''); //?
 
-  return stripped;
+  return [...input].join(('')) //?
 
 }
 
-strippedComments("apples, plums % and bananas", '%'); //? 
+strippedComments("apples, plums | and bananas", '|'); //? 
 
 module.exports = strippedComments;
