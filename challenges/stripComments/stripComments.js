@@ -1,4 +1,4 @@
-const strippedComments = (input, markers) => input.slice(0, input.indexOf(markers[0]))
+const strippedComments = (input, markers) => input.slice(0, input.indexOf(markers[0]));
 
 module.exports = strippedComments;
 
