@@ -4,6 +4,6 @@ const strippedComments = require('./stripComments.js');
 // checkComments("Q @b\nu\ne -e f g", ["@", "-"], "Q\nu\ne")
 
 test('valid string with marker', () => {
-  expect(strippedComments('apples, plums # and bananas\npears\noranges #applesauce',['#']))
-    .toBe('apples, plums\npears\noranges');
+  expect(strippedComments('apples, plums | and bananas',['|']))
+    .toBe('apples, plums ');
 });
