@@ -1,8 +1,8 @@
 const strippedComments = (input, markers) => input.slice(0, input.indexOf(markers[0]));
-
 module.exports = strippedComments;
 
-strippedComments('apples, plums | and bananas', '|'); //? 
+strippedComments('apples, plums| and bananas', ['|']); //?
+strippedComments('apples, plums| and bananas\nNew line!', ['|']); //?
 
 // [X] simple case: single line & one marker
 // [] multi-line
