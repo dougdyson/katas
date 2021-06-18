@@ -1,11 +1,17 @@
-const strippedComments = (input, markers) => input.slice(0, input.indexOf(markers[0]));
+const strippedComments = (input, markers) => {
+
+  return input.split(/\n/)
+              .reduce((a,v) => v.includes(markers[0]) ? a += '\n' + v.slice(0, v.indexOf(markers[0])) : a += '\n' + v, '')
+              .trim();
+
+}
 module.exports = strippedComments;
 
-strippedComments('apples, plums| and bananas', ['|']); //?
-strippedComments('apples, plums| and bananas\nNew line!', ['|']); //?
+strippedComments('apples| and bananas', ['|']); //?
+strippedComments('apples| and bananas\n2nd line\n3rd line!', ['|']); //?
 
 // [X] simple case: single line & one marker
-// [] multi-line
+// [X] multi-line
 // [] array of markers
 
 // array method, leaving for temp ref:
