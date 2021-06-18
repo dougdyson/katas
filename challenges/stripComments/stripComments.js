@@ -1,8 +1,10 @@
 const strippedComments = (input, markers) => {
 
-  return input.split(/\n/)
-              .reduce((a,v) => v.includes(markers[0]) ? a += '\n' + v.slice(0, v.indexOf(markers[0])) : a += '\n' + v, '')
-              .trim();
+  const removedComments = input.split(/\n/)
+                               .reduce((a,v) => v.includes(markers[0]) ? a += '\n' + v.slice(0, v.indexOf(markers[0])) : a += '\n' + v, '')
+                               .trim();
+
+  return removedComments;
 
 }
 module.exports = strippedComments;
