@@ -1,11 +1,11 @@
 const strippedComments = require('./stripComments.js');
 
-test('simple string with one marker', () => {
+test('one line string with one marker', () => {
   expect(strippedComments('apples| and bananas',['|']))
     .toBe('apples');
 });
 
-test('simple two line string with one marker', () => {
+test('two line string with one marker', () => {
   expect(strippedComments('apples| and bananas\nNew line!', ['|']))
     .toBe('apples\nNew line!');
 });
@@ -13,6 +13,11 @@ test('simple two line string with one marker', () => {
 test('three line string with one marker', () => {
   expect(strippedComments('apples| and bananas\n2nd line\n3rd line!', ['|']))
     .toBe('apples\n2nd line\n3rd line!');
+});
+
+test('two line string with two markers', () => {
+  expect(strippedComments('apples| and bananas\n2nd~ line', ['|','~']))
+    .toBe('apples\n2nd ');
 });
 
 
