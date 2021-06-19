@@ -15,12 +15,22 @@ test('three line string with one marker', () => {
     .toBe('apples\n2nd line\n3rd line!');
 });
 
-test('two line string with two markers', () => {
-  expect(strippedComments('apples| and bananas\n2nd~ line', ['|','~']))
-    .toBe('apples\n2nd ');
+test('one line string with two markers', () => {
+  expect(strippedComments('apples|, bananas and ~cherries', ['|','~']))
+    .toBe('apples');
 });
 
+test('two line string with two markers', () => {
+  expect(strippedComments('apples|, bananas \nand~ cherries', ['|','~']))
+    .toBe('apples\nand');
+});
 
-// tests from website
+test('three line string with two markers', () => {
+  expect(strippedComments('apples, plums % and bananas\npears\noranges !applesauce', ["%", "!"]))
+    .toBe("apples, plums\npears\noranges");
+})
+
+
+// tests from website: https://www.codewars.com/kata/51c8e37cee245da6b40000bd/train/javascript
 // checkComments("apples, plums % and bananas\npears\noranges !applesauce", ["%", "!"], "apples, plums\npears\noranges")
 // checkComments("Q @b\nu\ne -e f g", ["@", "-"], "Q\nu\ne")
