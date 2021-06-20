@@ -27,10 +27,10 @@ test('two line string with two markers', () => {
 
 test('three line string with two markers', () => {
   expect(strippedComments('apples, plums % and bananas\npears\noranges !applesauce', ["%", "!"]))
-    .toBe("apples, plums\npears\noranges");
+    .toBe("apples, plums \npears\noranges");
 })
 
 
 // tests from website: https://www.codewars.com/kata/51c8e37cee245da6b40000bd/train/javascript
-// checkComments("apples, plums % and bananas\npears\noranges !applesauce", ["%", "!"], "apples, plums\npears\noranges")
+// checkComments("apples, plums % and bananas\npears\noranges !applesauce", ["%", "!"], "apples, plums \npears\noranges")
 // checkComments("Q @b\nu\ne -e f g", ["@", "-"], "Q\nu\ne")
