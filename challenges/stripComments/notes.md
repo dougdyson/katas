@@ -3,7 +3,7 @@ A few thoughts on this kata
 
 ## Requirements
 * provided written requirements quality was low
-* trimming of whitespace only visible in tests
+* trimming of whitespace only visible in provided example tests
 
 ## Tests
 * seemed like only one test in the provided test suite
