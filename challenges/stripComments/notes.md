@@ -7,7 +7,7 @@ A few thoughts on this kata
 
 ## Tests
 * seemed like only one test in the provided test suite
-* wrote a bunch of progressively more complex tests however my first passing code failed the corresponding test in my own test suite
+* my passing code failed the corresponding test in my own test suite
 * not going to reconcile difference in tests and going with the successful code as I understand the logic and provided requirements are vague (AKA want to move on!)
 
 ## Solution
