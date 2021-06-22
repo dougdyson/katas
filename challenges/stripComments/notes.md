@@ -16,3 +16,12 @@ A few thoughts on this kata
 
 ## To Do
 [] review other solutions and refactor for terseness
+
+## Other Solutions
+Here are some other, terser solutions to review and incorporate in a refactor:
+
+const solution = (input, markers) => input.replace( new RegExp(" [" + markers.join(',') + "].+", "gi"), '' );
+
+function solution(input, markers) {
+  return input.replace(/(\s\W\w+).*|(\s\W\s?\w+\s?\w+)/g, "");
+};
