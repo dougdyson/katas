@@ -12,7 +12,7 @@ A few thoughts on this kata
 
 ## Solution
 * wasn't sure if the best solution was to parse an array or a string, either via string or regex. Instinct was to start with regex, as it is the most terse approach, but am not fluent enough
-* once solved, site provided examples of other, more terse solutions - will review and refactor my own
+* once solved, site provided examples of other, more terse solutions - will review and refactor my own (see below)
 
 ## To Do
 [] review other solutions and refactor for terseness
