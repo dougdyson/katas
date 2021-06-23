@@ -15,7 +15,7 @@ A few thoughts on this kata
 * once solved, site provided examples of other, more terse solutions - will review and refactor my own (see below)
 
 ## To Do
-[] review other solutions and refactor for terseness
+[in progress] review other solutions and refactor for terseness
 
 ## Other Solutions
 Here are some other, terser solutions to review and incorporate in a refactor:
