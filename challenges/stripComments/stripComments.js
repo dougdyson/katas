@@ -5,7 +5,7 @@ const strippedComments = (input, markers) => {
 
 }
 
-const solution = (input, markers) => input.replace( new RegExp(" [" + markers.join(',') + "].+", "gi"), '' );
+const strippedCommentsV2 = (input, markers) => input.replace( new RegExp(" [" + markers.join(',') + "].+", "gi"), '' );
 
 module.exports = strippedComments;
 
