@@ -14,3 +14,4 @@ module.exports = strippedComments;
 // function solution(input, markers) {
 //   return input.replace(/(\s\W\w+).*|(\s\W\s?\w+\s?\w+)/g, "");
 // };
+// // ^ doesn't pass tests
