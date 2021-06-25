@@ -6,7 +6,7 @@ A few thoughts on this kata: [https://www.codewars.com/kata/51c8e37cee245da6b400
 This kata is a great example of unclear requirements and incomplete existing tests:
 * looks like a single test in the provided test suite, so no confidence
 * existing solutions provide little insight as they only seem to work on the single test case; not the requirements
-* as a developer, would have to determine the risk and cost of addressing this technical debt and whether to invest any more time in it
+* as a developer, would have to determine the risk and cost of addressing this technical debt and whether to invest any more time in it.
 * going to make a quad square diagram for this: low to critical impact, low to high cost of addressing
 
 ## Requirements
