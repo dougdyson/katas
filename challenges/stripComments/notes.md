@@ -11,7 +11,7 @@ On the job, I would reach out for requirements clarity, rather than attempt to p
 
 ## Requirements
 * provided written requirements quality was low
-* trimming of whitespace only visible in provided example tests
+* trimming of whitespace requirement only visible in provided example tests, not in the written description
 
 ## Tests
 * seemed like only one or two tests in the provided test suite
