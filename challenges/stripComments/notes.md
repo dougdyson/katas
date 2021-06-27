@@ -26,7 +26,7 @@ This kata, with seemingly a single provided test, is an example of technical deb
 
 ### Considerations
 * REFACTOR: if you can refactor within your time constraints, do so!
-* BACKLOG: communicate with team and add to backlog for triage and prioritization
+* BACKLOG: communicate with team and add to backlog for triage, grooming and prioritization
 * IGNORE: communicate with team and come to consensus on ignoring
 
 
