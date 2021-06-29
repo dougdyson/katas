@@ -36,6 +36,7 @@ This kata, with seemingly a single provided test, is an example of technical deb
 
 ## To Do
 [in progress] using map, regex and replace.
+- using reduce, map regex of marker array, ternery on current marker with true trimming from marker on accumulator
 
 ## Other Solutions
 Here are some other, terser solutions to review and incorporate in a refactor:
