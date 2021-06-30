@@ -1,6 +1,6 @@
+const User = require('./userClass');
 
-
-it('We check to see if the class exists', () => {
+test('We check to see if the class exists', () => {
   const User = new User();
   expect(User).toBe(true)
 });
