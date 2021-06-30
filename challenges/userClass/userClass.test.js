@@ -1,6 +1,7 @@
-const User = require('./userClass');
+//import {User} from './userClass';
+const User = require('./userClass.js');
 
-test('We check to see if the class exists', () => {
+test('Super simple test to figure out testing classes', () => {
   const User = new User();
-  expect(User).toBe(true)
+  expect(User.bool).toBe(true)
 });
