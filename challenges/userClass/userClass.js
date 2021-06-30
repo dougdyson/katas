@@ -1,9 +1,7 @@
 export default class User {
-
   constructor() {
     this.exists = true;
   }
-  
 }
 
-const NewUser = new User(); //?
+const NewUser = new User();//?

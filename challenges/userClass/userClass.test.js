@@ -1,7 +1,9 @@
-import { User } from './userClass';
-// const User = require('./userClass.js');
+import User from './userClass.js';
 
-test('Super simple test to figure out testing classes', () => {
-  // const User = new User();
-  expect(()=>{}).toBeNewInstanceOf()
+const NewUser = new User(); //?
+
+NewUser.exists; //?
+
+test('Class successfully created', () => {
+  expect(NewUser.exists).toBe(true)
 });
