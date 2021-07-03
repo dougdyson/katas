@@ -6,6 +6,7 @@ class User {
   
   incProgress(a){
     // need to add bounds check
+    
     if (this.rank === a) this.progress += 3;
     else if (this.rank === (a + 1)) this.progress += 1;
     else if (this.rank < a && a !=1) this.progress += ((this.rank - a) * (this.rank - a) * 10);
