@@ -5,7 +5,9 @@ class User {
   }
   
   incProgress(a){
-    (a === this.rank) ? this.progress += 3 : 0
+    if (this.rank - a === 0) {
+      this.progress += 3;
+    }
   }
 }
 
