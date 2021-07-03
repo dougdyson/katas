@@ -9,6 +9,4 @@ class User {
   }
 }
 
-const NewUser = new User();//?
-
 module.exports = User; //?
