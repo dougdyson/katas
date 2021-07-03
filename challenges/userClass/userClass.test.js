@@ -48,7 +48,14 @@ test('User ranked -8 completes an activity ranked -4 they will receive 160 progr
 
 test('User ranked -1 completes an activity ranked 1 they will receive 10 progress', () => {
   const NewUser = new User();
-  NewUser.incProgress(-4);
-  expect(NewUser.rank).toBe(-7);
-  expect(NewUser.progress).toBe(60)
+  NewUser.incProgress(-4); //? -7
+  NewUser.incProgress(-3);
+  NewUser.incProgress(-2);
+  NewUser.incProgress(-1);
+  NewUser.incProgress(1);
+  NewUser.incProgress(2);
+  NewUser.incProgress(3);
+  NewUser.incProgress(4);
+  expect(NewUser.rank).toBe(1);
+  expect(NewUser.progress).toBe(10)
 });
