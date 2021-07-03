@@ -70,3 +70,11 @@ test('Any activities completed that are ranking 2 levels or more lower than the 
   expect(NewUser.progress).toBe(0);
 });
 
+test('Provided example scenario...', () => {
+  const NewUser = new User()
+  NewUser.incProgress(-7)
+  NewUser.incProgress(-5)
+  expect(NewUser.rank).toBe(-7);
+  expect(NewUser.progress).toBe(0);
+});
+
