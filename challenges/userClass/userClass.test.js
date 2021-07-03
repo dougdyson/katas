@@ -48,14 +48,25 @@ test('User ranked -8 completes an activity ranked -4 they will receive 160 progr
 
 test('User ranked -1 completes an activity ranked 1 they will receive 10 progress', () => {
   const NewUser = new User();
-  NewUser.incProgress(-4); //? -7
-  NewUser.incProgress(-3);
-  NewUser.incProgress(-2);
-  NewUser.incProgress(-1);
+  NewUser.rank = -1;
   NewUser.incProgress(1);
-  NewUser.incProgress(2);
-  NewUser.incProgress(3);
-  NewUser.incProgress(4);
   expect(NewUser.rank).toBe(1);
-  expect(NewUser.progress).toBe(10)
+  expect(NewUser.progress).toBe(10);
 });
+
+test('Completing an activity that is ranked one ranking lower than the users will be worth 1 point', () => {
+  const NewUser = new User();
+  NewUser.rank = -1;
+  NewUser.incProgress(-2);
+  expect(NewUser.rank).toBe(-1);
+  expect(NewUser.progress).toBe(1);
+});
+
+test('Any activities completed that are ranking 2 levels or more lower than the users ranking will be ignored', () => {
+  const NewUser = new User();
+  NewUser.rank = -1;
+  NewUser.incProgress(-3);
+  expect(NewUser.rank).toBe(-1);
+  expect(NewUser.progress).toBe(0);
+});
+
