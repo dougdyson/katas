@@ -1,6 +1,6 @@
 class User {
   constructor() {
-    this.exists = true;
+    this.rank = -8;
   }
 }
 

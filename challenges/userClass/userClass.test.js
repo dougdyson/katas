@@ -1,7 +1,6 @@
 const User = require('./userClass.js'); //?
 
-const NewUser = new User(); //?
-
-test('Class successfully created', () => {
-  expect(NewUser.exists).toBe(true)
+test('Class successfully created with default rank of -8', () => {
+  const NewUser = new User(); //?
+  expect(NewUser.rank).toBe(-8)
 });
