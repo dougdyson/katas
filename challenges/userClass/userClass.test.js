@@ -15,3 +15,9 @@ test('A new Rank 8 completes Rank 8 activity for a progress of 3', () => {
   NewUser.incProgress(-8) //?
   expect(NewUser.progress).toBe(3)
 });
+
+test('A new Rank 8 completes Rank 8 activity for a progress of 3', () => {
+  const NewUser = new User();
+  NewUser.incProgress(-8) //?
+  expect(NewUser.progress).toBe(3)
+});
