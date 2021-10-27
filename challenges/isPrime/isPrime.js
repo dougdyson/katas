@@ -3,7 +3,11 @@ function isPrime(number) {
   // any number less than 2 is not a prime number
   if (number < 2) return false;
   
-  /* numbers produced from factors of composite numbers begin repeating after the square root of the product,thus it is not necessary to repeat the calculation past the product's square root: http://mathandmultimedia.com/2012/06/02/determining-primes-through-square-root/ */
+  // numbers produced from factors of composite numbers
+  // begin repeating after the square root of the product,
+  // thus it is not necessary to repeat the calculation
+  // past the product's square root.
+  // see: http://mathandmultimedia.com/2012/06/02/determining-primes-through-square-root/
   for (let i = 2; i <= Math.sqrt(number); i++) {
     if (number % i === 0) {
       return false;
