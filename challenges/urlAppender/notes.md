@@ -2,3 +2,9 @@ After creating a MVP canvas and sketch User Journey, and also cursory reviews of
 
 * function to check attendee's check-in status for an event
 * QR code scan to capture order #, attendee_id
+
+1. Create eventbrite team account and event (free ticket price)
+2. Create eventbrite attendee account and purchase $0 ticket
+3. Pull event meta data via eventbright api
+4. Scan QR code and check if attendee has checked-in
+5. If they have checked-in, unlock store
