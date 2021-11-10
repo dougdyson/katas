@@ -4,6 +4,7 @@ After creating a MVP canvas and sketch User Journey, and also cursory reviews of
 * QR code scan to capture order #, attendee_id
 
 1. Setup test harness and write tests
+2. Create seperate repos for services
 
 1. Purchase domain, or find free one for dev
 2. Create eventbrite team account and event (free ticket price)
