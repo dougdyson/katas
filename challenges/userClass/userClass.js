@@ -11,7 +11,7 @@ class User {
     else if (this.rank === (a + 1)) this.progress += 1;
     else if (this.rank < a && a !=1) this.progress += ((this.rank - a) * (this.rank - a) * 10);
     else if (this.rank === -1 && a === 1) {
-      this.rank = 1
+      this.rank = 1;
       this.progress += 10;
     };
     
