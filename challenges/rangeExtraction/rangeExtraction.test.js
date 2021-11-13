@@ -1,6 +1,6 @@
 const rangeExtraction = require('./rangeExtraction');
 
-test('converts a non-sequential array to a string with each array element comma seperated', () => {
+test.skip('converts a non-sequential array to a string with each array element comma seperated', () => {
   expect(rangeExtraction([-3,-1,2,4])).toBe("-3,-1,2,4")
 });
 
