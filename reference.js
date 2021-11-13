@@ -93,7 +93,7 @@ const animalParade = animals.join(', '); //?
 
 
 // map, takes an existing array and creates a new one, with each element as an output from a function
-const pluralizedAnimals = animals.map(animal => {return animal + 's'}) //?
+const pluralizedAnimals = animals.map(animal => animal + 's') //?
 // ----------------------------------------
 
 // basic reduce, takes an existing array and performs a function for each value in the array,
