@@ -1,5 +1,6 @@
 const rangeExtraction =  (r) => {
   // return r.reduce((a,v,i,arr) => arr[i+1] - v != 1 ? a += `,${String(v)}` : a += `-${String(v)}`);
+  // consider moving off reduce and converting output to string at end
 
   const range = r.reduce((a,v,i,arr) => {
     if (arr[i+1] - v != 1) a += `-${v}`
