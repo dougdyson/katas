@@ -1,18 +1,19 @@
 const rangeExtraction =  (r) => {
   // return r.reduce((a,v,i,arr) => arr[i+1] - v != 1 ? a += `,${String(v)}` : a += `-${String(v)}`);
-  // consider moving off reduce and converting output to string at end
-
-  const range = r.reduce((a,v,i,arr) => {
-    if (arr[i+1] - v != 1) a += `-${v}`
-    else a += `,${v}`
-    return a
-  })
-  return range;
+  let range = [];
+  r.forEach((v,i,arr) => {
+    if (Math.abs(range[i-1] - v)!= 1){
+      range.push(v)
+    }
+  });
+  return range.toString();
 }
 
-let test = rangeExtraction([-2,-1,0,2,4,5]);
+let test = rangeExtraction([-4,-3,-2,0,2,4,5,7]);
 test
-test = rangeExtraction([-2,-1,0,1,2,4,5,6]);
+test = rangeExtraction([-2,-1,0,2,4,5]);
 test
+// test = rangeExtraction([-2,-1,0,1,2,4,5,6]);
+// test
 
 module.exports = rangeExtraction
