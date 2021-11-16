@@ -9,7 +9,7 @@ const rangeExtraction =  (r) => {
   return range.toString();
 }
 
-let test = rangeExtraction([-4,-3,-2,0,2,4,5,7]);
+let test = rangeExtraction([-4,-2,0,2,4]);
 test
 test = rangeExtraction([-2,-1,0,2,4,5]);
 test
