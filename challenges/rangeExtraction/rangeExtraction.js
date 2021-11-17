@@ -5,7 +5,7 @@ const rangeExtraction =  (r) => {
   for (let i = 1; i < r.length; i++) {
     // check if current and previous array element are sequential
     if (r[i] - r[i-1] != 1) {
-      range.push(r[i])
+      range.push(r[i]);
     } else {
       const li = range.length-1; // last index of range array
       const sliceTo = range[li].toString().lastIndexOf('-') // find the last '-'
