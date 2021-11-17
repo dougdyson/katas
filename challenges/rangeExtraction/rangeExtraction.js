@@ -1,15 +1,11 @@
 const rangeExtraction =  (r) => {
   // return r.reduce((a,v,i,arr) => arr[i+1] - v != 1 ? a += `,${String(v)}` : a += `-${String(v)}`);
   let range = [];
-  r.forEach((v,i,arr) => {
-    if (Math.abs(range[i-1] - v)!= 1){
-      range.push(v)
-    }
-  });
+  r.forEach((v,i,arr) => range.push(v));
   return range.toString();
 }
 
-let test = rangeExtraction([-4,-2,0,2,4]);
+let test = rangeExtraction([-4,-3,-2,-1,0,2,4]);
 test
 test = rangeExtraction([-2,-1,0,2,4,5]);
 test
