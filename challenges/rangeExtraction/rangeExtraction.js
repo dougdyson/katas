@@ -3,12 +3,12 @@ const rangeExtraction =  (r) => {
   let range = [r[0]];
   
   for (let i = 1; i < r.length; i++) {
-    const c = r[i];
-    const p = r[i-1];
+    const cv = r[i];
+    const pv = r[i-1];
     const li = range.length-1;
-    (c - p != 1) ? range.push(c) : range[li] = range[li].toString().slice(0,2) + `-${c}`
+    (cv - pv != 1) ? range.push(cv) 
+                   : range[li] = range[li].toString().slice(0,2) + `-${cv}`
   }
-
   return range.toString();
 }
 
