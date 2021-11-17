@@ -17,6 +17,6 @@ test;
 test = rangeExtraction([-2,-1,0,2,4,5]);
 test;
 test = rangeExtraction([-2,-1,0,1,2,4,5,6]);
-test
+test;
 
 module.exports = rangeExtraction
