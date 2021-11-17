@@ -12,7 +12,7 @@ const rangeExtraction =  (r) => {
   return range.toString();
 }
 
-let test = rangeExtraction([-2,-1,0,1,2,4]);
+let test = rangeExtraction([-2,-1,0,1,2,4,5,]);
 test;
 test = rangeExtraction([-2,-1,0,2,4,5]);
 test;
