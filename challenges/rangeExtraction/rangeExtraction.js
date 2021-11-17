@@ -1,7 +1,7 @@
 const rangeExtraction =  (r) => {
   // return r.reduce((a,v,i,arr) => arr[i+1] - v != 1 ? a += `,${String(v)}` : a += `-${String(v)}`);
   let range = [];
-  r.forEach((v,i,arr) => range.push(v));
+  r.forEach((v) => range.push(v));
   return range.toString();
 }
 
