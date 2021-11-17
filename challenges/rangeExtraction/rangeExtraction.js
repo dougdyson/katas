@@ -7,14 +7,14 @@ const rangeExtraction =  (r) => {
     const previous = r[i-1];
     const lastRangeIndex = range.length-1;
     console.log(current - previous);
-    (current - previous != 1) ? range.push(current) : range[lastRangeIndex] += `-${current}`
+    (current - previous != 1) ? range.push(current) : range[lastRangeIndex] = range[lastRangeIndex].toString().slice(0,2) + `-${current}`
     
   }
 
   return range.toString();
 }
 
-let test = rangeExtraction([-2,-1,0,1,2,4]);
+let test = rangeExtraction([-2,-1,0,1,2]);
 test;
 // test = rangeExtraction([-2,-1,0,2,4,5]);
 // test;
