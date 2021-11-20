@@ -10,6 +10,7 @@ const rangeExtraction =  (r) => {
     } else {
       const lastIndex = range.length-1;
       const sliceTo = range[lastIndex].toString().lastIndexOf('-') // find the last '-'
+      // managing impact of sequence having at least 3 array elements?
       if (sliceTo <= 0){ // first array element is '-' char or '-' is not found
         range[lastIndex] += `-${r[i]}`
       } else {
