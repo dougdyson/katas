@@ -24,7 +24,6 @@ const rangeExtraction =  (r) => {
       }
     }
   }
-  range
   return range.toString();
 }
 
