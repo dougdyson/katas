@@ -14,7 +14,7 @@ OK, didn't catch the part about a sequence requiring at least 3 sequential integ
 
 The lesson here is to make sure to include all existing tests in my test suite - even if I need to write simpler tests to start. (Existing tests can be skipped or ignored if/until required.)
 
-Also, I HATE my code! There is just far too much of it. All of the dynamic string manipulation makes my eyes glaze over. Totally needs a refactor, most likely a great candidate for regex.
+Also, I HATE my code! There is just far too much of it. All of the dynamic string manipulation makes my eyes glaze over. Totally needs a refactor, most likely a great candidate for regex. There is also a taletell sign: included logic to fix a bug but, while the fix works, not sure why!
 
 I started out trying to use reduce and other array methods such as maps, forEach filter, etc but the number of array elements does not equal to the reduced number of elements in the output array. So, used closure.
 
