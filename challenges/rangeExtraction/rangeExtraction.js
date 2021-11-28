@@ -27,7 +27,7 @@ const rangeExtraction =  (r) => {
   return range.toString();
 }
 
-const re = rangeExtraction([-12,-6,-5,-4,-1,0,2,3,10,11,12,13]);
+const re = rangeExtraction([-12,-6,-5,-4,-1,0,2,3,10,11,12,13])
 re
 
 module.exports = rangeExtraction
