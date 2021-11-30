@@ -22,3 +22,4 @@ Also, I HATE my code! There is just far too much of it. All of the dynamic strin
 I started out trying to use reduce and other array methods such as maps, forEach filter, etc but the number of array elements does not equal to the reduced number of elements in the output array. So, used closure.
 
 # UPDATE 2
+Going to swtich gears and move onto regex for this!
