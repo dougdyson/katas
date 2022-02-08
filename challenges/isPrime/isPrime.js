@@ -40,6 +40,7 @@ module.exports = isPrime;
 // I implemented a version of this where I had an external file with the 
 // first thousand prime numbers and used it to validate numbers before any math is performed.
 // (Assuming tests will catch any potential data errors in the file.)
+//
 // However, the numbers in the file were not large enough to avoid the problem of determining
 // prime for Very Large Numbers, which is where the computational demand needs to be optimized.
 //
