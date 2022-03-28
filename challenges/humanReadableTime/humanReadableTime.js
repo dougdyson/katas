@@ -1,4 +1,4 @@
-// The below version is th first attempt at solving this kata.
+// The below version is the first attempt at solving this kata.
 // Refactored Copilot's solution to make it more readable.
 // 239 characters
 const humanReadableTimeV1 = (seconds) => {
