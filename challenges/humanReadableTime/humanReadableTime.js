@@ -11,7 +11,7 @@ const humanReadableTimeV1 = (seconds) => {
 
 // The below version is the second attempt at solving this kata, without Copilot's help.
 // It is much more concise than the first attempt.
-// 115 characters = 52% decrease in code
+// 115 characters / 239 = 52% decrease in code
 const humanReadableTime = (s) => [s/3600 | 0, s/60 % 60 | 0, s % 60 | 0].map(i => `${i}`.padStart(2, 0)).join(':');
 
 module.exports = humanReadableTime;
