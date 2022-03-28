@@ -2,7 +2,8 @@ const humanReadableTime = (seconds) => {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   seconds = seconds % 60;
-  return `${('0' + hours).slice(-2)}:${('0' + minutes).slice(-2)}:${('0' + seconds).slice(-2)}`; 
+  const formatTime = (time) => `${('0' + time).slice(-2)}`;
+  return `${formatTime(hours)}:${(formatTime(minutes))}:${(formatTime(seconds))}`; 
 }
 
 module.exports = humanReadableTime;
