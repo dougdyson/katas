@@ -1,7 +1,7 @@
 // The below version is th first attempt at solving this kata.
 // Refactored Copilot's solution to make it more readable.
-
-const humanReadableTime = (seconds) => {
+// 239 characters
+const humanReadableTimeV1 = (seconds) => {
   const hours = seconds / 3600 | 0;
   const minutes = seconds % 3600 / 60 | 0;
   seconds = seconds % 60;
@@ -9,12 +9,9 @@ const humanReadableTime = (seconds) => {
   return `${formatTime(hours)}:${(formatTime(minutes))}:${(formatTime(seconds))}`; 
 }
 
-// Some examples of tighter code:
-//
-// p=n=>`0${n}`.slice(-2),humanReadable=(s)=>(m=s/60|0,p(m/60|0)+':'+p(m%60)+':'+p(s%60))
-//
-// let humanReadable =s=> [s/3600|0,s/60%60|0,s%60].map(i=>`${i}`.padStart(2,0)).join`:`
-//
-// const humanReadable = seconds => [seconds / 3600 ^ 0, seconds / 60 % 60 ^ 0, seconds % 60].map(val => `${val}`.padStart(2, `0`)).join(`:`); 
+// The below version is the second attempt at solving this kata.
+// It is much more concise than the first attempt.
+// 115 characters = 52% decrease in code
+const humanReadableTime = (s) => [s/3600 | 0, s/60 % 60 | 0, s % 60 | 0].map(i => `${i}`.padStart(2, 0)).join(':');
 
 module.exports = humanReadableTime;
