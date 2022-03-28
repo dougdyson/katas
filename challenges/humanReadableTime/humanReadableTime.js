@@ -9,7 +9,7 @@ const humanReadableTimeV1 = (seconds) => {
   return `${formatTime(hours)}:${(formatTime(minutes))}:${(formatTime(seconds))}`; 
 }
 
-// The below version is the second attempt at solving this kata.
+// The below version is the second attempt at solving this kata, without Copilot's help.
 // It is much more concise than the first attempt.
 // 115 characters = 52% decrease in code
 const humanReadableTime = (s) => [s/3600 | 0, s/60 % 60 | 0, s % 60 | 0].map(i => `${i}`.padStart(2, 0)).join(':');
