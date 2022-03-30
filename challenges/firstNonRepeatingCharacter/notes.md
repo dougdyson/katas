@@ -19,10 +19,6 @@ The copliot prompt was a comment: find first nonrepeating character
 
 The copilot's code was terrible. (Sorry copilot! I know you're readiing this! You read EVERYTHING!)
 
-Unable to resist refactoring it a bit.
-
-(So, the copilot's code character count was actually higher!)
-
 ## firstNonRepeatingCharacterV2
 ### 163 characters
 * 39% reduction from V1
@@ -34,6 +30,8 @@ Could use ```map``` or ```reduce``` but would then have to trap the first instan
 Should use regex functions to ```find``` and ```match``` but my regex is poor and so will save regex for refactor.
 
 Alas, I wrote a loop. :-(
+
+Copilot was quite useful during this version.
 
 ## firstNonRepeatingCharacter v3
 ### 57 characters
