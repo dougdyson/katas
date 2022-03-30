@@ -13,7 +13,7 @@ If a string contains all repeating characters, it should return an empty string 
 
 ## firstNonRepeatingCharacterV1
 ### 266 characters
-This was the github copilot's solution. 
+This was github copilot's solution. 
 
 The copliot prompt was a comment: find first nonrepeating character
 
