@@ -2,21 +2,18 @@
 const firstNonRepeatingCharacter = s => 
   [...s].find(v => !s.match(new RegExp(v, `gi`))[1]) || ``;
 
-// I knew regex was the way to go, especially since it
-// seemed I was being forced into a for loop (red flag!)
-// However, saving regex for refactor bc I need regex practice! 
-const firstNonRepeatingCharacterV2 = (str) => {
-  const lc = str.toLowerCase();
+const firstNonRepeatingCharacterV2 = s => {
+  const lc = s.toLowerCase();
 
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < s.length; i++) {
     if (lc.indexOf(lc[i]) == lc.lastIndexOf(lc[i])) {
-      return str[i]
+      return s[i]
     }
   };
   return '';
 }
 
-const firstNonRepeatingCharacterV1 = (s) => {
+const firstNonRepeatingCharacterV1 = s => {
   // copilot solution = YUCK!
   const charMap = {};
   for (let i = 0; i < s.length; i++) {
