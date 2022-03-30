@@ -1,7 +1,9 @@
 const firstNonRepeatingCharacter = (string) => {
+
+  const strCaps = string.toUpperCase();
   
   for (let i = 0; i < string.length; i++) {
-    if (string.indexOf(string[i]) === string.lastIndexOf(string[i])) {
+    if (strCaps.indexOf(strCaps[i]) === strCaps.lastIndexOf(strCaps[i])) {
       return string[i]
     }
   };

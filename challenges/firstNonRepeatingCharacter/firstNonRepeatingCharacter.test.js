@@ -22,6 +22,7 @@ describe('Simple Tests', function() {
 
 describe('Case sensitivity tests', function() {
   it('should handle case differences', function() {
+    expect(firstNonRepeatingCharacter('sTreSS')).toBe('T');
     expect(firstNonRepeatingCharacter('Ssss')).toBe('S');
     expect(firstNonRepeatingCharacter('sSss')).toBe('S');
     expect(firstNonRepeatingCharacter('ssSs')).toBe('S');
