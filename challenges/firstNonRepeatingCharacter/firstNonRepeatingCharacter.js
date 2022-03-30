@@ -4,7 +4,7 @@ const firstNonRepeatingCharacter = s =>
 
 // I knew regex was the way to go, especially since it
 // seemed I was being forced into a for loop (red flag!)
-// However, saving regex for refactor  
+// However, saving regex for refactor bc I need regex practice! 
 const firstNonRepeatingCharacterV2 = (str) => {
   const lowerCase = str.toLowerCase();
 
