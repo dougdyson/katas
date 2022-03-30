@@ -1,18 +1,23 @@
-const firstNonRepeatingCharacter = (string) => {
+// Regex solution v3
+const firstNonRepeatingCharacter = s => 
+  [...s].find(v => !s.match(new RegExp(v, `gi`))[1]) || ``;
 
-  const strCaps = string.toUpperCase();
-  
-  for (let i = 0; i < string.length; i++) {
-    if (strCaps.indexOf(strCaps[i]) === strCaps.lastIndexOf(strCaps[i])) {
-      return string[i]
+// I knew regex was the way to go, especially since it
+// seemed I was being forced into a for loop (red flag!)
+// However, saving regex for refactor  
+const firstNonRepeatingCharacterV2 = (str) => {
+  const lowerCase = str.toLowerCase();
+
+  for (let i = 0; i < str.length; i++) {
+    if (lowerCase.indexOf(lowerCase[i]) == lowerCase.lastIndexOf(lowerCase[i])) {
+      return str[i]
     }
   };
-
   return '';
 }
 
 const firstNonRepeatingCharacterV1 = (s) => {
-  // copilot solution
+  // copilot solution = YUCK!
   const charMap = {};
   for (let i = 0; i < s.length; i++) {
     if (charMap[s[i]]) {
