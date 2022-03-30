@@ -27,9 +27,7 @@ Unable to resist refactoring it a bit.
 ### 163 characters
 * 39% reduction from V1
 
-I explored finding a javascript function which iterates through lists and which can be return a single list element.
-
-However, these functions iterate through the whole list when we need only the first instance.
+I explored finding a javascript function which iterates through lists and which can return a single list element.
 
 Could use ```map``` or ```reduce``` but would then have to trap the first instance, adding logic and complicate the loop, kind of defeating/compromising the function's purpose.
 
@@ -47,5 +45,7 @@ So, yeah, regex is the way to go, using ```find``` and ```match```.
 Code-wise, the ```find``` replaces the ```for``` and the ```match``` replaces the ```if```.
 
 Using the RegEx object makes regex more readable in this case.
+
+I wondered during this exercise if this was a use case where a loop actually needs to be written. However, this is not the case.
 
 
