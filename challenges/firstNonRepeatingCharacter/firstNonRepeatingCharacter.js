@@ -1,6 +1,6 @@
 // v3 - Regex solution
 const firstNonRepeatingCharacter = s => 
-  [...s].find(v => !s.match(new RegExp(v, `gi`))[1]) || ``;
+  [...s].find(c => !s.match(new RegExp(c, `gi`))[1]) || ``;
 
 // v2 - loop solution
 const firstNonRepeatingCharacterV2 = s => {
