@@ -21,9 +21,10 @@ describe('Simple Tests', function() {
 });
 
 describe('Case sensitivity tests', function() {
-  it('should handle simple tests', function() {
-    expect(firstNonRepeatingCharacter('Stress')).toBe('S');
-    expect(firstNonRepeatingCharacter('sSs')).toBe('S');
-    expect(firstNonRepeatingCharacter('ssS')).toBe('S');
+  it('should handle case differences', function() {
+    expect(firstNonRepeatingCharacter('Ssss')).toBe('S');
+    expect(firstNonRepeatingCharacter('sSss')).toBe('S');
+    expect(firstNonRepeatingCharacter('ssSs')).toBe('S');
+    expect(firstNonRepeatingCharacter('sssS')).toBe('S');
   });
 });
