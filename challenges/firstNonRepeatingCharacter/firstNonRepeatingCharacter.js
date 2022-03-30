@@ -1,20 +1,21 @@
-// Regex solution v3
+// v3 - Regex solution
 const firstNonRepeatingCharacter = s => 
   [...s].find(v => !s.match(new RegExp(v, `gi`))[1]) || ``;
 
+// v2 - loop solution
 const firstNonRepeatingCharacterV2 = s => {
   const lc = s.toLowerCase();
 
   for (let i = 0; i < s.length; i++) {
-    if (lc.indexOf(lc[i]) == lc.lastIndexOf(lc[i])) {
+    if (lc.indexOf(lc[i]) === lc.lastIndexOf(lc[i])) {
       return s[i]
     }
   };
   return '';
 }
 
+// v1 - copilot solution
 const firstNonRepeatingCharacterV1 = s => {
-  // copilot solution = YUCK!
   const charMap = {};
   for (let i = 0; i < s.length; i++) {
     if (charMap[s[i]]) {
