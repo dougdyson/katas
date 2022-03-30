@@ -1,12 +1,11 @@
-const firstNonRepeatingCharacter = (s) => {
-  const charMap = s.split('')
+const firstNonRepeatingCharacter = (string) => {
   
-  for (let i = 0; i < charMap.length; i++) {
-    if (charMap.indexOf(charMap[i]) === charMap.lastIndexOf(charMap[i])) {
-      return charMap[i]
+  for (let i = 0; i < string.length; i++) {
+    if (string.indexOf(string[i]) === string.lastIndexOf(string[i])) {
+      return string[i]
     }
   };
-  
+
   return '';
 }
 
