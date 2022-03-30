@@ -46,6 +46,6 @@ So, yeah, regex is the way to go, using ```find``` and ```match```.
 
 Code-wise, the ```find``` replaces the ```for``` and the ```match``` replaces the ```if```
 
-Using the RegEx object makes regex more readable in this case
+Using the RegEx object makes regex more readable in this case.
 
 
