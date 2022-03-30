@@ -1,7 +1,7 @@
 const firstNonRepeatingCharacter = (s) => {
   let match = ''
 
-  s.split('').map((element,idx,arr) => {s.includes(element,idx+1) ? null : match = element})
+  s.split('').map((element,index) => {s.includes(element,index+1) ? null : match = element})
   
   return match;
 }
