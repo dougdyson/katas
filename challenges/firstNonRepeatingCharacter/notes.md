@@ -46,4 +46,7 @@ Using the RegEx object makes regex more readable in this case. Less scared of re
 
 I wondered during this exercise if this was a use case where a loop actually needs to be written. However, this was not the case.
 
+## Other Observations
+The provided name of the function firstNonRepeatingLetter is not as good a name as firstNonRepeatingCharacter, since characters in addition to letters are allowed. Mismatch in names created refactoring when going to test on codewars. Names matter!
+
 
