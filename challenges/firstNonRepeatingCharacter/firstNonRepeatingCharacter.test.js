@@ -10,12 +10,12 @@
 // If a string contains all repeating characters, 
 // it should return an empty string ("") or None
 
-const firstNonRepeatingLetter = require('./firstNonRepeatingLetter');
+const firstNonRepeatingCharacter = require('./firstNonRepeatingCharacter');
 
 describe('Simple Tests', function() {
   it('should handle simple tests', function() {
-    Test.assertEquals(firstNonRepeatingLetter('a'), 'a');
-    Test.assertEquals(firstNonRepeatingLetter('stress'), 't');
-    Test.assertEquals(firstNonRepeatingLetter('moonmen'), 'e');
+    expect(firstNonRepeatingCharacter('a')).toBe('a');
+    expect(firstNonRepeatingCharacter('stress')).toBe('t');
+    expect(firstNonRepeatingCharacter('moonmen')).toBe('e');
   });
 });
