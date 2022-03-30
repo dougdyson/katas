@@ -8,4 +8,14 @@
 // but the function should return the correct case for the initial letter. 
 // For example, the input 'sTreSS' should return 'T'.
 // If a string contains all repeating characters, 
-// it should return an empty string ("") or None 
+// it should return an empty string ("") or None
+
+const firstNonRepeatingLetter = require('./firstNonRepeatingLetter');
+
+describe('Simple Tests', function() {
+  it('should handle simple tests', function() {
+    Test.assertEquals(firstNonRepeatingLetter('a'), 'a');
+    Test.assertEquals(firstNonRepeatingLetter('stress'), 't');
+    Test.assertEquals(firstNonRepeatingLetter('moonmen'), 'e');
+  });
+});
