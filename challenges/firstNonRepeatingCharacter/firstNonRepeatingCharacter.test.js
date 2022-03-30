@@ -27,7 +27,7 @@ describe('Case sensitivity tests', function() {
 });
 
 describe('All repeating characters test', function() {
-  it('should handle case differences', function() {
+  it('should return empty', function() {
     expect(firstNonRepeatingCharacter('sSss')).toBe('');
   });
 
