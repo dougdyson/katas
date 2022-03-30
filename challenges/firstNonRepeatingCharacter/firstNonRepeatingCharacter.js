@@ -6,10 +6,10 @@ const firstNonRepeatingCharacter = s =>
 // seemed I was being forced into a for loop (red flag!)
 // However, saving regex for refactor bc I need regex practice! 
 const firstNonRepeatingCharacterV2 = (str) => {
-  const lowerCase = str.toLowerCase();
+  const lc = str.toLowerCase();
 
   for (let i = 0; i < str.length; i++) {
-    if (lowerCase.indexOf(lowerCase[i]) == lowerCase.lastIndexOf(lowerCase[i])) {
+    if (lc.indexOf(lc[i]) == lc.lastIndexOf(lc[i])) {
       return str[i]
     }
   };
