@@ -1,9 +1,13 @@
 const firstNonRepeatingCharacter = (s) => {
-  let match = ''
-
-  s.split('').map((element,index) => {s.includes(element,index+1) ? null : match = element})
+  const charMap = s.split('')
   
-  return match;
+  for (let i = 0; i < charMap.length; i++) {
+    if (charMap.indexOf(charMap[i]) === charMap.lastIndexOf(charMap[i])) {
+      return charMap[i]
+    }
+  };
+  
+  return '';
 }
 
 const firstNonRepeatingCharacterV1 = (s) => {
