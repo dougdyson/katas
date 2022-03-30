@@ -35,17 +35,17 @@ Should use regex functions to ```find``` and ```match``` but my regex is poor an
 
 Alas, I wrote a loop. :-(
 
-## firstNonRepeatingCharacter
+## firstNonRepeatingCharacter v3
 ### 57 characters
 * 79% reduction from V1
 * 39% reduction from V2
 
 So, yeah, regex is the way to go, using ```find``` and ```match```.
 
-Code-wise, the ```find``` replaces the ```for``` and the ```match``` replaces the ```if```.
+Code-wise, ```find``` replaces ```for``` and ```match``` replaces ```if```.
 
-Using the RegEx object makes regex more readable in this case.
+Using the RegEx object makes regex more readable in this case. Less scared of regex now! :-D
 
-I wondered during this exercise if this was a use case where a loop actually needs to be written. However, this is not the case.
+I wondered during this exercise if this was a use case where a loop actually needs to be written. However, this was not the case.
 
 
