@@ -19,3 +19,11 @@ describe('Simple Tests', function() {
     expect(firstNonRepeatingCharacter('moonmen')).toBe('e');
   });
 });
+
+describe('Case sensitivity tests', function() {
+  it('should handle simple tests', function() {
+    expect(firstNonRepeatingCharacter('Stress')).toBe('S');
+    expect(firstNonRepeatingCharacter('sSs')).toBe('S');
+    expect(firstNonRepeatingCharacter('ssS')).toBe('S');
+  });
+});

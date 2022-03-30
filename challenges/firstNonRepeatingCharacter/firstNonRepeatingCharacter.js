@@ -6,7 +6,6 @@ const firstNonRepeatingCharacter = (s) => {
       return charMap[i]
     }
   };
-  
   return '';
 }
 
