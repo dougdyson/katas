@@ -1,4 +1,4 @@
-const nextBiggestInteger = (int) => {
+const nextBiggestInteger = int => {
   
   // integer map for later iteration
   const numMap = int.toString().split('').sort() //?
@@ -7,10 +7,10 @@ const nextBiggestInteger = (int) => {
   const maxNum = numMap.reverse().join('') //?
 
   // get next index from numMap
-  const nextIndex = (i) => (numMap.indexOf(i) > numMap.length - 1) ? i++ : 0; //?
+  const nextIndex = i => (numMap.indexOf(i) > numMap.length - 1) ? i++ : 0; //?
 
   // reduce int to next highest number from numMap
-  const nextHighest = (int) => { 
+  const nextHighest = int => { 
     let i = int; //?
     maxNum //?
     while (i < maxNum) {
