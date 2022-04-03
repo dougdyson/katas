@@ -7,21 +7,27 @@ const nextBiggestInteger = (int) => {
   const maxNum = numMap.reverse().join('') //?
 
   // get next index from numMap
-  const nextIndex = (i) => (numMap.indexOf(i) < numMap.length - 1) ? i++ : 0;
+  const nextIndex = (i) => (numMap.indexOf(i) > numMap.length - 1) ? i++ : 0; //?
 
   // reduce int to next highest number from numMap
-  const nextHighest = (int) => {  //?
-    let i = 0;
-    while (int > maxNum) {
+  const nextHighest = (int) => { 
+    let i = int; //?
+    maxNum //?
+    while (i < maxNum) {
       // get next value from numMap
-      const nextNum = nextIndex(i);
+      const nextNum = nextIndex(i); //?
       // add next value to int
-      int += nextNum;
+      //i++; //?
     }
+    return i //?
   }
-  return int
+
+  return nextHighest(int); //?
+
+  const testNextIdx = nextIndex(0) //?
 }
 
 const test = nextBiggestInteger(2017) //?
+
 
 module.exports = nextBiggestInteger;
