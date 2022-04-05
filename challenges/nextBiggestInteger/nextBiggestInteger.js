@@ -1,33 +1,27 @@
 const nextBiggestInteger = int => {
-  
-  // integer map for later iteration
-  const numMap = int.toString().split('').sort() //?
+
+  // convert int to array of digits
+  const digits = int.toString().split(''); //?
 
   // maximum number possible
-  const maxNum = numMap.reverse().join('') //?
+  const maxNum = digits.sort().reverse().join(''); //?
 
-  // get next index from numMap
-  const nextIndex = i => (numMap.indexOf(i) > numMap.length - 1) ? i++ : 0; //?
+  let lowestNum = null;
 
-  // reduce int to next highest number from numMap
-  const nextHighest = int => { 
-    let i = int; //?
-    maxNum //?
-    while (i < maxNum) {
-      // get next value from numMap
-      const nextNum = nextIndex(i); //?
-      // add next value to int
-      //i++; //?
+  for (let i = int + 1; i <= maxNum; i++){
+    // convert i to array of strings
+    const iDigits = i.toString().split(''); //?
+    // chech each num in nums array to see if it isn't in digits array
+    if (iDigits.every(num => digits.includes(num))) {
+      lowestNum = i;
+      break;
     }
-    return i //?
   }
 
-  return nextHighest(int); //?
+  return lowestNum //?
 
-  const testNextIdx = nextIndex(0) //?
 }
 
-const test = nextBiggestInteger(2017) //?
-
+const test = nextBiggestInteger(2143) //?
 
 module.exports = nextBiggestInteger;
