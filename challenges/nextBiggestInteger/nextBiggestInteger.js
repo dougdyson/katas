@@ -19,7 +19,7 @@ const nextBiggestInteger = int => {
     }
   }
 
-  return lowestNum //?
+  return lowestNum; //?
 
 }
 
