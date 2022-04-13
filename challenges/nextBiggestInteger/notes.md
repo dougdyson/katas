@@ -19,3 +19,5 @@ If the digits can't be rearranged to form a bigger number, return -1 (or nil in 
 nextBigger(num: 9)   // returns nil
 nextBigger(num: 111) // returns nil
 nextBigger(num: 531) // returns nil
+
+This is a problem best resolved with regex
