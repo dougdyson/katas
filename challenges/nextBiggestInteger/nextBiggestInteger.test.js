@@ -8,4 +8,4 @@ describe("Simple tests", () => {
     expect(nextBiggestInteger(414)).toBe(441)
     expect(nextBiggestInteger(144)).toBe(414)
   });
-});
+})

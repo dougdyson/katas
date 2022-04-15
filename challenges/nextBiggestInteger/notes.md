@@ -1,5 +1,7 @@
 Link: https://www.codewars.com/kata/55983863da40caa2c900004e/train/javascript
 
+This is a regex problem!
+
 Create a function that takes a positive integer and returns the next bigger number that can be formed by rearranging its digits. For example:
 
 12 ==> 21
@@ -20,4 +22,4 @@ nextBigger(num: 9)   // returns nil
 nextBigger(num: 111) // returns nil
 nextBigger(num: 531) // returns nil
 
-This is a problem best resolved with regex
+This is a problem best resolved with regex!
