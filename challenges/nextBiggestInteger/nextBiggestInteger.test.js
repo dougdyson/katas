@@ -13,4 +13,5 @@ describe("Simple tests", () => {
 
 describe('Negative tests', () => {
   expect(nextBiggestInteger(333)).toBe(-1);
+  expect(nextBiggestInteger(0)).toBe(-1);
 });
