@@ -15,3 +15,12 @@ describe('Negative tests', () => {
   expect(nextBiggestInteger(333)).toBe(-1);
   expect(nextBiggestInteger(0)).toBe(-1);
 });
+
+describe('Random tests', () => {
+  for (let i = 0; i < 100; i++) {
+    let num = Math.floor(Math.random() * 100000);
+    it(`${num} should be next highest value`, () => {
+      expect(nextBiggestInteger(num)).toBe(num + 1);
+    });
+  }
+}
