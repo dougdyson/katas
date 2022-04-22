@@ -8,7 +8,7 @@ const nextBiggestInteger = int => {
 
   let lowestNum = null;
 
-  // have to refactor with regex!
+  // have to refactor with regex and reduce
   for (let i = int + 1; i <= maxNum; i++){
     // convert i to array of strings
     const iDigits = i.toString().split(''); //?
