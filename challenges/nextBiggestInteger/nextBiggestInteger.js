@@ -19,6 +19,11 @@ const nextBiggestInteger = int => {
     }
   }
 
+  // reduce digits
+  digits.reduce((acc, curr, i) => {
+    
+  }, int + 1);
+
   return lowestNum; //?
 
 }
