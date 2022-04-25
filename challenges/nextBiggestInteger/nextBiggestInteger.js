@@ -19,7 +19,7 @@ const nextBiggestInteger = int => {
     }
   }
 
-  // reduce digits and match
+  // reduce digits and match!
   digits.reduce((acc, curr, i) => {
     
   }, int + 1);
