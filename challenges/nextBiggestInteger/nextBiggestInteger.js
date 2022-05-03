@@ -4,22 +4,13 @@ const nextBiggestInteger = int => {
   const digits = int.toString().split(''); //?
 
   // maximum number possible
-  const maxNum = digits.sort().reverse().join(''); //?
+  const maxNum = parseInt(digits.sort().reverse().join('')); //?
+  int
 
-  let lowestNum = null;
-
-  // have to refactor with regex and reduce
-  for (let i = int + 1; i <= maxNum; i++){
-    // convert i to array of strings
-    const iDigits = i.toString().split(''); //?
-    // chech each num in nums array to see if it isn't in digits array
-    if (iDigits.every(num => digits.includes(num))) {
-      lowestNum = i;
-      break;
-    }
-  }
+  // if int is already the maximum possible number, return -1
+  if (int === maxNum) return -1; //?
 }
 
-const test = nextBiggestInteger(2143) //?
+nextBiggestInteger(333); //?
 
 module.exports = nextBiggestInteger;
