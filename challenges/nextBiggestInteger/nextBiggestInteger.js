@@ -21,7 +21,7 @@ const nextBiggestInteger = int => {
 
   // use integer for while; reduce digits and match
   digits.reduce((acc, curr, i) => {
-    // match via regex and remove matched digits also handle repeating digits
+    // match via regex and remove matched digits to handle repeating digits
   }, int + 1);
 
   return lowestNum; //?
