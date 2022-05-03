@@ -18,7 +18,6 @@ const nextBiggestInteger = int => {
       break;
     }
   }
-
 }
 
 const test = nextBiggestInteger(2143) //?
