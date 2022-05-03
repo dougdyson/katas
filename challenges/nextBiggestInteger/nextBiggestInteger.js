@@ -9,7 +9,7 @@ const nextBiggestInteger = int => {
   // if int is already the maximum possible number, return -1
   if (int === maxInt) return -1; //?
 
-  // int + 1
+  // next integer from int
   let nextInt = int + 1; //?
 
   // add +1 to int and check to see if all digits are in int in any order
@@ -19,7 +19,7 @@ const nextBiggestInteger = int => {
     
     // check if all digits are in int in any order
     if (digits.every(digit => nextIntDigits.includes(digit))) {
-      return nextInt;
+      return nextInt; //?
     }
 
     // increment nextInt
@@ -29,6 +29,6 @@ const nextBiggestInteger = int => {
 
 }
 
-nextBiggestInteger(12); //?
+nextBiggestInteger(441); //?
 
 module.exports = nextBiggestInteger;
