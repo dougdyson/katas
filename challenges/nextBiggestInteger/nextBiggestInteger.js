@@ -17,7 +17,7 @@ const nextBiggestInteger = int => {
     // create array of digits from nextInt
     const nextIntDigits = nextInt.toString().split(''); //?
     
-    // check if all digits are in int in any order
+    // check if all digits are in int in any order, need to remove matched ints
     if (nextIntDigits.every(digit => digits.includes(digit))) {
       return nextInt; //?
     }
@@ -25,10 +25,8 @@ const nextBiggestInteger = int => {
     // increment nextInt
     nextInt = nextInt + 1; //?
   }
-
-
 }
 
-nextBiggestInteger(414); //?
+nextBiggestInteger(144); //?
 
 module.exports = nextBiggestInteger;
