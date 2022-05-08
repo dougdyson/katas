@@ -15,6 +15,7 @@ describe('Negative tests', () => {
   it("should return false", () => {
     expect(nextBiggestInteger(333)).toBe(-1);
     expect(nextBiggestInteger(0)).toBe(-1);
+    expect(nextBiggestInteger(1)).toBe(-1);
   });
 });
 
