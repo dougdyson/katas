@@ -12,7 +12,7 @@ nextBigger(num: 12)   // returns 21
 nextBigger(num: 513)  // returns 531
 nextBigger(num: 2017) // returns 2071
 
-If the digits can't be rearranged to form a bigger number, return -1 (or nil in Swift):
+If the digits can't be rearranged to form a bigger number, return -1:
 
 9 ==> -1
 111 ==> -1
