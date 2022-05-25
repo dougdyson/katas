@@ -6,6 +6,7 @@ Create a function that takes a positive integer and returns the next bigger numb
 
 12 ==> 21
 513 ==> 531
+414 ==> 441
 2017 ==> 2071
 
 nextBigger(num: 12)   // returns 21
