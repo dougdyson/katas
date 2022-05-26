@@ -18,5 +18,6 @@ describe('Negative tests', () => {
     expect(nextBiggestInteger(0)).toBe(-1);
     expect(nextBiggestInteger('')).toBe(-1);
     expect(nextBiggestInteger(null)).toBe(-1);
+    expect(nextBiggestInteger(undefined)).toBe(-1);
   });
 });
