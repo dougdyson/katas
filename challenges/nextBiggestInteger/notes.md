@@ -18,6 +18,7 @@ If the digits can't be rearranged to form a bigger number, return -1:
 9 ==> -1
 111 ==> -1
 531 ==> -1
+-1 ==> -1
 
 nextBigger(num: 9)   // returns nil
 nextBigger(num: 111) // returns nil
