@@ -29,4 +29,4 @@ const nextBiggestInteger = int => {
 
 nextBiggestInteger(414); //?
 
-module.exports = nextBiggestInteger;
+module.exports = nextBiggestInteger
