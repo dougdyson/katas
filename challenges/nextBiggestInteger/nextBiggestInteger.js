@@ -25,7 +25,7 @@ const nextBiggestInteger = int => {
     // increment nextInt
     nextInt = nextInt + 1; //?
   }
-}
+};
 
 nextBiggestInteger(414); //?
 
