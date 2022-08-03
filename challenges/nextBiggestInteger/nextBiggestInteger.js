@@ -27,6 +27,6 @@ const nextBiggestInteger = int => {
   }
 };
 
-nextBiggestInteger(414); //?
+nextBiggestInteger(515); //?
 
 module.exports = nextBiggestInteger;
