@@ -12,21 +12,24 @@ const nextBiggestInteger = int => {
   // next integer from int
   let nextInt = int + 1; //?
 
-  // add +1 to int and check to see if all digits are in int in any order
-  while (nextInt <= maxInt) {
+  // add +1 to int and check to see if all digits are in the array in any order
+  while (nextInt < maxInt) {
+    
     // create array of digits from nextInt
     const nextIntDigits = nextInt.toString().split(''); //?
     
-    // check if all digits are in int in any order, need to remove matched ints
-    if (nextIntDigits.every(digit => digits.includes(digit))) {
-      return nextInt; //?
-    }
-
-    // increment nextInt
+    // reduce nextIntDigits for each digit in digits
+    nextIntDigits.reduceRight((ac, cv, arr, idx) => {
+      
+      // increment nextInt
+      
+    })
     nextInt = nextInt + 1; //?
-  }
-};
+  };
+  return nextInt; //?
+}
 
-nextBiggestInteger(414); //?
+
+nextBiggestInteger(12); //?
 
 module.exports = nextBiggestInteger;
