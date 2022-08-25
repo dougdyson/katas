@@ -1,5 +1,8 @@
 const nextBiggestInteger = int => {
 
+  // return -1 for empty string, null, undefined, NaN, or negative numbers
+  if (int === '' || int === null || int === undefined || isNaN(int) || int < 1) return -1;
+
   // convert int to array of digits
   const digits = int.toString().split(''); //?
 
@@ -16,16 +19,12 @@ const nextBiggestInteger = int => {
   while (nextInt < maxInt) {
     
     // create array of digits from nextInt
-    const nextIntDigits = nextInt.toString().split(''); //?
+    // const nextIntDigits = nextInt.toString().split(''); //?
     
-    // reduce nextIntDigits for each digit in digits
-    nextIntDigits.reduceRight((ac, cv, arr, idx) => {
-      
-      // increment nextInt
-      
-    })
     nextInt = nextInt + 1; //?
+    
   };
+
   return nextInt; //?
 }
 
