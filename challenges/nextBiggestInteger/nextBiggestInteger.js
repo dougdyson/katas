@@ -6,54 +6,42 @@ const nextBiggestInteger = int => {
   
   // convert int to array of digits
   const digits = int.toString().split(''); //?
-
+  
   // maximum number possible
   const maxInt = parseInt(digits.sort().reverse().join('')); //?
-
+  
   // if int is already the maximum possible number, return -1
-  if (int === maxInt) return -1; //?
+  if (int === maxInt) return -1;
+
+  // map instances of digits
+  const associativeDigits = {'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0};
+  digits.forEach(digit => associativeDigits[digit] += 1);
 
   // next integer from int
   let nextInt = int + 1; //?
 
-  
-  // add +1 to int and check to see if all digits are in the array in any order
   while (nextInt < maxInt) {
     
-    // create temp array of digits
-    const tempDigits = digits //?
-
     // create array of digits from nextInt
-    const nextIntDigits = nextInt.toString().split(''); //?
+    const nextIntDigits = nextInt.toString().split('');
 
-    // check to see if all digits from nextIntDigits are in tempDigits
-    const allDigits = nextIntDigits.every(digit => tempDigits.includes(digit));
-    if (allDigits) {
+    // create temp associativeDigits object
+    const tempAssociativeDigits = {...associativeDigits};
+    
+    // decrement tempAssociativeDigits[digit] for each digit in nextIntDigits
+    nextIntDigits.map(digit => tempAssociativeDigits[digit]--);
       
-      console.log(`all digits found for ${nextInt} in ${digits}`);
-      
-      digits.reduce((acc, digit) => {
-        console.log(digit)
-        // find first instance of digit in tempDigits
-        const index = tempDigits.indexOf(digit); //?
-        // remove digit from tempDigits
-        tempDigits.splice(index, 1); //?
-        console.log(`${tempDigits} and tempDigits length is ${tempDigits.length}`);
-      }, 0); //?
+    // check that all associativeDigits[digit] are 0
+    if (Object.values(tempAssociativeDigits).every(value => value === 0)) return nextInt;
 
-      // if tempDigits is empty, all digits were found
-      if (tempDigits.length === 0) return nextInt; //?
-
-    }
-
-    nextInt = nextInt + 1; //?
+    nextInt = nextInt + 1;
     
   };
 
-  return nextInt; //?
+  return nextInt;
 }
 
-
-nextBiggestInteger(114); //?
+// sb 414
+// nextBiggestInteger(18766555440); //?
 
 module.exports = nextBiggestInteger;
