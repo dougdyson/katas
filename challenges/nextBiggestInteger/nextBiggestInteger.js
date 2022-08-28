@@ -15,7 +15,16 @@ const nextBiggestInteger = int => {
 
   // last digit in digits
   const lastDigit = digits[digits.length - 1]; //?
-  const lastDigitIndex = digits.lastIndexOf(lastDigit); //?
+
+  // reduceright to find next highest digit
+  const nextHighestDigit = integers => digits.reduceRight((acc, digit, index) => {
+    if (digit >= lastDigit) {
+      acc = digit;
+      integers.splice(index, 1);
+    }
+    console.log(acc);
+    return acc;
+  }, 0); //?
 
   // Swapping approach: from the left, swap lower digit with higher digit appended to the right
   // and keep swapping/appending until the next higher digit is found
@@ -29,7 +38,8 @@ const nextBiggestInteger = int => {
   // 12123369 -> work from left to right to find the next highest digit and swap it
   // 21123369 -> swap lower digit with higher digit, do until greater than original number
 
-  return int;
+  digits;
+  return parseInt(digits.join('')); //?
 }
 
 const nextBiggestIntegerV1 = int => {
@@ -75,7 +85,7 @@ const nextBiggestIntegerV1 = int => {
   return nextInt;
 }
 
-// sb 21123369
-nextBiggestInteger(19633221); //?
+// sb 19633221 => 21123369
+nextBiggestInteger(12); //?
 
 module.exports = nextBiggestInteger;
