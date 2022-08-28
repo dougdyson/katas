@@ -25,9 +25,11 @@ describe("Edge cases", () => {
 // 19633221
 // 19633212
 // 19633122
-// 19632123
-// 19621233
-// 19212336
+// 19631223
+// 19612233
+// 19122336
+// 11223369 -> no more swapping possible
+// 12123369 -> now work from left to right to find the next highest digit
 // 21123369
 
 
