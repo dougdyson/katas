@@ -4,7 +4,7 @@ const nextBiggestInteger = int => {
   // return -1 for empty string, null, undefined, NaN, or negative numbers
   if (int === '' || int === null || int === undefined || isNaN(int) || int < 0) return -1;
   
-  // convert int to array of digits
+  // convert int to digits of digits
   const digits = int.toString().split(''); //?
 
   // maximum number possible
@@ -12,24 +12,36 @@ const nextBiggestInteger = int => {
   // // if int is already the maximum possible number, return -1
   // if (int === maxInt) return -1;
 
-  // from the right, swap lower digit with higher digit appended to the right
-  // and keep swapping/appending until the next higher digit is found
-  const swapIntegers = (digits, index) => { //?
-    // if index is 0, return -1
-    if (index === 0) return -1;
-    // if digit at index is greater than digit at index - 1
-    if (digits[index] > digits[index - 1]) {
-      // swap digits
-      const temp = digits[index];
-      digits[index] = digits[index - 1];
-      digits[index - 1] = temp;
-      // return digits
-      return digits;
-    } else {
-      // else, call swapIntegers with index - 1
-      return swapIntegers(digits, index - 1);
+  // reduceRight the digits array, comparing each digit to the next digit
+  // if the current digit is less than the next digit,
+  // swap the current digit with the next digit and
+  // put the next digit at the end of the digits array
+  // return the digits as a number
+
+  return digits.reduceRight((acc, digit, index, digits) => {
+    digits;
+    index;
+    digit;
+    const nextDigit = (digits[index + 1]) ? digits[index + 1] : digit; //?
+    // if digit is greater than nextDigit,
+    // put the next digit at the end of the digits array
+    if (digit < nextDigit) {
+      digit; //?
+      nextDigit; //?
+      // swap the current digit with the next digit
+      const tempDigit = digit;
+      digits[index] = nextDigit;
+      // move nextDigit to the end of the digits array
+      digits[index + 1] = tempDigit;
+      digits; //?
+      // return parseInt(digits.join('')); //?
+
+      acc = parseInt(digits.join('')); //?
+
     }
-  }
+
+    return acc
+  }, 0);
 
 
   // Swapping approach: from the right, swap lower digit with higher digit appended to the right
@@ -43,10 +55,6 @@ const nextBiggestInteger = int => {
   // 11223369 -> no more swapping possible
   // 12123369 -> work from left to right to find the next highest digit and swap it
   // 21123369 -> swap lower digit with higher digit, do until greater than original number
-
-  const swappedIntegers = swapIntegers(digits, digits.length - 1); //?
-
-  return parseInt(swappedIntegers.join('')); //?
   
 }
 
@@ -56,7 +64,7 @@ const nextBiggestIntegerV1 = int => {
   // return -1 for empty string, null, undefined, NaN, or negative numbers
   if (int === '' || int === null || int === undefined || isNaN(int) || int < 0) return -1;
   
-  // convert int to array of digits
+  // convert int to digits of digits
   const digits = int.toString().split(''); //?
   
   // maximum number possible
@@ -74,7 +82,7 @@ const nextBiggestIntegerV1 = int => {
 
   while (nextInt < maxInt) {
     
-    // create array of digits from nextInt
+    // create digits of digits from nextInt
     const nextIntDigits = nextInt.toString().split('');
 
     // create temp associativeDigits object
@@ -95,6 +103,8 @@ const nextBiggestIntegerV1 = int => {
 
 // sb 19633221 => 21123369
 // nextBiggestInteger(19633221); //?
-nextBiggestInteger(144); //?
+nextBiggestInteger(414); //?
+// sb 3421 => 4123
+// nextBiggestInteger(3421); //?
 
 module.exports = nextBiggestInteger;
