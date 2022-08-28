@@ -22,9 +22,9 @@ describe("Edge cases", () => {
 
 // Swapping approach: from the left, swap lower digit with higher digit appended to the right
 // and keep swapping/appending until the next higher digit is found
-// 19633221
-// 19633212
-// 19633122
+// 19633221         121
+// 19633212         112
+// 19633122         211
 // 19631223
 // 19612233
 // 19122336
