@@ -30,7 +30,7 @@ describe("Edge cases", () => {
 // 19122336
 // 11223369 -> no more swapping possible
 // 12123369 -> work from left to right to find the next highest digit
-// 21123369
+// 21123369 -> swap lower digit with lower digit, do until greater than original number
 
 
 describe('Negative tests', () => {
