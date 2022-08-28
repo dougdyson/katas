@@ -29,7 +29,7 @@ describe("Edge cases", () => {
 // 19612233
 // 19122336
 // 11223369 -> no more swapping possible
-// 12123369 -> now work from left to right to find the next highest digit
+// 12123369 -> work from left to right to find the next highest digit
 // 21123369
 
 
