@@ -9,7 +9,15 @@ describe("Simple tests", () => {
     expect(nextBiggestInteger(2017)).toBe(2071)
     expect(nextBiggestInteger(19)).toBe(91)
     expect(nextBiggestInteger(121)).toBe(211)
+    expect(nextBiggestInteger(123456789)).toBe(123456798)
+    expect(nextBiggestInteger(987654312)).toBe(987654321)
   });
+});
+
+describe("Edge cases", () => {
+  it("reorder digits by finding next lowest integer and sort remainder by ascending order", () => {
+    expect(nextBiggestInteger(19633221)).toBe(21123369)
+  })
 });
 
 describe('Negative tests', () => {

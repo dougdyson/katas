@@ -41,7 +41,7 @@ const nextBiggestInteger = int => {
   return nextInt;
 }
 
-// sb 414
+// sb 21123369
 nextBiggestInteger(19633221); //?
 
 module.exports = nextBiggestInteger;
