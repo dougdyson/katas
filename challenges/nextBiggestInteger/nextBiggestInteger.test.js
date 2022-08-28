@@ -9,7 +9,6 @@ describe("Simple tests", () => {
     expect(nextBiggestInteger(2017)).toBe(2071)
     expect(nextBiggestInteger(19)).toBe(91)
     expect(nextBiggestInteger(121)).toBe(211)
-    expect(nextBiggestInteger(18766555440)).toBe(18766555440)
   });
 });
 
