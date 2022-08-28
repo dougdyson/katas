@@ -10,7 +10,7 @@ describe("Simple tests", () => {
     expect(nextBiggestInteger(19)).toBe(91)
     expect(nextBiggestInteger(121)).toBe(211)
     expect(nextBiggestInteger(123456789)).toBe(123456798)
-    expect(nextBiggestInteger(987654312)).toBe(987654321)
+    expect(nextBiggestInteger(19633212)).toBe(19633221)
   });
 });
 
@@ -19,6 +19,17 @@ describe("Edge cases", () => {
     expect(nextBiggestInteger(19633221)).toBe(21123369)
   })
 });
+
+// Swapping approach: from the left, swap lower digit with higher digit appended to the right
+// and keep swapping/appending until the next higher digit is found
+// 19633221
+// 19633212
+// 19633122
+// 19632123
+// 19621233
+// 19212336
+// 21123369
+
 
 describe('Negative tests', () => {
   it("should return -1", () => {
