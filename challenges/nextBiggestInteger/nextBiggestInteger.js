@@ -35,7 +35,7 @@ const nextBiggestInteger = int => {
 
     return acc;
 
-   }, 0); //?
+   }, 0);
 }
 
 const nextBiggestIntegerV1 = int => {
