@@ -1,4 +1,4 @@
-const nextBiggestInteger = int => {
+const nextBiggestIntegerV2 = int => {
   
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
@@ -38,7 +38,7 @@ const nextBiggestInteger = int => {
    }, 0);
 }
 
-const nextBiggestIntegerV1 = int => {
+const nextBiggestInteger = int => {
   
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
@@ -61,18 +61,22 @@ const nextBiggestIntegerV1 = int => {
   let nextInt = int + 1; //?
 
   while (nextInt < maxInt) {
-    
-    // create digits of digits from nextInt
-    const nextIntDigits = nextInt.toString().split('');
 
-    // create temp associativeDigits object
-    const tempAssociativeDigits = {...associativeDigits};
+    // if nextInt has the same digits as int
+    if (nextInt.toString().split('').every(digit => associativeDigits[digit] > 0)) {
     
-    // decrement tempAssociativeDigits[digit] for each digit in nextIntDigits
-    nextIntDigits.map(digit => tempAssociativeDigits[digit]--);
+      // create digits of digits from nextInt
+      const nextIntDigits = nextInt.toString().split('');
+
+      // create temp associativeDigits object
+      const tempAssociativeDigits = {...associativeDigits};
       
-    // check that all associativeDigits[digit] are 0
-    if (Object.values(tempAssociativeDigits).every(value => value === 0)) return nextInt;
+      // decrement tempAssociativeDigits[digit] for each digit in nextIntDigits
+      nextIntDigits.map(digit => tempAssociativeDigits[digit]--);
+        
+      // check that all associativeDigits[digit] are 0
+      if (Object.values(tempAssociativeDigits).every(value => value === 0)) return nextInt;
+    }
 
     nextInt = nextInt + 1;
     
