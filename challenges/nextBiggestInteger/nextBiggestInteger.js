@@ -5,7 +5,7 @@ const nextBiggestInteger = int => {
   if (int === '' || int === null || int === undefined || isNaN(int) || int < 0) return -1;
   
   // maximum number possible
-  const maxInt = parseInt(int.toString().split('').sort().reverse().join('')); //?
+  const maxInt = parseInt(int.toString().split('').sort().reverse().join(''));
   if (int === maxInt) return -1;
 
   // convert int to array of digits
@@ -17,13 +17,8 @@ const nextBiggestInteger = int => {
   // reduce digits and make sorting changes to ascDigits
   return digits.reduce((acc, digit, index, digits) => {
     
-    
     // if digit is less than next digit
     if (digit < digits[index + 1]) {
-      
-      digit;
-      digits[index + 1]; //?
-      ascDigits; //?
 
       // find index of next highest digit in ascDigits
       const nextHighestIndex = ascDigits.findIndex(d => d > digit);
@@ -34,13 +29,13 @@ const nextBiggestInteger = int => {
       // prepend nextHighestDigit to the ascDigits array
       ascDigits.unshift(nextHighestDigit);
       
-      // convert to the next highest integer
+      // convert to integer
       acc = parseInt(ascDigits.join('')); //?
     }
 
     return acc;
 
-   },0); //?
+   },0);
 }
 
 const nextBiggestIntegerV1 = int => {
@@ -88,7 +83,7 @@ const nextBiggestIntegerV1 = int => {
 
 // sb 19633221 => 21123369
 // nextBiggestInteger(19633221); //?
-nextBiggestInteger(414); //?
+// nextBiggestInteger(414); //?
 // nextBiggestInteger(12); //?
 // sb 3421 => 4123
 // nextBiggestInteger(34211); //?
