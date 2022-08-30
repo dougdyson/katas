@@ -84,6 +84,7 @@ const nextBiggestIntegerV1 = int => {
 // sb 19633221 => 21123369
 // nextBiggestInteger(19633221); //?
 // nextBiggestInteger(414); //?
+nextBiggestInteger(2017); //?
 // nextBiggestInteger(12); //?
 // sb 3421 => 4123
 // nextBiggestInteger(34211); //?
