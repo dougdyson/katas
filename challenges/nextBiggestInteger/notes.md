@@ -24,4 +24,18 @@ nextBigger(num: 9)   // returns nil
 nextBigger(num: 111) // returns nil
 nextBigger(num: 531) // returns nil
 
-This is a problem best resolved with regex!
+This is a problem best resolved with regex!  EDIT: it is most defineately not!
+
+random comments:
+// Swapping approach: from the right, swap lower digit with higher digit appended to the right
+  // and keep swapping/appending until the next higher digit is found
+  // 19633221         121
+  // 19633212         112
+  // 19633122         211
+  // 19631223
+  // 19612233
+  // 19122336
+  // 11223369 -> no more swapping possible
+  // 12123369 -> work from left to right to find the next highest digit and swap it
+  // 21123369 -> swap lower digit with higher digit, do until greater than original number
+  

@@ -6,41 +6,35 @@ const nextBiggestInteger = int => {
   
   // maximum number possible
   const maxInt = parseInt(int.toString().split('').sort().reverse().join('')); //?
-  // if int is already the maximum possible number, return -1
   if (int === maxInt) return -1;
 
-  // convert int to digits of digits
-  const digits = int.toString().split(''); //?
+  // convert int to array of digits
+  const digits = int.toString().split('');
 
-  // reduceRight digits where digits[i] > digits[i-1]
-  const i = digits.reduceRight((acc, digit, index, digits) => {
-    digit; //?
-    digits[index-1]; //?
-    if (digit > digits[index - 1]) {
-      // swap digits[i] and digits[i-1]
-      digits[index] = digits[index - 1];
-      digits[index - 1] = digit;
+  // create ascending sorted array of digits from int
+  const ascDigits = int.toString().split('').sort();
+
+  // reduce digits and make sorting changes to ascDigits
+  return digits.reduce((acc, digit, index, digits) => {
+    
+    // if digit is less than next digit
+    if (digit < digits[index + 1]) {
+
+      // find index of next highest digit in ascDigits
+      const nextHighestIndex = ascDigits.findIndex(d => d > digit);
+
+      // remove the next highest digit from ascDigits
+      const nextHighestDigit = ascDigits.splice(nextHighestIndex, 1)[0];
+      
+      // prepend nextHighestDigit to the ascDigits array
+      ascDigits.unshift(nextHighestDigit);
+      
+      // return the next highest integer
+      acc = parseInt(ascDigits.join('')); //?
     }
-    acc = parseInt(digits.join('')); //?
-    return acc; //?
-  },0); //?
+    return acc;
+   },0); //?
 }
-
-
-  
-  // Swapping approach: from the right, swap lower digit with higher digit appended to the right
-  // and keep swapping/appending until the next higher digit is found
-  // 19633221         121
-  // 19633212         112
-  // 19633122         211
-  // 19631223
-  // 19612233
-  // 19122336
-  // 11223369 -> no more swapping possible
-  // 12123369 -> work from left to right to find the next highest digit and swap it
-  // 21123369 -> swap lower digit with higher digit, do until greater than original number
-  
-
 
 const nextBiggestIntegerV1 = int => {
   
@@ -86,10 +80,10 @@ const nextBiggestIntegerV1 = int => {
 }
 
 // sb 19633221 => 21123369
-// nextBiggestInteger(19633221); //?
+nextBiggestInteger(19633221); //?
 // nextBiggestInteger(414); //?
-nextBiggestInteger(12); //?
+// nextBiggestInteger(12); //?
 // sb 3421 => 4123
-// nextBiggestInteger(3421); //?
+// nextBiggestInteger(34211); //?
 
 module.exports = nextBiggestInteger;
