@@ -17,8 +17,13 @@ const nextBiggestInteger = int => {
   // reduce digits and make sorting changes to ascDigits
   return digits.reduce((acc, digit, index, digits) => {
     
+    
     // if digit is less than next digit
     if (digit < digits[index + 1]) {
+      
+      digit;
+      digits[index + 1]; //?
+      ascDigits; //?
 
       // find index of next highest digit in ascDigits
       const nextHighestIndex = ascDigits.findIndex(d => d > digit);
@@ -29,10 +34,12 @@ const nextBiggestInteger = int => {
       // prepend nextHighestDigit to the ascDigits array
       ascDigits.unshift(nextHighestDigit);
       
-      // return the next highest integer
+      // convert to the next highest integer
       acc = parseInt(ascDigits.join('')); //?
     }
+
     return acc;
+
    },0); //?
 }
 
