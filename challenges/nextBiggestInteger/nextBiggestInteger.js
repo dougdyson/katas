@@ -15,10 +15,10 @@ const nextBiggestInteger = int => {
   const ascDigits = int.toString().split('').sort();
 
   // reduce digits and make sorting changes to ascDigits
-  return digits.reduce((acc, digit, index, digits) => {
+  return digits.reduceRight((acc, digit, index, digits) => {
 
     // if digit is less than next digit
-    if (digit < digits[index + 1]) {
+    if (digit < digits[index - 1]) {
 
       // find index of next highest digit in ascDigits
       const nextHighestIndex = ascDigits.findIndex(d => d > digit);
@@ -31,6 +31,9 @@ const nextBiggestInteger = int => {
       
       // convert to integer
       acc = parseInt(ascDigits.join('')); //?
+
+      // if acc is less than int, call nextBiggestIntegerV2 with acc
+      // if (acc < int) acc = nextBiggestIntegerV1(int); //?
     }
 
     return acc;
@@ -86,9 +89,9 @@ const nextBiggestIntegerV1 = int => {
 }
 
 // sb 19633221 => 21123369
-// nextBiggestInteger(19633221); //?
+nextBiggestIntegerV1(19633221); //?
 nextBiggestInteger(414); //?
-// nextBiggestInteger(12); //?
+nextBiggestInteger(12); //?
 // sb 34211 => 41123
 // nextBiggestInteger(34211); //?
 
