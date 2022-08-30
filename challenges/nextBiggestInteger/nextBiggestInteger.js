@@ -1,4 +1,4 @@
-const nextBiggestIntegerV2 = int => {
+const nextBiggestInteger = int => {
   
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
@@ -38,7 +38,7 @@ const nextBiggestIntegerV2 = int => {
    }, 0);
 }
 
-const nextBiggestInteger = int => {
+const nextBiggestIntegerV1 = int => {
   
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
