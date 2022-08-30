@@ -16,7 +16,7 @@ const nextBiggestInteger = int => {
 
   // reduce digits and make sorting changes to ascDigits
   return digits.reduce((acc, digit, index, digits) => {
-    
+
     // if digit is less than next digit
     if (digit < digits[index + 1]) {
 
@@ -25,9 +25,9 @@ const nextBiggestInteger = int => {
 
       // remove the next highest digit from ascDigits
       const nextHighestDigit = ascDigits.splice(nextHighestIndex, 1)[0];
-      
-      // prepend nextHighestDigit to the ascDigits array
-      ascDigits.unshift(nextHighestDigit);
+
+      // splice nextHighestDigit into ascDigits at index
+      ascDigits.splice(index, 0, nextHighestDigit);
       
       // convert to integer
       acc = parseInt(ascDigits.join('')); //?
@@ -35,7 +35,7 @@ const nextBiggestInteger = int => {
 
     return acc;
 
-   },0);
+   }, 0); //?
 }
 
 const nextBiggestIntegerV1 = int => {
@@ -83,10 +83,9 @@ const nextBiggestIntegerV1 = int => {
 
 // sb 19633221 => 21123369
 // nextBiggestInteger(19633221); //?
-// nextBiggestInteger(414); //?
-nextBiggestInteger(2017); //?
+nextBiggestInteger(414); //?
 // nextBiggestInteger(12); //?
-// sb 3421 => 4123
+// sb 34211 => 41123
 // nextBiggestInteger(34211); //?
 
 module.exports = nextBiggestInteger;
