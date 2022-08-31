@@ -1,4 +1,27 @@
 const nextBiggestInteger = int => {
+  // VALIDATE INPUT
+  // return -1 for empty string, null, undefined, NaN, or negative numbers
+  if (int === '' || int === null || int === undefined || isNaN(int) || int < 0) return -1;
+  
+  // convert int to digits of digits
+  const digits = int.toString().split(''); //?
+  
+  // maximum number possible
+  const maxInt = parseInt(digits.sort().reverse().join('')); //?
+  
+  // if int is already the maximum possible number, return -1
+  if (int === maxInt) return -1;
+
+  // map instances of digits
+  const associativeDigits = {'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0};
+  digits.forEach(digit => associativeDigits[digit] += 1);
+
+  // create ascending sorted array of digits from int
+  const ascDigits = int.toString().split('').sort();
+  
+}
+
+const nextBiggestIntegerV2 = int => {
   
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
@@ -89,9 +112,9 @@ const nextBiggestIntegerV1 = int => {
 }
 
 // sb 19633221 => 21123369
-nextBiggestIntegerV1(19633221); //?
-nextBiggestInteger(414); //?
-nextBiggestInteger(12); //?
+// nextBiggestIntegerV1(19633221); //?
+// nextBiggestInteger(414); //?
+// nextBiggestInteger(12); //?
 // sb 34211 => 41123
 // nextBiggestInteger(34211); //?
 
