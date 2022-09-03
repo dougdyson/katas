@@ -23,6 +23,8 @@ const nextBiggestInteger = int => {
 
   // create ascending sorted array of digits from int
   const ascDigits = int.toString().split('').sort();
+
+  return int;
   
 }
 
