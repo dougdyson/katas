@@ -7,7 +7,7 @@ describe("Simple tests", () => {
     expect(nextBiggestInteger(414)).toBe(441)
     expect(nextBiggestInteger(516)).toBe(561)
     expect(nextBiggestInteger(2017)).toBe(2071)
-    expect(nextBiggestInteger(19)).toBe(91)
+    expect(nextBiggestInteger(18)).toBe(81)
     expect(nextBiggestInteger(121)).toBe(211)
     expect(nextBiggestInteger(19633212)).toBe(19633221)
     expect(nextBiggestInteger(19633112)).toBe(19633121)
