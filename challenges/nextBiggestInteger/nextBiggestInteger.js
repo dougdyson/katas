@@ -9,7 +9,7 @@ const nextBiggestInteger = int => {
   if (int === '' || int === null || int === undefined || isNaN(int) || int < 0) return -1;
   
   // convert int to digits of digits
-  const digits = int.toString().split(''); //?
+  const digits = int.toString().split('');
   
   // maximum number possible
   const maxInt = parseInt(digits.sort().reverse().join('')); //?
