@@ -2,7 +2,7 @@ const nextBiggestInteger = int => {
 
   // This will be the combination of the 2 previous functions,
   // where if int matches the 2 function target format, it will
-  // use the V2 function, otherwise it will use the V1 function.
+  // use the V2 function, otherwise it will use the V1 function
 
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
