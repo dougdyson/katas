@@ -27,7 +27,7 @@ nextBigger(num: 531) // returns nil
 This is a problem best resolved with regex!  EDIT: it is most defineately not!
 
 Solved with 2 different algorithms but feel like there is a better way to do it. Just need to to test for first algothrim based on sort and, if test fails, then run the second algorithm based on
-associative array. Still, I think there is a better way to do it.
+associative array. Still, I think there is a better way to do it!
 
 random comments:
 // Swapping approach: from the right, swap lower digit with higher digit appended to the right
