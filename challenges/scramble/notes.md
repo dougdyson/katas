@@ -11,3 +11,6 @@ Examples:
 scramble('rkqodlw', 'world') ==> True
 scramble('cedewaraaossoqqyt', 'codewars') ==> True
 scramble('katas', 'steak') ==> False
+
+--- passed simple tests at 15 minutes with copilot solution, which is not performant enough
+--- spent 10 minutes trying to create a really big test string but it never seems big enough to fail, so am going to try to optimize the solution instead by utlizing sort and compare
