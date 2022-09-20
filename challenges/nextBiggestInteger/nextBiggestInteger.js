@@ -9,21 +9,22 @@ const nextBiggestInteger = int => {
   if (int === '' || int === null || int === undefined || isNaN(int) || int < 0) return -1;
   
   // convert int to digits of digits
-  const digits = int.toString().split('');
+  const digits = int.toString().split(''); //?
   
   // maximum number possible
-  const maxInt = parseInt(digits.sort().reverse().join('')); //?
+  const maxDigit =  int.toString().split('');
+  const maxInt = parseInt(maxDigit.sort().reverse().join('')); //?
   
   // if int is already the maximum possible number, return -1
   if (int === maxInt) return -1;
 
   // slice digits fom index 1 to end
+  
   const digitsFromIndex1 = digits.slice(1); //?
+  const sortedDigitsFromIndex1 = digits.slice(1).sort().reverse(); //?
 
-  // check if digitsFromIndex1 is sorted in descending order
-  const descendingSort = digitsFromIndex1.every((digit, index, digits) => digit >= (digits[index + 1] || digits[index])); //?
-
-  if (!descendingSort) return descendingSortMethod(int);
+ 
+  if (digitsFromIndex1.join('') === sortedDigitsFromIndex1.join('')) return descendingSortMethod(int); //?
   else return associativeArrayMethod(int);
 }
   
@@ -47,9 +48,10 @@ const descendingSortMethod = int => {
 
       digit
       index
+      const nextDigit = digits[index - 1] //?
 
       // find index of next highest digit in ascDigits
-      const nextHighestIndex = ascDigits.findIndex(d => d > digit); //?
+      const nextHighestIndex = ascDigits.findIndex(d => d > nextDigit); //?
 
       // remove the next highest digit from ascDigits
       const nextHighestDigit = ascDigits.splice(nextHighestIndex, 1)[0]; //?
@@ -117,13 +119,13 @@ const associativeArrayMethod = int => {
 }
 
 // sb 19633221 => 21123369
-// descendingSortMethod(19633221); //?
+// nextBiggestInteger(19633221); //?
 // nextBiggestInteger(414); //?
 // nextBiggestInteger(12); //?
 // sb 34211 => 41123
-descendingSortMethod(34211); //?
-associativeArrayMethod(34211) //?
+// nextBiggestInteger(34211) //?
+nextBiggestInteger(315); //?
 
-// descendingSortMethod(58777665555541);
+// nextBiggestInteger(59777763110); //?
 
 module.exports = nextBiggestInteger;
