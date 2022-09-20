@@ -22,8 +22,6 @@ describe("Edge cases", () => {
   })
 });
 
-
-
 describe('Negative tests', () => {
   it("should return -1", () => {
     expect(nextBiggestInteger(333)).toBe(-1);

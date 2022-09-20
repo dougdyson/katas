@@ -17,47 +17,45 @@ const nextBiggestInteger = int => {
   // if int is already the maximum possible number, return -1
   if (int === maxInt) return -1;
 
-  // map instances of digits
-  const associativeDigits = {'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0};
-  digits.forEach(digit => associativeDigits[digit] += 1);
+  // slice digits fom index 1 to end
+  const digitsFromIndex1 = digits.slice(1); //?
 
-  // create ascending sorted array of digits from int
-  const ascDigits = int.toString().split('').sort();
+  // check if digitsFromIndex1 is sorted in descending order
+  const descendingSort = digitsFromIndex1.every((digit, index, digits) => digit >= (digits[index + 1] || digits[index])); //?
 
-  return int;
-  
+  if (!descendingSort) return descendingSortMethod(int);
+  else return associativeArrayMethod(int);
 }
-
-const nextBiggestIntegerV2 = int => {
   
-  // VALIDATE INPUT
-  // return -1 for empty string, null, undefined, NaN, or negative numbers
-  if (int === '' || int === null || int === undefined || isNaN(int) || int < 0) return -1;
+const descendingSortMethod = int => {
   
-  // maximum number possible
-  const maxInt = parseInt(int.toString().split('').sort().reverse().join(''));
-  if (int === maxInt) return -1;
-
   // convert int to array of digits
-  const digits = int.toString().split('');
+  const digits = int.toString().split(''); //?
 
   // create ascending sorted array of digits from int
-  const ascDigits = int.toString().split('').sort();
+  const ascDigits = int.toString().split('').sort(); //?
 
   // reduce digits and make sorting changes to ascDigits
   return digits.reduceRight((acc, digit, index, digits) => {
 
+    digit
+    digits[index - 1] //?
+    index
+    
     // if digit is less than next digit
-    if (digit < digits[index - 1]) {
+    if (digit > digits[index - 1]) {
+
+      digit
+      index
 
       // find index of next highest digit in ascDigits
-      const nextHighestIndex = ascDigits.findIndex(d => d > digit);
+      const nextHighestIndex = ascDigits.findIndex(d => d > digit); //?
 
       // remove the next highest digit from ascDigits
-      const nextHighestDigit = ascDigits.splice(nextHighestIndex, 1)[0];
+      const nextHighestDigit = ascDigits.splice(nextHighestIndex, 1)[0]; //?
 
       // splice nextHighestDigit into ascDigits at index
-      ascDigits.splice(index, 0, nextHighestDigit);
+      ascDigits.splice(0, 0, nextHighestDigit); //?
       
       // convert to integer
       acc = parseInt(ascDigits.join('')); //?
@@ -66,12 +64,12 @@ const nextBiggestIntegerV2 = int => {
       // if (acc < int) acc = nextBiggestIntegerV1(int); //?
     }
 
-    return acc;
+    return acc; //?
 
    }, 0);
 }
 
-const nextBiggestIntegerV1 = int => {
+const associativeArrayMethod = int => {
   
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
@@ -119,10 +117,13 @@ const nextBiggestIntegerV1 = int => {
 }
 
 // sb 19633221 => 21123369
-// nextBiggestIntegerV1(19633221); //?
+// descendingSortMethod(19633221); //?
 // nextBiggestInteger(414); //?
 // nextBiggestInteger(12); //?
 // sb 34211 => 41123
-// nextBiggestInteger(34211); //?
+descendingSortMethod(34211); //?
+associativeArrayMethod(34211) //?
+
+// descendingSortMethod(58777665555541);
 
 module.exports = nextBiggestInteger;
