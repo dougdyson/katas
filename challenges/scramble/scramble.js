@@ -21,8 +21,6 @@ const scrambleV1 = (str1, str2) => {
   }
   , {});
 
-  const mapKeys = Object.keys(str1Map); //?
-
   // create map of str2
   const str2Map = str2.split('').reduce((acc, letter) => {
     acc[letter] = acc[letter] + 1 || 1;
