@@ -18,9 +18,9 @@ scramble('katas', 'steak') ==> False
 --- used a mapping to an associative arrays and then compared the values of the arrays - 1 hour!
 
 REFACTOR
-My solution is a bit verbose and need to refactor it down. There was a previous solution from someone else that was super tight:
+My solution is a bit verbose and I need to refactor it down. There was a previous solution from someone else that was super tight:
 ```const scramble = (str1, str2) => str2.split('').every(x => str1.split(x).length >= str2.split(x).length)```
 ^ going to analyze this and see if I can understand it!
 
-EDIT: split was the key! I was trying to use regex and match but split is much more performant and easier to understand. I also like the use of the .every method to check if all the characters in str2 are in str1 by way of comparing lengths. I've only been using split to create arrays from '' and using lengths is way more peformant than iterating each character for a match.
+EDIT: split was the key! I was trying to use regex and match but split is much more performant and easier to understand. I also like the use of the .every method to check if all the characters in str2 are in str1 by way of comparing lengths. I've only been using split to create arrays from '' but using lengths is way more peformant than iterating each character for a match.
 
