@@ -1,4 +1,4 @@
-const nextBiggestInteger = int => {
+const nextBiggestIntegerV1 = int => {
 
   // VALIDATE INPUT
   // return -1 for empty string, null, undefined, NaN, or negative numbers
@@ -96,6 +96,68 @@ const associativeArrayMethod = int => {
   return nextInt;
 }
 
+const nextBiggestIntegerCommented = int => {
+
+  // create array of digits from int
+  const digits = int.toString().split('');
+  // length of digits for use in interogating digits from right to left
+  let i = digits.length-1;
+  
+  // find first digit from right that is less than the digit to its left
+  while(i > 0) {
+    if (digits[i]>digits[i-1]) break;
+    i--;
+  }
+  if (i == 0) return -1; // if no such digit is found, return -1
+
+  // splice digits from the i
+  const endDigits = digits.splice(i).sort();
+  // get the digit from the immediate left of the endDigits splice
+  let leftDigit = digits[digits.length-1];
+  
+  // find the smallest digit in the endDigits that is greater than leftDigit
+  for (i = 0; i < endDigits.length; ++i) {
+    if (endDigits[i] > leftDigit) break;
+  }
+
+  // swap the leftDigit with the smallest digit in the endDigits
+  digits[digits.length-1] = endDigits[i]
+  endDigits[i] = leftDigit;
+
+  // return the integer formed by the digits
+  const res = digits.concat(endDigits);
+  const num = parseInt(res.join(''));
+  return num;
+}
+
+const nextBiggestInteger = int => {
+
+  const digits = int.toString().split('');
+  let i = digits.length-1;
+  
+  while(i > 0) {
+    if (digits[i]>digits[i-1]) break;
+    i--;
+  }
+  if (i == 0) return -1;
+
+  const endDigits = digits.splice(i).sort();
+  let leftDigit = digits[digits.length-1];
+  
+  for (i = 0; i < endDigits.length; ++i) {
+    if (endDigits[i] > leftDigit) break;
+  }
+
+  digits[digits.length-1] = endDigits[i]
+  endDigits[i] = leftDigit;
+
+  const res = digits.concat(endDigits);
+  const num = parseInt(res.join(''));
+  return num;
+}
+
+
+
 // // sb 19633221 => 21123369
 // nextBiggestInteger(19633221); //?
 // nextBiggestInteger(414); //?
@@ -104,6 +166,6 @@ const associativeArrayMethod = int => {
 // nextBiggestInteger(34211) //?
 // nextBiggestInteger(315); //?
 // // sb 59777763110 => 60113577779
-nextBiggestInteger(59777763110); //?
+// nextBiggestInteger(59777763110); //?
 
 module.exports = nextBiggestInteger;
