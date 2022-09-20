@@ -97,13 +97,13 @@ const associativeArrayMethod = int => {
 }
 
 // // sb 19633221 => 21123369
-// // nextBiggestInteger(19633221); //?
-// // nextBiggestInteger(414); //?
-// // nextBiggestInteger(12); //?
+// nextBiggestInteger(19633221); //?
+// nextBiggestInteger(414); //?
+// nextBiggestInteger(12); //?
 // // sb 34211 => 41123
-// // nextBiggestInteger(34211) //?
+// nextBiggestInteger(34211) //?
 // nextBiggestInteger(315); //?
-
-// // nextBiggestInteger(59777763110); //?
+// // sb 59777763110 => 60113577779
+nextBiggestInteger(59777763110); //?
 
 module.exports = nextBiggestInteger;
