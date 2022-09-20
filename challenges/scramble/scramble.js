@@ -12,14 +12,16 @@ const scrambleCopilot = (str1, str2) => {
   return result;
 }
 
-const scramble = (str1, str2) => {
+const scrambleV1 = (str1, str2) => {
 
   // create map of str1
-  const str1Map = str1.split('').reduce((acc, letter) => {
+  const str1Map = [str1.split('')].reduce((acc, letter) => {
     acc[letter] = acc[letter] + 1 || 1;
     return acc;
   }
   , {});
+
+  const mapKeys = Object.keys(str1Map); //?
 
   // create map of str2
   const str2Map = str2.split('').reduce((acc, letter) => {
@@ -35,6 +37,8 @@ const scramble = (str1, str2) => {
   );
 
 }
+
+const scramble = (str1, str2) => str2.split('').every(x => str1.split(x).length >= str2.split(x).length)
 
 scramble('scriptjavx', 'javascript'); //?
 
