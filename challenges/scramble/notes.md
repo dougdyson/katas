@@ -26,5 +26,5 @@ My solution is a bit verbose and I need to refactor it down. There was a previou
 
 ^ going to analyze this and see if I can understand it!
 
-EDIT: split was the key! I was trying to use regex and match but split is much more performant and easier to understand. I also like the use of the .every method to check if all the characters in str2 are in str1 by way of comparing lengths - very clever. I've only been using split to create arrays from '' but using lengths is way more peformant than iterating each character for a match.
+EDIT: split was the key! I was trying to use regex and match but split is much more performant and easier to understand. I also like the use of the .every method to check if all the characters in str2 are in str1 by way of comparing lengths - very clever. I've only been using split to create arrays from '' but using lengths is way more peformant than iterating each character for a match. This probably comes from me wanting code to be as explicit as possible, but that is not always the best approach.
 
