@@ -2,7 +2,6 @@ From: https://www.codewars.com/kata/551f23362ff852e2ab000037/javascript
 
 Example set: https://www.codewars.com/kata/551f23362ff852e2ab000037/discuss#5918235980a6997f7b000005
 
-
 [75],
 [95, 64],
 [17, 47, 82],
@@ -22,3 +21,6 @@ Example set: https://www.codewars.com/kata/551f23362ff852e2ab000037/discuss#5918
 and the correct longest slide down is:
 
 75+64+82+87+82+75+73+28+83+32+91+78+58+73+93 = 1074
+
+ROUND ONE
+Copilot had a solution right from the start which passed the simple test but failed the medium test because the solution only taverses in one direction, when it needs to be able to go back to a previous node if the sum of the current node and the next node is less than the sum of the current node and the node after that.
