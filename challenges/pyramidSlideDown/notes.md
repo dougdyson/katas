@@ -22,5 +22,16 @@ and the correct longest slide down is:
 
 75+64+82+87+82+75+73+28+83+32+91+78+58+73+93 = 1074
 
-ROUND ONE
-Copilot had a solution right from the start which passed the simple test but failed the medium test because the solution only taverses in one direction, when it needs to be able to go back to a previous node if the sum of the current node and the next node is less than the sum of the current node and the node after that.
+# ROUND ONE
+Copilot had a solution right from the start which passed the simple test but failed the medium test because the solution only taverses in one direction, when it needs to be able to go back to a previous node if the sum of the current node and the next node is less than the sum of the current node and the previous node's other path.
+
+## Thoughts
+Although I could traverse the entire tree, it won't be performant and not likely pass the tests unless I can find a way to proactively prune the tree or know when not to traverse a branch.
+
+### Sorting Idea
+Another approach may be sorting, where all the values in each row is a descending sort  stored in an associative array together with the index position in the source tree and then sort by index position in the source tree. 
+
+If the index positions from the source tree do not create a full path and/or there are holes in the path, then the path is not valid.
+
+If the path is not valid, compare to the next column in the source tree and repeat until a valid path is found.
+
