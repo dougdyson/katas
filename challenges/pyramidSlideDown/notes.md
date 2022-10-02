@@ -31,7 +31,7 @@ Although I could traverse the entire tree, it won't be performant and not likely
 ### Sorting Idea
 Another approach may be sorting, where all the values in each row is a descending sort  stored in an associative array together with the index position in the source tree and then sort by index position in the source tree. 
 
-If the index positions from the source tree do not create a full path and/or there are holes in the path, then the path is not valid.
+If the index positions from the source tree do not create a full path and/or there are dead ends in the path, then the path is not valid.
 
 If the path is not valid, compare to the next column in the source tree and repeat until a valid path is found.
 
