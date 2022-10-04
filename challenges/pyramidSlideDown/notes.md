@@ -33,5 +33,5 @@ Another approach may be sorting, where all the values in each row is a descendin
 
 If the index positions from the source tree do not create a full path and/or there are dead ends in the path, then the path is not valid.
 
-If the path is not valid, compare to the next column in the source tree and repeat until a valid path is found.
+If the path is not valid, compare to the next highest value column in the source tree and repeat until a valid path is found.
 
