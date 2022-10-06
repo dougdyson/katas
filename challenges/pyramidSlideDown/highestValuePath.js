@@ -1,10 +1,18 @@
 const highestValuePath = (tree) => {
   
+  // create an associative array to store the initial index values
   const associativeTree = tree.map((row, rowIndex) => {
     return row.map((value, valueIndex) => {
       return {"value": value,"originalIndex": valueIndex}
     }
   )});
+
+  // sort each rows in descending order
+  associativeTree.forEach((row) => {
+    row.sort((a, b) => {
+      return b.value - a.value
+    })
+  });
   
 }
 
