@@ -1,7 +1,7 @@
 const highestValuePath = (tree) => {
   
   // create an associative array to store the initial index values
-  const associativeTree = tree.map((row, rowIndex) => {
+  const associativeTree = tree.map((row) => {
     return row.map((value, valueIndex) => {
       return {"value": value,"column": valueIndex}
     }
@@ -10,11 +10,15 @@ const highestValuePath = (tree) => {
   // sort each row in descending order
   associativeTree.forEach((row) => row.sort((a, b) => b.value - a.value));
 
-  // sum up column 0 values
-  const maxPossible = associativeTree.reduce((acc, row) => acc + row[0].value, 0); //?
-
-  return maxPossible;
-
+  // reduce associative array by column value: if the column value doesn't match
+  // the next column value, move to next column
+  const highestValuePath = associativeTree.reduce((acc, row) => {
+    row[0].column //?
+    // const nextColumn = acc.column + 1; //?
+    // const nextValue = row.find((value) => value.column === nextColumn);
+    // return nextValue ? nextValue : acc;
+  }, 0); //?
+  
 }
 
 const highestValuePathCopilot = (pyramid) => {
