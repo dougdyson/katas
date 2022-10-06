@@ -1,9 +1,11 @@
 const highestValuePath = (tree) => {
   
   const associativeTree = tree.map((row, rowIndex) => {
-    return row.map((value, valueIndex) => [{"value": value,"originalIndex": valueIndex}]
-  )}); //?
-
+    return row.map((value, valueIndex) => {
+      return {"value": value,"originalIndex": valueIndex}
+    }
+  )});
+  
 }
 
 const highestValuePathCopilot = (pyramid) => {
