@@ -7,13 +7,13 @@ const highestValuePath = (tree) => {
     }
   )});
 
-  // sort each rows in descending order
+  // sort each row in descending order
   associativeTree.forEach((row) => {
     row.sort((a, b) => {
       return b.value - a.value
     })
   });
-  
+
 }
 
 const highestValuePathCopilot = (pyramid) => {
