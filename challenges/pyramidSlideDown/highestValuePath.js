@@ -3,7 +3,7 @@ const highestValuePath = (tree) => {
   // create an associative array to store the initial index values
   const associativeTree = tree.map((row, rowIndex) => {
     return row.map((value, valueIndex) => {
-      return {"value": value,"originalIndex": valueIndex}
+      return {"value": value,"column": valueIndex}
     }
   )});
 
@@ -13,6 +13,11 @@ const highestValuePath = (tree) => {
       return b.value - a.value
     })
   });
+
+  // sum up column 0 values
+  const maxPossible = associativeTree.reduce((accumulator, row) => accumulator + row[0].value, 0);
+
+  return associativeTree;
 
 }
 
@@ -31,6 +36,6 @@ const highestValuePathCopilot = (pyramid) => {
 }
 
 highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
-// highestValuePath([[3],[7, 4]]); //?
+// highestValuePath([[3],[4, 7]]); //?
 
 module.exports = highestValuePath;
