@@ -8,16 +8,12 @@ const highestValuePath = (tree) => {
   )});
 
   // sort each row in descending order
-  associativeTree.forEach((row) => {
-    row.sort((a, b) => {
-      return b.value - a.value
-    })
-  });
+  associativeTree.forEach((row) => row.sort((a, b) => b.value - a.value));
 
   // sum up column 0 values
-  const maxPossible = associativeTree.reduce((accumulator, row) => accumulator + row[0].value, 0);
+  const maxPossible = associativeTree.reduce((acc, row) => acc + row[0].value, 0); //?
 
-  return associativeTree;
+  return maxPossible;
 
 }
 
@@ -35,7 +31,8 @@ const highestValuePathCopilot = (pyramid) => {
   return sum;
 }
 
-highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 // highestValuePath([[3],[4, 7]]); //?
+highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
+// highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 
 module.exports = highestValuePath;
