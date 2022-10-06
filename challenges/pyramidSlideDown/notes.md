@@ -28,8 +28,10 @@ Copilot had a solution right from the start which passed the simple test but fai
 ## Thoughts
 Although I could traverse the entire tree, it won't be performant and not likely pass the tests unless I can find a way to proactively prune the tree or know when not to traverse a branch.
 
-### Sorting Idea
-Another approach may be sorting, where all the values in each row is a descending sort  stored in an associative array together with the index position in the source tree and then sort by index position in the source tree. 
+Also, it doesn't seem possible to know if a path that traverse the entire tree is path with highest possible value.
+
+## Sorting Idea
+Another approach may be sorting, where all the values in each row is a descending sort  stored in an associative array together with the index position in the source tree and then sort by index position in the source tree. In this way, we can at least know the highest value possible, regardless of paths with dead ends, so we can start reducing down the tree until we find the first path that traverse the entire tree.
 
 If the index positions from the source tree do not create a full path and/or there are dead ends in the path, then the path is not valid.
 
