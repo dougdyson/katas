@@ -10,15 +10,27 @@ const highestValuePath = (tree) => {
   // sort each row in descending order
   associativeTree.forEach((row) => row.sort((a, b) => b.value - a.value));
 
-  // reduce associative array by column value: if the column value doesn't match
-  // the next column value, move to next column
-  const highestValuePath = associativeTree.reduce((acc, row) => {
-    row[0].column //?
-    // const nextColumn = acc.column + 1; //?
-    // const nextValue = row.find((value) => value.column === nextColumn);
-    // return nextValue ? nextValue : acc;
-  }, 0); //?
-  
+  associativeTree
+
+  // compare the column values of each row to determine the highest value path
+  let sum = associativeTree[0][0].value; //?
+  let prevCol = 0
+  let row = 1;
+  let col = 0;
+  while (row < associativeTree.length) {
+    if (associativeTree[row][col].column >= prevCol) //?
+    { 
+      sum = sum + associativeTree[row][col].value //?
+      prevCol = associativeTree[row][col].column //?
+      row++; //?
+    } else {
+      col = col + 1 //?
+      sum = sum + associativeTree[row][col].value //?
+      prevCol = associativeTree[row][col].column //?
+      row++; //?
+    }
+  }
+  return sum; //?
 }
 
 const highestValuePathCopilot = (pyramid) => {
@@ -35,8 +47,8 @@ const highestValuePathCopilot = (pyramid) => {
   return sum;
 }
 
-// highestValuePath([[3],[4, 7]]); //?
-highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
+highestValuePath([[3],[4, 7]]); //?
+// highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
 // highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 
 module.exports = highestValuePath;
