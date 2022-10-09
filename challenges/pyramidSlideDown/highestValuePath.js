@@ -18,7 +18,7 @@ const highestValuePath = (tree) => {
   let row = 1;
   let col = 0;
   while (row < associativeTree.length) {
-    if (associativeTree[row][col].column >= prevCol) //?
+    if (associativeTree[row][col].column === (prevCol || prevCol + 1) ) //?
     { 
       sum = sum + associativeTree[row][col].value //?
       prevCol = associativeTree[row][col].column //?
@@ -48,7 +48,7 @@ const highestValuePathCopilot = (pyramid) => {
 }
 
 highestValuePath([[3],[4, 7]]); //?
-// highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
+highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
 // highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 
 module.exports = highestValuePath;
