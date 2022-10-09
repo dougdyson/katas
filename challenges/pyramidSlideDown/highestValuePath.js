@@ -35,8 +35,8 @@ const highestValuePathCopilot = (pyramid) => {
   return sum;
 }
 
-highestValuePath([[3],[4, 7]]); //?
-// highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
+// highestValuePath([[3],[4, 7]]); //?
+highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
 // highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 
 module.exports = highestValuePath;
