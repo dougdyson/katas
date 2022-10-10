@@ -1,33 +1,46 @@
-const highestValuePath = (tree) => {
+const highestValuePath = (pyramid) => {
   
   // create an associative array to store the initial index values
-  const associativeTree = tree.map((row) => {
+  const associativePyramid = pyramid.map((row) => {
     return row.map((value, valueIndex) => {
-      return {"value": value,"column": valueIndex}
+      return {"value": value, "col": valueIndex}
     }
   )});
 
   // sort each row in descending order
-  associativeTree.forEach((row) => row.sort((a, b) => b.value - a.value));
+  associativePyramid.forEach((row) => row.sort((a, b) => b.value - a.value));
 
-  associativeTree
+  associativePyramid
 
   // compare the column values of each row to determine the highest value path
-  let sum = associativeTree[0][0].value; //?
-  let prevCol = 0
+  let sum = associativePyramid[0][0].value; //?
+  let prevCol = 0;
   let row = 1;
   let col = 0;
-  while (row < associativeTree.length) {
-    if (associativeTree[row][col].column === (prevCol || prevCol + 1) ) //?
-    { 
-      sum = sum + associativeTree[row][col].value //?
-      prevCol = associativeTree[row][col].column //?
-      row++; //?
-    } else {
-      col = col + 1 //?
-      sum = sum + associativeTree[row][col].value //?
-      prevCol = associativeTree[row][col].column //?
-      row++; //?
+
+  while (row < associativePyramid.length) {
+    
+    associativePyramid[row][col].col   //?
+    associativePyramid[row][col].value //?
+    associativePyramid[row][col].col - prevCol //?
+    
+    switch (associativePyramid[row][col].col - prevCol) {
+      
+      case 0:
+        sum = sum + associativePyramid[row][col].value; //?
+        row = row + 1 //?
+        break;
+      
+      case 1:
+        sum = sum + associativePyramid[row][col].value; //?
+        prevCol = col //?
+        col = col + 1 //?
+        row = row + 1 //?
+        break;
+      
+      default:
+        row = row + 1
+        break;
     }
   }
   return sum; //?
@@ -47,8 +60,8 @@ const highestValuePathCopilot = (pyramid) => {
   return sum;
 }
 
-highestValuePath([[3],[4, 7]]); //?
-highestValuePath([[3],[7, 4],[2, 4, 6]]); //?
+// highestValuePath([[3],[6, 7]]); //?
+highestValuePath([[3],[7, 4],[4, 2, 6]]); //?
 // highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 
 module.exports = highestValuePath;
