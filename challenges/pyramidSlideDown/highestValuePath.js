@@ -31,20 +31,20 @@ const highestValuePath = (pyramid) => {
       // same column
       case 0:
         sum = sum + colValue; //?
-        row = row + 1;
+        row = row + 1; //?
         break;
       
       // next column
       case 1:
-        sum = sum + colValue; //?
         prevCol = col //?
         col = col + 1 //?
+        sum = sum + colValue; //?
         row = row + 1 //?
         break;
       
-      // go back to the previous row and check the next column
+      // go over to the next column
       default:
-        row = row + 1 //?
+        col = col + 1; //?
         break;
     }
   }
@@ -66,7 +66,7 @@ const highestValuePathCopilot = (pyramid) => {
 }
 
 // highestValuePath([[3],[6, 7]]); //?
-highestValuePath([[3],[7, 4],[4, 5, 3]]); //?
-// highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
+// highestValuePath([[3],[7, 4],[4, 3, 5]]); //?
+highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 
 module.exports = highestValuePath;
