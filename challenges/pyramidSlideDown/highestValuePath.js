@@ -24,6 +24,11 @@ const highestValuePath = (pyramid) => {
     row; //?
     const originalCol = associativePyramid[row][col].col //?
     const colValue = associativePyramid[row][col].value  //?
+    
+    // the difference of the original column value and the current column equal positioning in the sorted row
+    // if the difference is 0, same column as the previous row
+    // if the difference is 1, next column over
+    // if the difference is 2, path dead end and need to go back to the next column
     const compareColumns =  originalCol - prevCol //?
     
     switch (compareColumns) {
