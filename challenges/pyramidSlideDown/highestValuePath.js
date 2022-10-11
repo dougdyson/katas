@@ -21,26 +21,28 @@ const highestValuePath = (pyramid) => {
 
   while (row < associativePyramid.length) {
     
-    associativePyramid[row][col].col   //?
-    associativePyramid[row][col].value //?
-    associativePyramid[row][col].col - prevCol //?
+    row; //?
+    const originalCol = associativePyramid[row][col].col //?
+    const colValue = associativePyramid[row][col].value  //?
+    const compareColumns =  originalCol - prevCol //?
     
-    switch (associativePyramid[row][col].col - prevCol) {
+    switch (compareColumns) {
       
+      // same column
       case 0:
-        associativePyramid[row][col].value //?
-        sum = sum + associativePyramid[row][col].value; //?
-        row = row + 1 //?
-        row
+        sum = sum + colValue; //?
+        row = row + 1;
         break;
       
+      // next column
       case 1:
-        sum = sum + associativePyramid[row][col].value; //?
+        sum = sum + colValue; //?
         prevCol = col //?
         col = col + 1 //?
         row = row + 1 //?
         break;
       
+      // go back to the previous row and check the next column
       default:
         row = row + 1 //?
         break;
@@ -64,7 +66,7 @@ const highestValuePathCopilot = (pyramid) => {
 }
 
 // highestValuePath([[3],[6, 7]]); //?
-highestValuePath([[3],[7, 4],[4, 2, 6]]); //?
+highestValuePath([[3],[7, 4],[4, 5, 3]]); //?
 // highestValuePath([[3],[7, 4],[2, 4, 6],[8, 5, 9, 3]]); //?
 
 module.exports = highestValuePath;
