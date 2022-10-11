@@ -17,6 +17,7 @@ const highestValuePath = (pyramid) => {
   let prevCol = 0;
   let row = 1;
   let col = 0;
+  associativePyramid.length //?
 
   while (row < associativePyramid.length) {
     
@@ -27,8 +28,10 @@ const highestValuePath = (pyramid) => {
     switch (associativePyramid[row][col].col - prevCol) {
       
       case 0:
+        associativePyramid[row][col].value //?
         sum = sum + associativePyramid[row][col].value; //?
         row = row + 1 //?
+        row
         break;
       
       case 1:
@@ -39,7 +42,7 @@ const highestValuePath = (pyramid) => {
         break;
       
       default:
-        row = row + 1
+        row = row + 1 //?
         break;
     }
   }
