@@ -22,7 +22,7 @@ const highestValuePath = (pyramid) => {
   // loop to find highest value path
   while (row < associativePyramid.length) {
     
-    row; //?
+    row;
     const originalCol = associativePyramid[row][col].col //?
     const colValue = associativePyramid[row][col].value  //?
     
