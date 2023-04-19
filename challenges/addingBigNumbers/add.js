@@ -1,5 +1,5 @@
 function add(a, b) {
-  return (Number(a) + Number(b)).toString(); // Fix me!
+  return (BigInt(a) + BigInt(b)).toString();
 }
 
-module.exports = add;
+module.exports = add

@@ -18,3 +18,8 @@
         Test.assertEquals(add('63829983432984289347293874', '90938498237058927340892374089'), "91002328220491911630239667963")
       });
     });
+
+## Notes
+The input numbers are big.
+The input is a string of only digits
+The numbers are positives
