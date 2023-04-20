@@ -3,20 +3,28 @@ function add(a, b) {
   const finalSum = [];
   
   const addBigInts = (smallerNum, largerNum) => {
+    
     smallerNum = smallerNum.split('');
     largerNum = largerNum.split('');
+    let carry = false;
     
-    const sum = smallerNum.reduceRight((carry, smallNum, i) => {
-      (Number(smallNum) + Number(largerNum[i]) > 9) ? carry = 1 : carry = 0;
-      // convert each element to a number and add both inputs via the index of the element
-      (carry) ? largerNum[i] = Number(largerNum[i]) + carry : largerNum[i] = Number(largerNum[i])
-      const acc = Number(smallNum) + Number(largerNum[i]);
-      console.log('smallNum:', smallNum, ', largerNum[i]:', largerNum[i] ,', acc:', acc);
-      // calculate carry
+    const sum = smallerNum.reduceRight((acc, smallNum, i) => {
       
-      finalSum.unshift(acc);
+      // handle carry and add 1 to smallNum
+      (carry) && (smallNum = Number(smallNum) + 1);
+      
+      const total = Number(smallNum) + Number(largerNum[i]);
+      
+      // determine carry
+      (total > 9) ? carry = true : carry = false;
+      console.log('smallNum:', smallNum, ', largerNum[i]:', largerNum[i] ,', total:', total, ', carry:', carry);
+      
+      const lastDigit = total.toString().split('').pop();
+      finalSum.unshift(lastDigit);
       
     }, 0);
+    // if carry is true, unshift 1 to the first element of the finalSum array
+    (carry) && finalSum.unshift(1);
     console.log('finalSum:', finalSum.join(''));
     return finalSum.join('');
   }
