@@ -14,39 +14,33 @@ function add(a, b) {
       // handle carry and add 1
       (carry) && (smallNum = Number(smallNum) + 1);
       
-      // determine correct index of largerNum
+      // determine correct index of largerNum (as it is reversed because of reduceRight)
       idx = largerNum.length - (smallerNum.length - i);
       
+      // add the two numbers
       const total = Number(smallNum) + Number(largerNum[idx]);
       
       // determine carry
       (total > 9) ? carry = 1 : carry = 0;
 
-      console.log('smallNum:', smallNum, ', largerNum[idx]:', largerNum[idx] ,', total:', total, ', carry:', carry);
-      
+      // pop the last digit of the sum and add to finalSum
       const lastDigit = total.toString().split('').pop();
       finalSum.unshift(lastDigit);
       
     }, 0);
+
+    // make all the remaining digits of the largerNum a number and add carry
+    const remainingDigits = Number(largerNum.slice(0, idx).join('')) + Number(carry);
     
-    // // if carry is true, add 1 as the first element of the finalSum array
-    // (carry) && finalSum.unshift(1);
+    // if there are remaining digits in the largerNum, prepend them to the finalSum
+    (remainingDigits > 0) && finalSum.unshift(remainingDigits);
 
-    // make all the remaining digits of the largerNum a number add carry
-    const remainingDigits = Number(largerNum.slice(0, idx)) + Number(carry)
-    console.log('remainingDigits:', remainingDigits);
-
-    (remainingDigits) && finalSum.unshift(remainingDigits);
-
+    // return the finalSum as a string
     return finalSum.join('');
   }
   
-  // determine which number is smaller
-  if (a.length < b.length) {
-    return addBigInts(a, b);
-  } else {
-    return addBigInts(b, a);
-  }
+  // determine which number is smaller and call addBigInts
+  return (a.length < b.length) ? addBigInts(a, b) : addBigInts(b, a);
 
 }
 
