@@ -29,8 +29,14 @@ function add(a, b) {
       
     }, 0);
     
-    // if carry is true, add 1 as the first element of the finalSum array
-    (carry) && finalSum.unshift(1);
+    // // if carry is true, add 1 as the first element of the finalSum array
+    // (carry) && finalSum.unshift(1);
+
+    // make all the remaining digits of the largerNum a number add carry
+    const remainingDigits = Number(largerNum.slice(0, idx)) + Number(carry)
+    console.log('remainingDigits:', remainingDigits);
+
+    (remainingDigits) && finalSum.unshift(remainingDigits);
 
     return finalSum.join('');
   }
