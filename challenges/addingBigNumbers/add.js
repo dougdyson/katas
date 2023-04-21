@@ -6,6 +6,7 @@ function add(a, b) {
 
     smallerNum = smallerNum.split('');
     largerNum = largerNum.split('');
+    let idx = 0;
     let carry = false;
     
     const sum = smallerNum.reduceRight((acc, smallNum, i) => {
@@ -14,22 +15,23 @@ function add(a, b) {
       (carry) && (smallNum = Number(smallNum) + 1);
       
       // determine correct index of largerNum
-      const lrgNumIdx = largerNum.length - (smallerNum.length - i);
+      idx = largerNum.length - (smallerNum.length - i);
       
-      const total = Number(smallNum) + Number(largerNum[lrgNumIdx]);
-      console.log(`total`, total);
+      const total = Number(smallNum) + Number(largerNum[idx]);
       
       // determine carry
-      (total > 9) ? carry = true : carry = false;
-      console.log('smallNum:', smallNum, ', largerNum[i]:', largerNum[lrgNumIdx] ,', total:', total, ', carry:', carry);
+      (total > 9) ? carry = 1 : carry = 0;
+
+      console.log('smallNum:', smallNum, ', largerNum[idx]:', largerNum[idx] ,', total:', total, ', carry:', carry);
       
       const lastDigit = total.toString().split('').pop();
       finalSum.unshift(lastDigit);
       
     }, 0);
-    // if carry is true, unshift 1 to the first element of the finalSum array
+    
+    // if carry is true, add 1 as the first element of the finalSum array
     (carry) && finalSum.unshift(1);
-    console.log('finalSum:', finalSum.join(''));
+
     return finalSum.join('');
   }
   
