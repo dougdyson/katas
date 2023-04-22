@@ -57,7 +57,7 @@ I was determined to be as explicit as possible, thinking there would be less cha
 Copilot suggested using modulo to handle the carry. I was intrigued by this idea but pushed ahead with my own solution. Modulo is a much better solution for managing the carry.
 
 #### **Too concerned with performance**
-I tried to keep the loop as performant as possible and only loop as much as necessary, using strong manipulation to handle remaining digits in the larger number. This is a good idea, but I was too concerned with performance and had to introduce more code that really wasn't necessary.
+I tried to keep the loop as performant as possible and only loop as much as necessary, using string manipulation to handle remaining digits in the larger number. This is a good idea, but I was too concerned with performance and had to introduce more code that really wasn't necessary.
 
 ### Version 2
 Am going to do a rewrite and use these lessons learned.
