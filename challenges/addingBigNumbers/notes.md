@@ -28,3 +28,36 @@ The numbers are positives
 Although I bumbled around a bit getting back into the flow, this kata is too dated to be useful as it uses an older version of JS node, where the solution is more complicated than it needs to be.
 
 In the spirit of the kata, I'm going to solve it by writing the BigInt() function from scratch.
+
+## Version 1
+Far too complicated. It feels like I forgot everything about writing good code!
+
+The below code is another, far superior solution:
+
+    function add(a, b) {
+      var res = '', c = 0
+      a = a.split('')
+      b = b.split('')
+      while (a.length || b.length || c) {
+        c += ~~a.pop() + ~~b.pop()
+        res = c % 10 + res
+        c = c > 9
+      }
+      return res
+    }
+
+### Lessons relearned
+#### **reduce() vs while()**
+I was determined to use reduceRights and not use a while loop, thinking that a bug in a while loop can create an infinite loop. But I was wrong. The while loop is much more readable and easier to debug.
+
+#### **Single condition vs multiple conditions in loop**
+I was determined to be as explicit as possible, thinking there would be less chance of bugs with less conditions. However, as I have learned before, this can make the code less readable and more difficult to debug.
+
+#### **modulo carry**
+Copilot suggested using modulo to handle the carry. I was intrigued by this idea but pushed ahead with my own solution. Modulo is a much better solution for managing the carry.
+
+#### **Too concerned with performance**
+I tried to keep the loop as performant as possible and only loop as much as necessary, using strong manipulation to handle remaining digits in the larger number. This is a good idea, but I was too concerned with performance and had to introduce more code that really wasn't necessary.
+
+### Version 2
+Am going to do a rewrite and use these lessons learned.
