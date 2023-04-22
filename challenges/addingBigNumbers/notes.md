@@ -20,9 +20,9 @@
     });
 
 ## Requirements
-The input numbers are big.
-The input is a string of only digits
-The numbers are positives
+- The input numbers are big.
+- The input is a string of only digits
+- The numbers are positives
 
 ## Notes
 Although I bumbled around a bit getting back into the flow, this kata is too dated to be useful as it uses an older version of JS node, where the solution is more complicated than it needs to be.
