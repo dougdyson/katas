@@ -48,19 +48,19 @@ The below code is another, far superior solution:
 
 ### Version 1 - Lessons relearned
 #### **reduce() vs while()**
-I was determined to use reduceRights and not use a while loop, thinking that a bug in a while loop can create an infinite loop. But I was wrong and just spread the other conditions out into new code.
+I was determined to use reduceRights and not use a while loop, thinking that a bug in a while loop can create an infinite loop. But I was wrong and just ended up spreading the other conditions out into new code.
 
 #### **Single condition vs multiple conditions in loop**
-I was determined to be as explicit as possible, thinking there would be less chance of bugs with less conditions. However, as I have learned before, this can make the code less readable and more difficult to debug.
+I was determined to be as explicit as possible, thinking there would be less chance of bugs with less conditions to process. However, as I have learned before, this can make the code less readable and more difficult to debug.
 
 #### **modulo carry**
 Copilot suggested using modulo to handle the carry. I was intrigued by this idea but pushed ahead with my own solution. Modulo is a much better solution for managing the carry.
 
 #### **Too concerned with performance**
-I tried to keep the loop as performant as possible and only loop as much as necessary, using string manipulation to handle remaining digits in the larger number. This is a good idea, but I was too concerned with performance and had to introduce more code that really wasn't necessary.
+I tried to keep the loop as performant as possible and only loop as much as necessary, using string manipulation to handle remaining digits in the larger number. This is a good idea, but I was too concerned with performance and had to introduce more code that really wasn't necessary. Should only write code that is necessary and then optimize for performance if necessary.
 
 #### **Takeaways**
-By attempting to be more explicit and use reduceRight, I ended up spreading out the other conditions into the code and making it more difficult to read and debug. I also ended up writing more code than necessary. A key takeaway is to consolidate logic wherevever possible, to make the code readable and debuggable.
+By attempting to be more explicit and use reduceRight, I just ended up spreading out the other conditions into the code and making it more difficult to read and debug. I also ended up writing more code than necessary. A key takeaway is to consolidate logic wherevever possible, to make the code readable and maintainable.
 
 ### Version 2
 Am going to do a rewrite and use these lessons learned.
