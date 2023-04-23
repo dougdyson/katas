@@ -59,5 +59,10 @@ Copilot suggested using modulo to handle the carry. I was intrigued by this idea
 #### **Too concerned with performance**
 I tried to keep the loop as performant as possible and only loop as much as necessary, using string manipulation to handle remaining digits in the larger number. This is a good idea, but I was too concerned with performance and had to introduce more code that really wasn't necessary.
 
+#### **Takeaways**
+By being attempting to be more explicit and use reduceRight, I ended up spreading out the conditions and making the code more difficult to read and debug. I also ended up writing more code than necessary.
+
+A key takeaway is to consolidate logic wherevever possible. This is a good idea in general, but it is especially important when writing code that is meant to be readable and debuggable.
+
 ### Version 2
 Am going to do a rewrite and use these lessons learned.
