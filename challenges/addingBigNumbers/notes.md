@@ -46,7 +46,7 @@ The below code is another, far superior solution:
       return res
     }
 
-### Lessons relearned
+### Version 1 - Lessons relearned
 #### **reduce() vs while()**
 I was determined to use reduceRights and not use a while loop, thinking that a bug in a while loop can create an infinite loop. But I was wrong. The while loop is much more readable and easier to debug.
 
