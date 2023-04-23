@@ -62,7 +62,7 @@ I tried to keep the loop as performant as possible and only loop as much as nece
 #### **Takeaways**
 By attempting to be more explicit and use reduceRight, I ended up spreading out the conditions and making the code more difficult to read and debug. I also ended up writing more code than necessary.
 
-A key takeaway is to consolidate logic wherevever possible. This is a good idea in general, but it is especially important when writing code that is meant to be readable and debuggable.
+A key takeaway is to consolidate logic wherevever possible, to make the code readable and debuggable.
 
 ### Version 2
 Am going to do a rewrite and use these lessons learned.
