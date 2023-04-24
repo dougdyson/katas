@@ -63,7 +63,7 @@ I tried to keep the loop as performant as possible and only loop as much as nece
 Running the code through ChatGPT for suggestion revealed that I had spread out the variable declarations. This is a good lesson to remember, to keep variable declarations together.
 
 #### **Takeaways**
-By attempting to be more explicit and use reduceRight, I just ended up spreading out the other conditions into the code and making it more difficult to read and debug. I also ended up writing more code than necessary. A key takeaway is to consolidate logic wherevever possible, to make the code readable and maintainable.
+By attempting to be more explicit and use reduceRight, I just ended up spreading out the other conditions into the code and making it more difficult to read and debug. I also ended up writing more code than necessary. A key takeaway is to consolidate logic wherevever possible, to make the code readable and maintainable. This applies to variable declarations as well.
 
 ### Version 2
 Am going to do a rewrite and use these lessons learned.
