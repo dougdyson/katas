@@ -65,5 +65,9 @@ Running the code through ChatGPT for suggestion revealed that I had spread out t
 #### **Takeaways**
 By attempting to be more explicit and use reduceRight, I just ended up spreading out the other conditions into the code and making it more difficult to read and debug. I also ended up writing more code than necessary. A key takeaway is to consolidate logic wherevever possible, to make the code readable and maintainable. This applies to variable declarations as well.
 
+- consolidate and centralize logic, if gets too complicated, break it out into a function, potentially in an external file
+- keep variable declarations together
+- don't be afraid to use variable-controlled loops
+
 ### Version 2
 Am going to do a rewrite and use these lessons learned.
