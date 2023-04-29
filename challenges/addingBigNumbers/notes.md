@@ -72,4 +72,4 @@ By attempting to be more explicit and use reduceRight, I just ended up spreading
 - learned that ~~ is a shortcut for Math.floor() and is a good way to convert a string to a number
 
 ### Version 2
-Am going to do a rewrite and use these lessons learned!
+Am going to do a rewrite and use these lessons learned!!
