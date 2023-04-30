@@ -69,7 +69,7 @@ By attempting to be more explicit and use reduceRight, I just ended up spreading
 - keep variable declarations together
 - too many intermediate variables is a sign that the code is too complicated
 - don't avoid using variable-controlled loops (i.e while)
-- learned that ~~ is a shortcut for Math.floor() and is a good way to convert a string to a number
+- learned that ~~ is a shortcut for Math.floor() or Number() for converting strings to numbers
 
 ### Version 2
 Am going to do a rewrite and use these lessons learned!
