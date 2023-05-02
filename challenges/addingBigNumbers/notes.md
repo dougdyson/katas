@@ -70,4 +70,4 @@ Running the code through ChatGPT for suggestion revealed that I had spread out t
 - learned that ~~ is a converting strings to numbers shortcut for Math.floor() or Number()
 
 ### Version 2
-Am going to do a rewrite and use these lessons learned!
+Am going to do a rewrite and use these lessons learned
