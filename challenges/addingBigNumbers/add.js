@@ -7,8 +7,8 @@ function add(a, b) {
 
   while (aArr.length || bArr.length || c) {
     c += ~~aArr.pop() + ~~bArr.pop()
-    sum.unshift(c % 10)
-    c = c > 9
+    sum.unshift(c % 10);
+    (c > 9) ? c = 1 : c = 0
   }
 
   return sum.join('')
