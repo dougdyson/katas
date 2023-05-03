@@ -48,7 +48,7 @@ The below code is another, far superior solution:
 
 ### Version 1 - Lessons relearned
 #### **reduce() vs while()**
-I was determined to use reduceRights and not use a while loop, thinking that a bug in a while loop can create an infinite loop. But I was wrong and just ended up spreading the other conditions out into new code.
+I was determined to use reduceRights and not use a while loop, thinking that a bug in a while loop can create an infinite loop. But I was wrong and just ended up spreading the other conditions out into new code. In this instance, pop was a better solution than reduceRight.
 
 #### **Single condition vs multiple conditions in loop**
 I was determined to be as explicit as possible, thinking there would be less chance of bugs with less conditions to process. However, as I have learned before, this can make the code less readable and more difficult to debug.
