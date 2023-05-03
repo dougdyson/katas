@@ -67,7 +67,7 @@ Running the code through ChatGPT for suggestion revealed that I had spread out t
 - keep variable declarations together
 - too many intermediate variables is a sign that the code is too complicated
 - don't avoid using variable-controlled loops (i.e while)
-- learned that ~~ is a converting strings to numbers shortcut for Math.floor() or Number()
+- learned that ~~ is a shortcut for converting strings to numbers shortcut and handles undefined values, whereas Number() does not
 
 ### Version 2
 Am going to do a rewrite and use these lessons learned
